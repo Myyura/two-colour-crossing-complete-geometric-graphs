@@ -33,7 +33,7 @@ K_0+L_++M_C-E_{\rm fr}-E_g
 \end{align}
 \end{proposition}
 \begin{proof}
-Take an actual optimum of $G_0$. Conditional on every other colour, its grid minimizes a unary-perturbed comparison energy with unary differences bounded by $\alpha N_g$. Theorem~\ref{thm:grid} supplies a canonical phase and a localized flip set of size at most $52aN_g$. If necessary complement every colour in the whole graph to make the phase positive. There are no prescribed colours, and complementation preserves every monochromatic count.
+Take an optimum of $G_0$. Conditional on every other colour, its grid minimizes a unary-perturbed comparison energy with unary differences bounded by $\alpha N_g$. Theorem~\ref{thm:grid} supplies a canonical phase and a localized flip set of size at most $52aN_g$. If necessary complement every colour in the whole graph to make the phase positive. There are no prescribed colours, and complementation preserves every monochromatic count.
 
 Keep this grid unchanged. By Lemma~\ref{lem:soft-fields}, the probe soft-count hypothesis holds. Proposition~\ref{prop:freezing} changes only the program fans to $t^+$, with cost increase at most $E_{\rm fr}$. The grid retains its localized flip set, so the localized lower estimate in Theorem~\ref{thm:grid}, now for the frozen unary energy in~\eqref{eq:background}, gives at least $L_+-E_g$. The current core colouring costs at least $M_C$, irrespective of whether its palette was forced before the fans were frozen. The frame class costs at least $Z(B)$, and the fan--fan cost is exactly $\Phi_{T_f}(t^+)$. These terms exhaust $G_0$. Thus the altered colouring has cost at least $K_0+L_++M_C-E_g$ but at most $\OPT(G_0)+E_{\rm fr}$, proving the lower bound.
 
@@ -41,7 +41,7 @@ For the upper bound, use the same $t^+$, the grid colouring
 $c^+\oplus\{v:d_v<0\}$, a core minimizer, and a convex frame optimum. The prescribed-phase upper witness in Theorem~\ref{thm:grid} has grid cost at most $L_++E_g$. All these choices coexist, since the edge classes are disjoint and no further cross-class constraints remain. This proves~\eqref{eq:decoupling-zero}. Restoring $Y$ with~\eqref{eq:nonfan-delete} proves~\eqref{eq:decoupling-full}. Optimizers are used only as witnesses for inequalities.
 \end{proof}
 
-\subsection{One parameter choice verifies every hypothesis}
+\subsection{Parameter estimates}
 Use the parameters of~\eqref{eq:parameters}, namely
 \[
 q=2^{20}(n+1),\quad S=nq,\quad d=S+1,\quad
@@ -60,7 +60,7 @@ c\leq2^{19}d^2H^8,\qquad h\leq2os\leq2^{91}d^5H^7.
 \end{equation}
 Also $B\geq2o$, $B\leq o^2/1024$, $o\geq1000$, $8\mid B$, and $W/o\leq1/514$. These verify the geometric and core hypotheses. Each follows directly by substituting $W=H^4$ and $B=H^5$ and using $H=2^{20000}d^{40}$, $d\geq1$, $S\geq1$.
 
-In $G_0$, a grid vertex has at most $p$ outside neighbors: it has no neighbors in $C$ or $I$. A program fan has at most $p+c$ neighbors outside $X$, since $I$ is isolated. Thus
+In $G_0$, a grid vertex has at most $p$ outside neighbours: it has no neighbours in $C$ or $I$. A program fan has at most $p+c$ neighbours outside $X$, since $I$ is isolated. Thus
 \[
 p/N_g=s/o\leq\alpha,\qquad
 (p+c)/N_g\leq\beta,\qquad
@@ -82,7 +82,7 @@ E_{\rm fr}+2E_g+R_Y<2^{310}d^{14}H^{15}.
 \end{equation}
 
 \subsection{Quantitative reduction and threshold}
-\begin{theorem}[A computable source-value window]\label{thm:quantitative-reduction}
+\begin{theorem}[Bounds for the target optimum]\label{thm:quantitative-reduction}
 Given a represented permutation graph $G$ with $n\geq1$, the construction computes a general-position rational point set $P$, a baseline $K_{\rm base}$, and a positive integer $\Delta=q^2H^{16}$, with explicit nonnegative errors such that
 \begin{equation}\label{eq:final-window}
 K_{\rm base}+\Delta g(G)-E_-
@@ -115,14 +115,14 @@ and the conservative local term satisfies
 \[
 \frac{2SW^4}{\Delta}=\frac{2n}{q}<2^{-19}.
 \]
-Hence the total is less than $2^{-39}+2^{-19}<2^{-18}$, proving the required strict window. No sharper local enumeration or narrower aggregate window is used.
+Hence the total is less than $2^{-39}+2^{-19}<2^{-18}$, which proves the strict error bound in~\eqref{eq:final-window}.
 
 To compute the baseline, first enumerate proper crossings on the actual final coordinates by exact determinants. Evaluate $c^+$, each fan response, the actual fan--fan cost, and each single-flip difference $d_v$. Evaluate $K_C$ by~\eqref{eq:core-baseline}: set the palette, use the all-zero source colour as a reference, minimize each short unary separately, insert the known dummy value, subtract the explicit $\Delta|E(G)|$, and add the residual unary minima. Finally insert $Z(B)$. These are finite sums and minima of two known integers. The source optimum, core optimum, and target optimum never occur as computational subroutines.
 
 The output point count is $N=B+o+s\leq3H^5$. Since $S=2^{20}n(n+1)$, it is bounded by a fixed polynomial of degree $400$ in $n$. Proposition~\ref{prop:realization} proves polynomial coordinate bit length and construction time; it also gives the integer-coordinate version by a common positive scaling.
 \end{proof}
 
-We make the bit bound for the decision threshold explicit as well. For actual total point count $N$, all grid, fan, and core edge counts are at most $N^2$. Each unnormalized crossing contribution is zero or one, and all fields are differences of finite such sums. The baseline formula~\eqref{eq:background} and~\eqref{eq:core-baseline} therefore gives the deliberately loose bound
+We make the bit bound for the decision threshold explicit as well. For total point count $N$, all grid, fan, and core edge counts are at most $N^2$. Each unnormalized crossing contribution is zero or one, and all fields are differences of finite such sums. The baseline formula~\eqref{eq:background} and~\eqref{eq:core-baseline} therefore gives the bound
 \[
 |K_{\rm base}|\leq16N^6.
 \]

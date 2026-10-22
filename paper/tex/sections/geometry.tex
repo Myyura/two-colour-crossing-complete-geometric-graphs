@@ -1,4 +1,4 @@
-\section{Geometric interfaces and effective coordinates}\label{sec:geometry}
+\section{Geometric construction and rational coordinates}\label{sec:geometry}
 
 We construct three sets of points: originals, frames, and programs. Original--frame edges realize the comparison grid; program--frame edges are the probes to which Proposition~\ref{prop:freezing} will apply. All other edges of the complete graph remain present.
 
@@ -29,7 +29,7 @@ The brackets are at least $D+F-3\kappa$ and $D+F-3\kappa_f$, respectively. These
 
 There are $S$ early source endpoint clusters and $S$ late clusters, each containing $W$ consecutive originals. Between them lie $D_m=512SW$ dummy originals, so $o=514SW$. Each cluster is an equally spaced interval of parameter diameter $\tau$ around a macro parameter. Early, dummy, and late parameters lie, respectively, in $(-3/4,-5/8)$, $(-1/2,1/2)$, and $(5/8,3/4)$. A matching pairs the early and late clusters; Section~\ref{sec:core} specifies it from the source permutation.
 
-Every original chord has direction $(b-a)(-\kappa(a+b),1)$, while an original--frame vector has horizontal component at least $D+F$ and vertical component of absolute value at most two. These direction cones are separated. Programs will lie in $x<-D/2$, $|y|<2$. The preliminary interfaces below use small displacements and clone diameter $\tau$; the effective construction then chooses both by explicit simultaneous bounds.
+Every original chord has direction $(b-a)(-\kappa(a+b),1)$, while an original--frame vector has horizontal component at least $D+F$ and vertical component of absolute value at most two. These direction cones are separated. Programs will lie in $x<-D/2$, $|y|<2$. The crossing relations below hold for sufficiently small displacements and clone diameter $\tau$. We then choose both scales explicitly so that all relations hold simultaneously.
 
 \subsection{Ordinary programs}
 Take $8\mid B$ and $t_i=1-2(i+1)/(B+1)$. The artificial point $A_*=A(0)$ lies in the strict angular gap between the middle frame rows, as viewed from every original. At a macro point $p=P(a)$, an ordinary program has prototype
@@ -37,13 +37,13 @@ Take $8\mid B$ and $t_i=1-2(i+1)/(B+1)$. The artificial point $A_*=A(0)$ lies in
 r=p-\mu_o(A_*-p),\qquad \mu_o>0.
 \end{equation}
 
-\begin{lemma}[Ordinary interface]\label{lem:ordinary-table}
+\begin{lemma}[Crossings of ordinary program fans]\label{lem:ordinary-table}
 For sufficiently small $\mu_o$, followed by sufficiently small $\tau$, every clone $p_s$ of the parent satisfies
 \begin{equation}\label{eq:ordinary-own}
 rA_k\sim p_sA_i\quad\Longleftrightarrow\quad
 \begin{cases}i<k,&k<B/2,\\i>k,&k\geq B/2.\end{cases}
 \end{equation}
-Outside the parent block, the program fan has the neighborhood of a virtual column inserted at that block. A core edge from a parent clone to a different macro or a dummy crosses exactly the first half of the program fans when its other endpoint is later, and exactly the last half when it is earlier. These tables hold on an open neighborhood of the prototype.
+Outside the parent block, the program fan has the neighbourhood of a virtual column inserted at that block. A core edge from a parent clone to a different macro or a dummy crosses exactly the first half of the program fans when its other endpoint is later, and exactly the last half when it is earlier. These tables hold on an open neighbourhood of the prototype.
 \end{lemma}
 \begin{proof}
 Put $\epsilon_i=\sgn\orient(r,p_s,A_i)$. The strict central gap gives $\epsilon_i=1$ on the first half and $-1$ on the last half, uniformly for all clones after choosing $\tau$. Both endpoint tests for proper crossing are needed. When $i<k$, they require $\epsilon_i=\epsilon_k=1$; when $i>k$, they require $\epsilon_i=\epsilon_k=-1$. For $i=k$ there is a common endpoint. Here $r$ and $p_s$ lie on the same strict side of each frame chord: on $|y|\leq2$ that chord has supporting coordinate
@@ -53,7 +53,7 @@ x=F+\kappa_f((t_i+t_k)y-t_it_k)\geq F-5\kappa_f>0,
 whereas both points lie in the left strip. This proves~\eqref{eq:ordinary-own}. In every nonparent column the nonzero macro determinants persist under displacement and cloning, giving the virtual-column prefix or suffix.
 
 For the core table, let $w=P(b)$ with $b\ne a$. Then
-$\orient(p,w,r)=-\mu_o\orient(p,w,A_*)$, so $r$ and every frame point lie on opposite sides of $pw$. The other test compares the signs of $\orient(r,A_k,p)$ and $\orient(r,A_k,w)$. The former is negative on the first half and positive on the last; at zero displacement the latter has the sign of $b-a$, and this strict sign persists. This gives the claimed halves for the actual clones. All signs have positive margins, hence hold on an open neighborhood. No half-frame assertion is made for a short edge inside the parent cluster; its exact unary cost is retained later.
+$\orient(p,w,r)=-\mu_o\orient(p,w,A_*)$, so $r$ and every frame point lie on opposite sides of $pw$. The other test compares the signs of $\orient(r,A_k,p)$ and $\orient(r,A_k,w)$. The former is negative on the first half and positive on the last; at zero displacement the latter has the sign of $b-a$, and this strict sign persists. This gives the claimed halves for the actual clones. All signs have positive margins, hence hold on an open neighbourhood. No half-frame assertion is made for a short edge inside the parent cluster; its exact unary cost is retained later.
 \end{proof}
 
 \subsection{Rank programs}
@@ -67,13 +67,13 @@ The supporting horizontal coordinate of an actual selected chord at height $y$ i
 T_{s,t}(y)=-D-\kappa((a_s+b_t)y-a_sb_t).
 \end{equation}
 
-\begin{lemma}[Rank interface]\label{lem:rank-table}
+\begin{lemma}[Crossings of rank program fans]\label{lem:rank-table}
 At each internal gap $1\leq\ell<W$ there are open regions for left and right programs. Every left program fan crosses precisely the selected edges with $s>\ell$; every right fan crosses precisely those with $t\leq\ell$. The test is independent of the opposite clone rank.
 
-The grid neighborhood is the exact virtual column after the entire early parent block, or before the entire late parent block, independently of $\ell$. On an incident nonselected core edge to $P(w)$, every fan crosses if $a<w<b$, and none crosses otherwise.
+The grid neighbourhood is the exact virtual column after the entire early parent block, or before the entire late parent block, independently of $\ell$. On an incident nonselected core edge to $P(w)$, every fan crosses if $a<w<b$, and none crosses otherwise.
 \end{lemma}
 \begin{proof}
-At the unsteered center $r_0=(1-\theta)P(a)+\theta P(b)$, where $\theta=\mu_r$ or $1-\mu_r$,
+At the unsteered centre $r_0=(1-\theta)P(a)+\theta P(b)$, where $\theta=\mu_r$ or $1-\mu_r$,
 \[
 \orient(r_0,A,P(a))=\theta\orient(P(a),P(b),A)<0,\quad
 \orient(r_0,A,P(b))=(1-\theta)\orient(P(a),A,P(b))>0.
@@ -100,16 +100,16 @@ $T_{1,\ell}(y_R)-T_{W,\ell+1}(y_R)\geq\kappa\tau d_0/(2W)$, so
 \[
 x_{R,\ell}=\tfrac12(T_{W,\ell+1}(y_R)+T_{1,\ell}(y_R))
 \]
-gives exactly $t\leq\ell$. These prototypes tend to the unsteered centers as $\tau\to0$, retaining the endpoint tests above.
+gives exactly $t\leq\ell$. These prototypes tend to the unsteered centres as $\tau\to0$, retaining the endpoint tests above.
 
-For grid neighbors, marker-to-parent directions remain in the original-chord cone, outside the entire frame cone. The sign $\epsilon_i$ in the preceding proof is now constant over frame rows, positive for an original before the marker and negative for one after it. Consequently
+For grid neighbours, marker-to-parent directions remain in the original-chord cone, outside the entire frame cone. The sign $\epsilon_i$ in the preceding proof is now constant over frame rows, positive for an original before the marker and negative for one after it. Consequently
 \[
 rA_k\sim P_jA_i\quad\Longleftrightarrow\quad
 \begin{cases}i<k,&P_j\text{ precedes the marker},\\ i>k,&P_j\text{ follows it}.\end{cases}
 \]
 The left marker is above its whole parent block and the right marker below its whole parent block. Their displacement remains below the next macro gap, and steering does not change these signs.
 
-For a nonselected incident chord, put $L_{a,w}(y)=-D-\kappa((a+w)y-aw)$. At the left unsteered center,
+For a nonselected incident chord, put $L_{a,w}(y)=-D-\kappa((a+w)y-aw)$. At the left unsteered centre,
 \[
 (r_0)_x-L_{a,w}((r_0)_y)=-\kappa\mu_r(b-a)(b-w).
 \]
@@ -120,7 +120,7 @@ The support-side test excludes $w>b$. For $w<b$, the other endpoint test exclude
 A program fan does not cross a core edge whose endpoints both avoid its parent block.
 \end{lemma}
 \begin{proof}
-For endpoints in different nonparent blocks, the fan at the parent macro is noncrossing by Lemma~\ref{lem:double-chain}, with nonzero macro determinants. Small displacement and then cloning preserve the exclusion. For a short edge in one nonparent block, the macro fan has positive distance from that block's center. Choose the displacement and clone neighborhood below this distance. The whole short edge remains disjoint from the fan. This argument avoids applying a strict determinant test to a collapsed zero-length edge.
+For endpoints in different nonparent blocks, the fan at the parent macro is noncrossing by Lemma~\ref{lem:double-chain}, with nonzero macro determinants. Small displacement and then cloning preserve the exclusion. For a short edge in one nonparent block, the macro fan has positive distance from that block's centre. Choose the displacement and clone neighbourhood below this distance. The whole short edge remains disjoint from the fan. This argument avoids applying a strict determinant test to a collapsed zero-length edge.
 \end{proof}
 
 \subsection{Canonical response fields}
@@ -167,7 +167,7 @@ A frozen fan of colour $c$ contributes $2c-1$ to the core unary coefficient. Ear
 \subsection{All remaining edge classes}
 Partition the complete graph into $X$ (original--frame), $T_f$ (program--frame), $C$ (original--original), $Y$ (program--original or program--program), and $I$ (frame--frame).
 \begin{lemma}[Convex separation]\label{lem:separation}
-The programs can all be placed strictly inside $\mathcal H=\{(x,y):\phi(x,y)\leq0\}$, where $\phi(x,y)=x+D+\kappa y^2$. Every open $X$ segment lies outside $\mathcal H$. Consequently $X$ has no crossing with $C$ or $Y$. The frame class $I$ has no crossing-graph neighbor outside itself.
+The programs can all be placed strictly inside $\mathcal H=\{(x,y):\phi(x,y)\leq0\}$, where $\phi(x,y)=x+D+\kappa y^2$. Every open $X$ segment lies outside $\mathcal H$. Consequently $X$ has no crossing with $C$ or $Y$. The frame class $I$ has no crossing-graph neighbour outside itself.
 \end{lemma}
 \begin{proof}
 The set $\mathcal H$ is convex. For $z_\lambda=(1-\lambda)P(a)+\lambda A(t)$,
@@ -189,7 +189,7 @@ For the frame component put $\psi(x,y)=F+\kappa_fy^2-x$ and use $\mathcal H_f=\{
 for $0<\lambda\leq1$, since the bracket is at least $D+F-5\kappa_f$. Thus no fan crosses $I$. The remaining $C,Y$ segments lie in $x\leq-D$, disjoint from $\mathcal H_f\subseteq\{x\geq F\}$.
 \end{proof}
 
-The isolated component $I$ has optimum $Z(B)$, not zero. Besides $I$--$I$, the only possible crossing types are
+The isolated component $I$ contributes $Z(B)$ to the optimum. Besides $I$--$I$, the only possible crossing types are
 \[
 X\!:\!X,\quad X\!:\!T_f,\quad T_f\!:\!T_f,\quad
 C\!:\!C,\quad C\!:\!T_f,\quad Y\!:\!T_f,\quad Y\!:\!C,\quad Y\!:\!Y.
@@ -226,7 +226,7 @@ $a_r=a+\tau\vartheta_r$, where $\vartheta_r=(2r-W-1)/(2(W-1))$.
 All internal rank prototypes use the midpoint formulas of Lemma~\ref{lem:rank-table}; there are $2S(W-1)$ candidates, including those assigned zero copies later.
 
 \begin{lemma}[Simultaneous quantitative margins]\label{lem:common-scales}
-The choices~\eqref{eq:explicit-scales} satisfy all geometric interfaces above for the actual clones and every candidate program. In particular no choice depends on later program multiplicities.
+The choices~\eqref{eq:explicit-scales} give all the crossing relations above for the actual clones and every candidate program. In particular no choice depends on later program multiplicities.
 \end{lemma}
 \begin{proof}
 The set $\mathcal A$ is finite with distinct parameters, so $0<\eta\leq1$. Direct substitution gives
@@ -290,7 +290,7 @@ It is the steering error $\tau/50$ plus clone error at most $\tau/100$. Inequali
 The strict inwardness formulas in Lemma~\ref{lem:separation} apply directly to these ordinary and steered rank prototypes. Their heights have absolute value below two. Thus all prototypes are valid simultaneously. The argument uses only fixed base data and the candidate gap index.
 \end{proof}
 
-Compute each candidate's exact grid neighbors and response sequence. These determine the ordinary and rank weights. The greedy and ceiling rules of Section~\ref{sec:core} now determine the actual multiplicities and hence $s$. None of the earlier choices is repeated.
+Compute each candidate's exact grid neighbours and response sequence. These determine the ordinary and rank weights. The greedy and ceiling rules of Section~\ref{sec:core} now determine the actual multiplicities and hence $s$. None of the earlier choices is repeated.
 
 Let $\mathcal B$ be the set of all fixed original and frame points, and $\mathcal R$ the finite set of used prototypes. Define positive rational margins
 \begin{align*}
@@ -312,7 +312,7 @@ r+\delta\left(\frac{i}{m+1}-\frac12,\frac{j}{m+1}-\frac12\right),\qquad 1\leq i,
 Reject coincidences with existing points and collinearity with any existing pair. At most $\binom N2$ forbidden lines each meet this grid in at most $m$ points, and at most $N$ further points are forbidden. Since $\binom{N}{2}m+N<m^2$, some candidate survives. Induction gives distinct points in general position. The same radius and denominator are used throughout. All required one-program tables and response colours persist; actual fan--fan crossings and short-edge unary costs are evaluated after insertion, while program nonfans are covered by~\eqref{eq:nonfan-budget}.
 
 \begin{proposition}[Effective realization]\label{prop:realization}
-The construction is a deterministic polynomial-time algorithm with rational coordinates of polynomial binary length. It preserves all stated interfaces simultaneously and yields general position. A common positive scaling yields integer coordinates of polynomial binary length with the same crossing relation.
+The construction is a deterministic polynomial-time algorithm with rational coordinates of polynomial binary length. It preserves all the stated crossing relations simultaneously and yields general position. A common positive scaling yields integer coordinates of polynomial binary length with the same crossing relation.
 \end{proposition}
 \begin{proof}
 Proposition~\ref{prop:program-count} bounds the actual program count, and $2S(W-1)$ bounds the candidate prototypes. Both, together with $B,o$, are fixed polynomials in the source size. The base coordinates have

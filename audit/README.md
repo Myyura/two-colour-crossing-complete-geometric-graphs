@@ -36,10 +36,25 @@ There is no claim here of a probability of correctness, acceptance by a journal,
 
 ## Manuscript build and package checks
 
-The public edition was rebuilt after the metadata update. It is 33 pages, with Myyura as the PDF author and The Kai Project displayed as the affiliation. The revised cover was rendered and visually inspected; all font programs are embedded, text is extractable on every page, and no unresolved reference or overfull box was found. Pages 2–33 have exactly the same extracted text as the previously reviewed and fully rendered manuscript. The module-name table produces nonfatal underfull-box diagnostics and was checked for legibility. These layout checks are separate from the mathematical review.
+The current manuscript is 34 pages, with Myyura as the PDF author and
+The Kai Project as the affiliation. The abstract, introduction, bibliography
+and prose were revised on 22 October 2026. The [revision record](new-manuscript-review.md#abstract-literature-and-prose-revision-22-october-2026)
+describes the literature and prose reviews and identifies the revised source
+hashes. The mathematical expressions in the five technical proof/appendix files
+and all Lean sources are unchanged.
 
-The source archive from that build was extracted into a separate directory and compiled without the research workspace. It produced the same 33 pages and exactly the same extracted page text. The GitHub archive was also extracted separately; its public manifest and all 128 Lean source hashes/imports passed the standalone checks. The recorded check resolved all 143 relative documentation links and all 103 TeX references. These counts describe that verification run, rather than an unperformed check of later metadata or documentation revisions.
+Both manuscript editions compile without unresolved references or overfull
+boxes. All 34 public pages were rendered for a layout overview, with detailed
+checks of the repository link, formalization statement and bibliography. All
+21 public PDF font programs are embedded and all pages have extractable text.
+The 12 bibliography entries are all cited; all 110 TeX references resolve.
 
-Updating the author and affiliation metadata changes `main.tex`, the separate `metadata.tex` file, and the compiled PDF bytes without changing the reviewed mathematical sections. Current source and PDF bindings are recorded in [verification-history.json](verification-history.json) and the release manifest. No Lean proof or finite-check program was changed for this metadata revision, so the recorded mathematical verification remains bound to the same sources.
+The current public and local submission source archives were each extracted
+and compiled independently. Each contains 11 members and reproduces the
+corresponding document's 34 pages, extracted text and page dimensions. The
+public source import/manifest audit also passed. Current build hashes are in
+[verification-history.json](verification-history.json); the previous build is
+retained there as a historical checkpoint. The original 128-file Lean run
+reported above was not repeated for this prose-only change.
 
 The public export writes `github.zip` and `public-source.tar.gz` under `.local/build/releases/`. It verifies every stored member byte against its input and excludes Git history, dependency caches, reference drafts, exploratory directories and the optional local submission edition. Local submission files remain under `.local/arxiv/`, research history under `.local/research/`, and build products under `.local/build/`. The whole `.local/` directory is ignored and excluded from the public package.

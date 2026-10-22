@@ -4,7 +4,7 @@
 The comparison grid supplies a reference colouring without prescribing any
 target edge colours.  We first prove a quantitative continuous statement,
 then transfer it to every finite rectangular grid.  The finite statement
-applies to actual minimizers with arbitrary bounded unary perturbations.
+applies to minimizers with arbitrary bounded unary perturbations.
 A separate estimate applies to any colouring with the resulting localized
 support; this distinction will allow us to change the program colours while
 keeping the same grid colouring.
@@ -448,7 +448,7 @@ phase whose disagreement fraction $\mu=|F|/V$ satisfies
 \end{equation}
 For the final numerical bound, use $5<8$, $a\le2^{-4096}$, and
 $\rho\le a$; the first term is less than $2^{11-4093/72}<2^{-45}$.
-This initial estimate follows from the actual minimum condition.
+This initial estimate follows from the minimum condition.
 
 \emph{Canonical local fields.}
 For $p=(u,v)$ let $Q_p$ be the union of the lower-left and upper-right
@@ -582,7 +582,7 @@ over colourings and can be evaluated exactly in polynomially many
 operations for rational unary costs.
 \end{proof}
 
-\subsection{Freezing probes while preserving the actual grid}
+\subsection{Freezing probes with the grid colouring fixed}
 
 The following lemma is about an arbitrary finite simple graph.  In the
 application its vertices are geometric edges and its adjacency relation
@@ -636,7 +636,7 @@ $0\le t\le t_0$, together with $b\le t_0$.
 \end{proposition}
 
 \begin{proof}
-Fix the colours outside $X$ in a genuine global optimum.  Its restriction
+Fix the colours outside $X$ in a global optimum.  Its restriction
 to $X$ minimizes the resulting grid objective.  Each conditional unary
 oscillation is at most the number of outside neighbours, hence at most
 $\alpha V$.  Theorem~\ref{thm:grid} gives a phase $\sigma$ and a

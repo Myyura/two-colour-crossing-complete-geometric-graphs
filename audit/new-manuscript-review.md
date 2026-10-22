@@ -162,7 +162,7 @@ upgrade those claims to Lean-checked statements.
 
 ## Reviewed source versions
 
-The mathematical sections and bibliography retain the reviewed SHA-256 hashes below. The public edition subsequently changed the author and affiliation metadata in `main.tex` to Myyura and The Kai Project. This metadata-only revision changes the aggregate source hash, without extending the mathematical review to new mathematics. The current `main.tex` bytes are bound by the release manifest; the earlier aggregate-file hash is not presented as the current public version.
+The table below identifies the mathematical sections and bibliography at the original review. Subsequent editorial revisions are recorded separately below. The public edition subsequently changed the author and affiliation metadata in `main.tex` to Myyura and The Kai Project. This metadata-only revision changes the aggregate source hash, without extending the mathematical review to new mathematics. The current `main.tex` bytes are bound by the release manifest; the earlier aggregate-file hash is not presented as the current public version.
 
 | File | SHA-256 |
 | --- | --- |
@@ -175,7 +175,7 @@ The mathematical sections and bibliography retain the reviewed SHA-256 hashes be
 | `paper/tex/sections/stability.tex` | `78610f0684c115aa057223fb55d5715b3c3bc427fe05d620ae990a3ad4aaa26e` |
 | `paper/tex/references.bib` | `f2bd9f8733c83f9cd04def388a453719ba3a4781bc3a293d19faaee8860bfc7e` |
 
-Public metadata revision (22 October 2026): only the author/affiliation rendering and PDF author metadata changed. The mathematical sections and bibliography still match the hashes above. Source hashes at that metadata revision:
+Public metadata revision (22 October 2026): only the author/affiliation rendering and PDF author metadata changed. At that metadata-only checkpoint, the mathematical sections and bibliography matched the hashes above. Source hashes at that metadata revision:
 
 - `paper/tex/main.tex`: `4892ab669f37e9eda6b725545d73125604d1c9585e753c00a794b194a1c9d78f`.
 - `paper/tex/metadata.tex`: `ed01eb9df3ac70ad87fe9f8e115f1485329eaf01e4826da85f93512b94e26111`.
@@ -184,4 +184,62 @@ Public metadata revision (22 October 2026): only the author/affiliation renderin
 
 The title now reads **Two-colour crossing minimization in complete geometric graphs is NP-hard**. This wording describes the optimization problem; the abstract and theorem continue to state NP-completeness of its threshold decision version. Only the displayed title and PDF title metadata in `main.tex` changed in this revision. The abstract, mathematical chapters, bibliography and author metadata are unchanged. This editorial change does not extend the mathematical review above.
 
-Current `paper/tex/main.tex` SHA-256: `bf5f9e1ee182c1a0e937d5fd17b7e2d9e02826dec642f33d70699bf3ab183ca5`.
+`paper/tex/main.tex` SHA-256 at the title-only checkpoint: `bf5f9e1ee182c1a0e937d5fd17b7e2d9e02826dec642f33d70699bf3ab183ca5`.
+
+
+## Abstract, literature and prose revision (22 October 2026)
+
+The abstract now states the problem, hardness result and reduction idea without
+mentioning Lean. The introduction includes the repository link and a short
+formalization statement; Section 6 retains the final theorem, its external
+convex-optimum hypothesis, the arguments outside Lean, and the verification
+trust boundary. The detailed module index remains in the repository's proof
+guide. The AI-use disclosure is retained.
+
+The bibliography now contains 12 references. The introduction traces the open
+question through the 2019 workshop, the 2019 paper, the 2021 Dagstuhl report and
+GGWeek 2022. It distinguishes general segment hardness, fixed-order two-page
+hardness, the convex complete-graph formula, extremal coloured-crossing bounds,
+random-point expectations and dense MaxCut approximation. Pinpoint citations
+and publication metadata were checked against primary sources and the retained
+literature checks; the full-version appendix is identified explicitly. Some
+publisher full texts were unavailable, and the 2018 abstract and 2022 booklet
+checks reused earlier same-day primary-source evidence after fresh retrievals
+timed out. This is a bounded reference audit, not an exhaustive priority claim.
+
+Separate LLM-assisted literature and prose reviews found no unresolved
+substantive issue in these revisions. The prose review covered every changed
+section and checked that the mathematical qualifications remained intact.
+The root comparison also found the same 1,016 inline and displayed mathematical
+expressions, in the same order, across the five technical proof/appendix files.
+This comparison supplements the prose review; it is not a new proof of those
+statements. Lean sources, dependencies and computational programs are unchanged.
+No new full Lean run or finite-experiment run was needed for this editorial
+revision; the source-manifest/import audit passed.
+
+Both editions compile to 34 pages. The public PDF was rendered in full for a
+layout overview, with detailed inspection of the repository-link, formalization
+and bibliography pages. The local submission cover was also inspected; pages
+2--34 have identical extracted text in both editions. All 21 public PDF font
+programs are embedded, all pages have extractable text, and compilation has no
+undefined citations, unresolved references or overfull boxes. Each source
+archive was extracted and compiled independently: its 11 members reproduce the
+corresponding 34-page document's text and page dimensions. All 12 citation keys
+are used, and all 110 TeX references resolve to the 102 unique labels.
+
+The following hashes identify the sources after this editorial revision. They
+supersede the earlier source table for current byte identification, without
+changing the scope of the original mathematical review.
+
+| File | SHA-256 |
+| --- | --- |
+| `paper/tex/main.tex` | `4fd67b9af8cc4a23af7a6dd3340b1ef94ba41e8636aeff15fe4397f7d6df997e` |
+| `paper/tex/metadata.tex` | `ed01eb9df3ac70ad87fe9f8e115f1485329eaf01e4826da85f93512b94e26111` |
+| `paper/tex/references.bib` | `2000d5c79a955ab36f6e0c8cb06e27f00fb8eaee25f55b67ec7bb21bb7a21676` |
+| `paper/tex/sections/completion.tex` | `acae2c4e74fd02a82d09c641bcd6cc3a01fd53357bed570e12e01135e4147a86` |
+| `paper/tex/sections/core.tex` | `ee45c01efe6f9ba613b589844ca819a42286b7b17812520d4965b71eabbe137e` |
+| `paper/tex/sections/formalization.tex` | `3b69be4a219a8f88aed1abe262cee77fb8a58014914cdfe344937c1c0ad27c9a` |
+| `paper/tex/sections/geometry.tex` | `83a2cea8b6401a1db5c77fc9093dbea7f7a8931a60719b18f2d98620633738e4` |
+| `paper/tex/sections/introduction.tex` | `7f201c60e73429157297ccc713037d5d1bd7a0a87c7b2215a66aae64697e9a3e` |
+| `paper/tex/sections/reduction.tex` | `e55fe4a381c62078958c263360e9d60c340b9ca2887e730f6dc185634d454c45` |
+| `paper/tex/sections/stability.tex` | `b3d4b80056e5bd91e2229eaae7f3d64d41013b126793da1dfef8c4cbc0699093` |

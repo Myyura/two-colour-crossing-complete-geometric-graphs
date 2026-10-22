@@ -47,6 +47,90 @@
     "engine": "tectonic",
     "compiler_version": "Tectonic 0.17.0",
     "source_sha256": {
+      "main.tex": "4fd67b9af8cc4a23af7a6dd3340b1ef94ba41e8636aeff15fe4397f7d6df997e",
+      "metadata.tex": "ed01eb9df3ac70ad87fe9f8e115f1485329eaf01e4826da85f93512b94e26111",
+      "references.bib": "2000d5c79a955ab36f6e0c8cb06e27f00fb8eaee25f55b67ec7bb21bb7a21676",
+      "sections/completion.tex": "acae2c4e74fd02a82d09c641bcd6cc3a01fd53357bed570e12e01135e4147a86",
+      "sections/core.tex": "ee45c01efe6f9ba613b589844ca819a42286b7b17812520d4965b71eabbe137e",
+      "sections/formalization.tex": "3b69be4a219a8f88aed1abe262cee77fb8a58014914cdfe344937c1c0ad27c9a",
+      "sections/geometry.tex": "83a2cea8b6401a1db5c77fc9093dbea7f7a8931a60719b18f2d98620633738e4",
+      "sections/introduction.tex": "7f201c60e73429157297ccc713037d5d1bd7a0a87c7b2215a66aae64697e9a3e",
+      "sections/reduction.tex": "e55fe4a381c62078958c263360e9d60c340b9ca2887e730f6dc185634d454c45",
+      "sections/stability.tex": "b3d4b80056e5bd91e2229eaae7f3d64d41013b126793da1dfef8c4cbc0699093"
+    },
+    "pdf_sha256": "c08b34b74a907e719c1fb5a90ffc1cea5ecb4824c3de527cffea7418ec81c4a8",
+    "bbl_sha256": "d6d0b48a194723a7009253ae1e44a9500d824e0d21cdd810d345e4db7df1a6c9",
+    "pages": 34,
+    "public_author": "Myyura",
+    "public_affiliation": "The Kai Project",
+    "title": "Two-colour crossing minimization in complete geometric graphs is NP-hard",
+    "editorial_revision": "abstract, introduction, references, formalization exposition and prose",
+    "all_page_text_extracted": true,
+    "font_programs_embedded": 21,
+    "all_fonts_embedded": true,
+    "all_pages_rendered_and_overviewed": true,
+    "detailed_visual_checks": [
+      5,
+      32,
+      34
+    ],
+    "undefined_references": false,
+    "overfull_boxes": false,
+    "bibliography_entries": 12,
+    "all_citation_keys_used": true,
+    "tex_references": 110,
+    "tex_labels": 102,
+    "technical_math_expressions_unchanged": {
+      "stability": {
+        "math_expressions_unchanged": 384
+      },
+      "geometry": {
+        "math_expressions_unchanged": 328
+      },
+      "core": {
+        "math_expressions_unchanged": 166
+      },
+      "reduction": {
+        "math_expressions_unchanged": 124
+      },
+      "completion": {
+        "math_expressions_unchanged": 14
+      }
+    },
+    "lean_and_computational_sources_unchanged": true,
+    "new_full_lean_run_performed": false,
+    "source_manifest_and_import_audit": "PASS",
+    "public_source_archive_check": {
+      "archive_members": 11,
+      "pages": 34,
+      "independent_build": true,
+      "all_page_text_matches": true,
+      "page_boxes_match": true
+    },
+    "review_record": "new-manuscript-review.md",
+    "review_record_sha256": "20a67186baf23e5f1d2e10bdff4d8684a0c25601f19c6efcde3e4082b01c14d4",
+    "private_submission_material_excluded": true
+  },
+  "workspace_reorganization": {
+    "date": "2026-10-22",
+    "local_only_directory": ".local/",
+    "original_lean_modules_compared": 127,
+    "lean_source_manifest_check": "PASS",
+    "historical_lookup": "PASS",
+    "public_and_submission_builds": "PASS",
+    "public_pdf_pages": 33,
+    "public_pdf_all_page_text_matches_pre_migration": true,
+    "new_full_lean_replay_performed": false,
+    "mathematical_sources_unchanged": true,
+    "lean_relocation_build": "PASS",
+    "lean_final_module_reelaboration": "PASS"
+  },
+  "manuscript_build_before_editorial_revision": {
+    "schema_version": 1,
+    "edition": "public",
+    "engine": "tectonic",
+    "compiler_version": "Tectonic 0.17.0",
+    "source_sha256": {
       "main.tex": "bf5f9e1ee182c1a0e937d5fd17b7e2d9e02826dec642f33d70699bf3ab183ca5",
       "metadata.tex": "ed01eb9df3ac70ad87fe9f8e115f1485329eaf01e4826da85f93512b94e26111",
       "references.bib": "f2bd9f8733c83f9cd04def388a453719ba3a4781bc3a293d19faaee8860bfc7e",
@@ -77,19 +161,5 @@
     "title": "Two-colour crossing minimization in complete geometric graphs is NP-hard",
     "title_update_only": true,
     "body_unchanged_after_title_revision": true
-  },
-  "workspace_reorganization": {
-    "date": "2026-10-22",
-    "local_only_directory": ".local/",
-    "original_lean_modules_compared": 127,
-    "lean_source_manifest_check": "PASS",
-    "historical_lookup": "PASS",
-    "public_and_submission_builds": "PASS",
-    "public_pdf_pages": 33,
-    "public_pdf_all_page_text_matches_pre_migration": true,
-    "new_full_lean_replay_performed": false,
-    "mathematical_sources_unchanged": true,
-    "lean_relocation_build": "PASS",
-    "lean_final_module_reelaboration": "PASS"
   }
 }

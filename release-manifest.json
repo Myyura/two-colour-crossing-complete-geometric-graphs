@@ -54,8 +54,8 @@
     },
     {
       "path": "audit/README.md",
-      "bytes": 6341,
-      "sha256": "ffd895c76178176a4a9a12204c189b1a070baebc7b83f5a7c700033ea9a19c29"
+      "bytes": 6111,
+      "sha256": "8307d0d6fc3365e44bf266a9f44c5e8aa84c518954e8aa92c8130d4b69d809de"
     },
     {
       "path": "audit/lean-verification.log.gz",
@@ -64,13 +64,13 @@
     },
     {
       "path": "audit/new-manuscript-review.md",
-      "bytes": 12603,
-      "sha256": "f4b729b04070075532d77c4dbe45d18ee656a1cf8535a3ca533d4d9cb56d3650"
+      "bytes": 16656,
+      "sha256": "20a67186baf23e5f1d2e10bdff4d8684a0c25601f19c6efcde3e4082b01c14d4"
     },
     {
       "path": "audit/verification-history.json",
-      "bytes": 4579,
-      "sha256": "f3e1614633a1da6a17c302616077fe13863e03ef695d468386e79531d195da1b"
+      "bytes": 7542,
+      "sha256": "d7080bcc5e4a1f12058e7e9f551d883c41886c9582aa44f4f0e59fcd5e9ba9b0"
     },
     {
       "path": "computations/README.md",
@@ -819,8 +819,8 @@
     },
     {
       "path": "paper/README.md",
-      "bytes": 4118,
-      "sha256": "1275d4da1b02af68800efc32ed24b373bb5d572c2d50b6038905a9bc30187c99"
+      "bytes": 4269,
+      "sha256": "7c3a5d13b516e0c45d79cba9aeea227640e6659062add1e9091711fd377ed67b"
     },
     {
       "path": "paper/formalization-notes.md",
@@ -829,8 +829,8 @@
     },
     {
       "path": "paper/manuscript.pdf",
-      "bytes": 242329,
-      "sha256": "03724d551dba4ba881d2780fdbfdc2bb0db78c61a06d98d3098f921f032c93c0"
+      "bytes": 249612,
+      "sha256": "c08b34b74a907e719c1fb5a90ffc1cea5ecb4824c3de527cffea7418ec81c4a8"
     },
     {
       "path": "paper/submission-notes.md",
@@ -839,8 +839,8 @@
     },
     {
       "path": "paper/tex/main.tex",
-      "bytes": 3724,
-      "sha256": "bf5f9e1ee182c1a0e937d5fd17b7e2d9e02826dec642f33d70699bf3ab183ca5"
+      "bytes": 3452,
+      "sha256": "4fd67b9af8cc4a23af7a6dd3340b1ef94ba41e8636aeff15fe4397f7d6df997e"
     },
     {
       "path": "paper/tex/metadata.tex",
@@ -849,8 +849,8 @@
     },
     {
       "path": "paper/tex/references.bib",
-      "bytes": 1184,
-      "sha256": "f2bd9f8733c83f9cd04def388a453719ba3a4781bc3a293d19faaee8860bfc7e"
+      "bytes": 5116,
+      "sha256": "2000d5c79a955ab36f6e0c8cb06e27f00fb8eaee25f55b67ec7bb21bb7a21676"
     },
     {
       "path": "paper/tex/sections/completion.tex",
@@ -859,33 +859,33 @@
     },
     {
       "path": "paper/tex/sections/core.tex",
-      "bytes": 16489,
-      "sha256": "0175a7f0bb37b04e5d5f1fb410c1afaf945fce3d40d2cf578e04c7fe859376cb"
+      "bytes": 16436,
+      "sha256": "ee45c01efe6f9ba613b589844ca819a42286b7b17812520d4965b71eabbe137e"
     },
     {
       "path": "paper/tex/sections/formalization.tex",
-      "bytes": 6319,
-      "sha256": "80eda14f3f90fe3e5ff137c971584529a4dcf522baa8a1bb6134224c3be09cb8"
+      "bytes": 5124,
+      "sha256": "3b69be4a219a8f88aed1abe262cee77fb8a58014914cdfe344937c1c0ad27c9a"
     },
     {
       "path": "paper/tex/sections/geometry.tex",
-      "bytes": 27912,
-      "sha256": "1d4ede30f6563e889dc451881d874fe32c398bd86fb55072a428069c8d46b74f"
+      "bytes": 27986,
+      "sha256": "83a2cea8b6401a1db5c77fc9093dbea7f7a8931a60719b18f2d98620633738e4"
     },
     {
       "path": "paper/tex/sections/introduction.tex",
-      "bytes": 7033,
-      "sha256": "43ceb2877738462f6bbb95a3e9749e3969b7b74fb0d8979944453950198b876d"
+      "bytes": 12228,
+      "sha256": "7f201c60e73429157297ccc713037d5d1bd7a0a87c7b2215a66aae64697e9a3e"
     },
     {
       "path": "paper/tex/sections/reduction.tex",
-      "bytes": 11821,
-      "sha256": "df6094467495996206bd6f73bb5167ad36d950d8c52fe50a7b0dbbec048eca59"
+      "bytes": 11722,
+      "sha256": "e55fe4a381c62078958c263360e9d60c340b9ca2887e730f6dc185634d454c45"
     },
     {
       "path": "paper/tex/sections/stability.tex",
-      "bytes": 27534,
-      "sha256": "78610f0684c115aa057223fb55d5715b3c3bc427fe05d620ae990a3ad4aaa26e"
+      "bytes": 27509,
+      "sha256": "b3d4b80056e5bd91e2229eaae7f3d64d41013b126793da1dfef8c4cbc0699093"
     },
     {
       "path": "tools/build_paper.py",

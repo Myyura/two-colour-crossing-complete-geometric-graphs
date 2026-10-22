@@ -1,22 +1,24 @@
 \section{Introduction}\label{sec:introduction}
 
-Let $P=(p_0,\ldots,p_{N-1})$ be a labelled set of points in the plane.
-The complete geometric graph on $P$ contains the straight segment $p_ip_j$
-for every $i<j$. We assign one of two colours to every edge and count pairs
-of edges that cross properly and have the same colour. Both the point set
-and the drawing are fixed; the edge colours are the only variables.
+Assigning two colours to the edges of a drawing separates its crossings
+into monochromatic and bichromatic pairs. We count only the former, as
+if the two colour classes were drawn on separate layers with the same
+vertex positions. The resulting optimization has two versions: one may
+choose both the drawing and its edge colours, or one may keep the drawing
+fixed and choose only the colours. This paper concerns the latter version
+for complete geometric graphs.
 
-The complexity of this problem for complete geometric graphs was posed at
-the Crossing Number Workshop in 2019 and appears as Vogtenhuber's Problem~2
-in Section~4.12 of the report of Dagstuhl Seminar~21293
-\cite{Dagstuhl2021}. Completeness is a substantial restriction. A reduction
-that represents a hard graph by segments does not automatically survive
-adding every missing segment between their endpoints: the new edges are
-free variables and their optimal contribution can depend on the source
-colours. Appendix~\ref{app:completion} gives a six-point example of this
-dependence. At the other extreme, for points in convex position the optimum
-is the known two-page crossing number of a complete graph
-\cite{Abrego2013}.
+Let $P=(p_0,\ldots,p_{N-1})$ be a labelled point set in the plane. Its
+complete geometric graph contains the straight segment $p_ip_j$ for every
+$i<j$. How hard is it to find an edge two-colouring with the fewest
+monochromatic crossing pairs? This was Question~4 at the Crossing Number
+Workshop in 2019 \cite[Section~1.4]{CRNW2019}, and it appears as the first
+open problem in Section~5 of Aichholzer et al.\ \cite{Aichholzer2019}.
+It was subsequently listed as Vogtenhuber's Problem~2 in the report of
+Dagstuhl Seminar~21293 \cite[Section~4.12]{Dagstuhl2021} and as Problem~11
+at Geometric Graphs Week~2022 \cite{GGWeek2022}. We prove that the threshold
+decision problem is NP-complete, including when the given points have
+integer coordinates.
 
 \begin{definition}\label{def:problem}
 The input to \emph{complete geometric two-colour crossing minimization}
@@ -38,6 +40,74 @@ distinct endpoints. Several crossing pairs may have the same geometric
 intersection point; each pair is counted separately. The colouring is
 unrestricted: it is not a proper edge colouring in the graph-theoretic
 sense. There are no weights or prescribed colours.
+
+\subsection{Previous results}
+
+For a fixed drawing on $P$, let $X(P)$ be its \emph{crossing graph}: its
+vertices are the edges of the geometric graph, and two vertices are
+adjacent precisely when the corresponding segments cross properly.
+If $C(P)=|E(X(P))|$, then
+\begin{equation}\label{eq:crossing-maxcut}
+ \OPT(P)=C(P)-\MaxCut(X(P)).
+\end{equation}
+Every crossing is either monochromatic or belongs to the cut induced by
+the two colours. This relation makes MaxCut a natural source of both
+algorithms and hardness results.
+
+Aichholzer, Mulzer, Schnider and Vogtenhuber \cite{Aichholzer2018} proved
+that MaxCut is NP-complete on segment intersection graphs. Their reduction
+does not require the segments to form the edges of a complete geometric
+graph. Adding all missing edges between their endpoints introduces new
+colour variables and crossing costs; the minimum added cost can depend on
+the colours used by the original segments. Thus the general segment result
+does not settle the complete-graph problem. The six-point example in
+Appendix~\ref{app:completion} illustrates this dependence.
+
+The role of completeness is also visible in convex position. Masuda
+et al.\ \cite{Masuda1990} proved NP-hardness for assigning the edges of
+an arbitrary graph to two pages with a fixed vertex order. This is
+equivalent to two-colour crossing minimization on a convex drawing of
+that graph. For a complete graph, however, the optimum is known exactly.
+Two chords cross
+exactly when their endpoints alternate, so two-colour crossing
+minimization is equivalent to the two-page crossing-number problem for
+$K_N$. \'{A}brego et al.\ \cite{Abrego2013} determined this value exactly;
+we recall the formula below and use it for two convex parts of our
+construction. In Appendix~B of the full version, Aichholzer et al.\
+\cite{Aichholzer2019} also studied the complete bipartite drawing between two convex chains and
+gave a two-colouring with asymptotic crossing ratio at most $1/3$.
+A rectangular version of this drawing forms our comparison grid.
+For the reduction we need a stability estimate: its optimal colourings
+must remain close to one of two reference patterns in the presence of
+additional crossing costs.
+
+Previous work on coloured crossing numbers has established several
+extremal bounds. Aichholzer et al.\
+\cite{Aichholzer2019} obtained bounds on the minimum over all drawings of
+$K_N$, using small configurations, integer programming and a duplication
+construction. They also proved that every sufficiently large complete
+geometric graph admits a two-colouring whose monochromatic crossing
+ratio is bounded away from $1/2$. Fabila-Monroy \cite{FabilaMonroy2025}
+extended this ratio result to dense geometric graphs and any fixed
+number of colours. For random points in the unit square, Cabello et al.\
+\cite{Cabello2024} analysed a colouring defined by edge slopes and obtained
+an expected monochromatic crossing count equal to $9/25$ of the expected
+total crossing count. More recently, Hahn, Klinz and Vogtenhuber
+\cite{Hahn2025} generalized the doubling construction to several colours
+and improved asymptotic upper bounds using heuristic searches for small
+initial drawings.
+
+Approximation also benefits from the crossing-graph formulation.
+Complete geometric graphs have $\Theta(N^4)$ crossings, so $X(P)$ is
+dense on its $\binom N2$ vertices. The dense-graph MaxCut approximation
+scheme of Arora, Karger and Karpinski \cite{Arora1999} therefore applies,
+as noted by Hahn et al.\ \cite{Hahn2025}. Through
+\eqref{eq:crossing-maxcut}, it gives additive approximation for the
+monochromatic objective on the scale of $N^4$. Such a guarantee does not
+determine the exact optimum. The result below settles that exact
+complexity question.
+
+\subsection{Result and proof outline}
 
 \begin{theorem}\label{thm:main}
 The decision problem in Definition~\ref{def:problem} is NP-complete under
@@ -61,23 +131,46 @@ For a source graph $G$, set
 Thus a source threshold $k$ becomes the equivalent integer threshold
 $g(G)\leq t$, where $t=|E(G)|-k$.
 
-Our construction has three interacting components. A large rectangular
-comparison grid forces one of two stable colour phases. Small families of
-geometric program points then produce controlled fields on the edges
-encoding the source. Finally, an exact convex separation removes the
-potentially dominant interaction between the grid and program nonfans.
-The remaining added edges are included in an explicit error bound. The
-conclusion is a uniform interval
+The reduction must keep every target edge available for either colour.
+We arrange the points so that a large family of original--frame edges
+forms a rectangular comparison grid. A quantitative stability theorem
+shows that every optimal colouring, even after bounded perturbations,
+lies close to one of two reference patterns. This provides a reference colouring for the
+rest of the construction without prescribing colours in the input.
+
+Additional points, called program points, then control the difference
+between the two colour costs on selected edges. These selected edges
+encode a blown-up permutation graph. Their interactions with the other
+edges of the complete graph are handled in two ways. A convex separation
+excludes crossings between the comparison grid and program edges that
+do not meet a frame point. The remaining costs are either evaluated
+explicitly or bounded by errors smaller than the amplified source signal.
+In particular, the background contribution is computable without knowing
+an optimal source colouring.
+
+The resulting estimate is
 \begin{equation}\label{eq:main-sandwich}
  K_{\mathrm{base}}+\Delta g(G)-E_-
  \ \leq\ \OPT(P)\ \leq\
  K_{\mathrm{base}}+\Delta g(G)+E_+,
- \qquad 2^{18}(E_-+E_+)<\Delta,
+ \qquad 2^{18}(E_-+E_+)<\Delta.
 \end{equation}
-where $K_{\mathrm{base}}$ is computable without an optimization oracle.
-The lower bound holds for an unrestricted optimum of the complete graph;
-the upper bound is attained within the stated error by a single complete
-colouring. No colour restrictions are part of the output instance.
+Here the baseline $K_{\mathrm{base}}$, the amplification $\Delta$, and
+the nonnegative error bounds are all computable in polynomial time.
+The lower bound applies to an unrestricted optimum of the complete
+graph, and one complete colouring supplies the upper bound. Since $g(G)$
+is an integer, the gap separates consecutive source values and gives a
+many-one reduction. We also specify a deterministic rational-coordinate
+construction and bound its bit complexity.
+
+The construction and its final threshold equivalence have been formalized
+in Lean. Section~\ref{sec:formalization} describes the formal statement,
+its assumption of the known convex optimum, and the complexity arguments
+proved separately in the text. The proof source and exact finite checks
+are available at
+\begin{center}
+\small\url{https://github.com/Myyura/two-colour-crossing-complete-geometric-graphs}.
+\end{center}
 
 \subsection{Conventions and scales}
 
@@ -106,9 +199,9 @@ For a source with $n\geq1$, the parameters are
  \Delta=q^2W^4.
 \end{gathered}
 \end{equation}
-All exponents and constants are absolute. These deliberately generous
-scales simplify exact error separation; no practical implementation of the
-full, extremely large target instances is claimed.
+All exponents and constants are absolute. The large constants simplify
+the error estimates; the construction is intended to establish polynomial
+complexity rather than produce small instances.
 
 \subsection{Membership in NP and integer coordinates}
 
@@ -144,6 +237,8 @@ The same positive scaling is a reduction from rational to integer inputs;
 the converse inclusion is immediate.
 \end{proof}
 
-The rest of the paper establishes the reduction and the quantitative
-interval~\eqref{eq:main-sandwich}. The formalization and its precise
-external dependencies are described in Section~\ref{sec:formalization}.
+Section~\ref{sec:stability} proves the grid stability estimate.
+Section~\ref{sec:geometry} constructs the points and establishes the
+required crossing relations. Section~\ref{sec:core} encodes the source
+graph, and Section~\ref{sec:reduction} combines the estimates to prove
+Theorem~\ref{thm:main}.

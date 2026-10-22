@@ -9,9 +9,9 @@ The paper and its accompanying documentation are licensed under **CC BY 4.0**, a
 `tex/main.tex` supplies the preamble, abstract and document structure, and loads author metadata with `\input{metadata}`. Its dependencies are:
 
 - `tex/metadata.tex`: the public author Myyura, affiliation The Kai Project, and an empty email field;
-- `tex/sections/introduction.tex`: problem statement, main theorem and literature inputs;
+- `tex/sections/introduction.tex`: problem statement, related work, main theorem, proof outline and repository link;
 - `tex/sections/stability.tex`: continuous stability, finite grids and probe freezing;
-- `tex/sections/geometry.tex`: geometric interfaces and deterministic rational coordinates;
+- `tex/sections/geometry.tex`: geometric construction and deterministic rational coordinates;
 - `tex/sections/core.tex`: source encoding, palette fields and local costs;
 - `tex/sections/reduction.tex`: all-edge accounting, scale separation and complexity;
 - `tex/sections/formalization.tex`: formal statement, verification and trust boundary;
@@ -20,7 +20,7 @@ The paper and its accompanying documentation are licensed under **CC BY 4.0**, a
 
 These are ten source files in total: `main.tex`, `metadata.tex`, seven section files and `references.bib`. The project uses standard LaTeX packages and no external figures, private paths or custom style files. A conventional build uses pdfLaTeX, BibTeX, then two further pdfLaTeX passes from `tex/`. The release build and PDF checks are recorded with the [manuscript review](../audit/new-manuscript-review.md).
 
-From a maintained Git checkout, run `python3 tools/build_paper.py` at the repository root, inspect the resulting PDF, then run `python3 tools/repository.py refresh` and `python3 tools/repository.py export`. The refresh deliberately updates the public byte manifest after an accepted rebuild; generated PDF metadata can change between runs. The exported `.local/build/releases/public-source.tar.gz` contains the public edition's ten source files and generated `main.bbl`, for eleven archive entries. The mathematical manuscript was compiled with Tectonic, and an extracted source archive was independently compiled and compared with the 33-page PDF before the public metadata update. Current source and PDF bytes are bound by the release manifest. See the [build and package checks](../audit/README.md#manuscript-build-and-package-checks).
+From a maintained Git checkout, run `python3 tools/build_paper.py` at the repository root, inspect the resulting PDF, then run `python3 tools/repository.py refresh` and `python3 tools/repository.py export`. The refresh deliberately updates the public byte manifest after an accepted rebuild; generated PDF metadata can change between runs. The exported `.local/build/releases/public-source.tar.gz` contains the public edition's ten source files and generated `main.bbl`, for eleven archive entries. The current 34-page manuscript was compiled with Tectonic. Its introduction and 12-entry bibliography were expanded, the formalization discussion was moved out of the abstract, and the prose was reviewed. Both source archives were independently extracted, compiled and compared with their respective PDFs. Current source and PDF bytes are bound by the release manifest. See the [build and package checks](../audit/README.md#manuscript-build-and-package-checks).
 
 The default `python3 tools/build_paper.py` builds the public edition. For an optional local submission edition, run `python3 tools/build_paper.py --edition arxiv`. It copies the current public source into `.local/arxiv/tex/`, replaces the author metadata using the ignored `.local/arxiv/metadata.json`, and generates `.local/arxiv/manuscript.pdf` and `.local/arxiv/arxiv-source.tar.gz`. The mathematical body is copied from the public edition rather than maintained separately. The entire `.local/arxiv/` directory is ignored, and `repository.py export` neither processes nor includes it.
 
