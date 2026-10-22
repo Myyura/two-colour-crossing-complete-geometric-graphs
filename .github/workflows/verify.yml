@@ -1,0 +1,50 @@
+name: Verify proof package
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  package-and-computations:
+    name: Package integrity and finite diagnostics
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out the source
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Check public files and manifests
+        run: python3 tools/repository.py check
+      - name: Replay finite diagnostics
+        run: python3 computations/run_checks.py
+
+  lean:
+    name: Full Lean source and axiom verification
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Check out the source
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Prepare the pinned Lean environment
+        uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: lean
+          auto-config: "false"
+          build: "false"
+          test: "false"
+          lint: "false"
+          use-mathlib-cache: "true"
+          use-github-cache: "false"
+      - name: Build, recheck every source, and audit axiom output
+        run: python3 lean/verify.py

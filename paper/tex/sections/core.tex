@@ -1,0 +1,212 @@
+\section{Encoding the source graph in the core}\label{sec:core}
+
+Throughout this section the program fans $T_f$ are fixed to their canonical best responses $t^+$ to the grid. We prove a statement about the entire original--original subsystem with these frozen neighbors. Colours forced here are consequences of minimization in this subsystem; they are never imposed in the target instance.
+
+\subsection{Source matching and amplification}
+Let $G$ be a permutation graph on $n$ vertices, with a supplied permutation representation, and write
+\[
+g(G)=\min_{z:V(G)\to\{0,1\}}\sum_{uv\in E(G)}\1_{z_u=z_v}
+=|E(G)|-\MaxCut(G).
+\]
+This represented source is NP-hard by the construction in \cite{Figueiredo2023}. Place its two endpoint orders in consecutive blocks of the original cap, reversing one order. The resulting chords alternate exactly for adjacent source vertices. Replace each source chord by $q$ macro copies, ordered forward at the early endpoint and backward at the late endpoint. Copies of a vertex are nested; two distinct source classes have either all $q^2$ crossings or none. Write $S=nq$ and label the selected macro chords $p_jq_j$, $1\leq j\leq S$, by early endpoint order.
+
+Each macro endpoint is replaced by $W$ consecutive originals, denoted $p_{j,r},q_{j,t}$, $1\leq r,t\leq W$. There are $D_m=512SW$ dummy points between the endpoint blocks. All original points are in convex position on the same cap, so their chords cross precisely when their endpoints alternate.
+
+Partition the core $C$ into selected edges
+\[
+\mathcal S=\bigcup_{j=1}^S\mathcal S_j,\qquad
+\mathcal S_j=\{p_{j,r}q_{j,t}:1\leq r,t\leq W\},
+\]
+short edges $\mathcal U$ within one endpoint cluster, dummy--dummy edges $\mathcal D$, and the remaining palette edges $\mathcal F$. Define the proposed palette by
+\begin{equation}\label{eq:palette}
+f^*(e)=
+\begin{cases}
+0,&e\text{ joins two early clusters or an early cluster to a dummy},\\
+1,&e\text{ joins two late clusters or a dummy to a late cluster},\\
+\1_{j<k},&e=p_{j,r}q_{k,t},\ j\ne k.
+\end{cases}
+\end{equation}
+Every palette edge falls in exactly one case.
+
+\begin{lemma}[Independent source amplification]\label{lem:source-amplification}
+After deleting the crossing constraints internal to each $\mathcal S_j$, the graph induced on $\mathcal S$ is the independent $qW^2$-fold blowup of $G$. Its minimum monochromatic count is $\Delta g(G)$, where $\Delta=q^2W^4$.
+\end{lemma}
+\begin{proof}
+Consecutive endpoint clusters preserve all crossings between different macro chords. The $q$ macro copies of one vertex remain pairwise noncrossing, and the deletion makes each individual bundle independent. Thus each source vertex becomes an independent class of $qW^2$ variables with identical neighbors; source adjacency gives a complete join.
+
+With colours outside one class fixed, its cost is affine in the number of colour-one variables in that class. One uniform colour is therefore no worse. Perform this operation successively on all classes. The final class-uniform colouring costs $(qW^2)^2$ times a colouring cost of $G$. Conversely every source colouring lifts to that cost. The deleted internal constraints remain in the actual drawing and are restored below.
+\end{proof}
+
+\subsection{The frozen interface and affine fields}
+Every unary coefficient means cost in colour one minus cost in colour zero; a frozen neighbor of colour $a$ contributes $2a-1$. With $e\sim f$ denoting proper crossing, define
+\begin{align}
+E_C(x;t^+)
+&=\sum_{\substack{\{e,f\}\subseteq C\\e\sim f}}\1_{x_e=x_f}
++\sum_{\substack{e\in C,\ f\in T_f\\e\sim f}}\1_{x_e=t_f^+},
+&
+M_C&=\min_{x:C\to\{0,1\}}E_C(x;t^+).
+\label{eq:core-energy}
+\end{align}
+The first sum ranges over unordered pairs of distinct edges.
+
+By Lemmas~\ref{lem:ordinary-table}--\ref{lem:soft-fields}, an ordinary program at an early endpoint contributes a positive half-frame weight in $[B/4,B]$ on an incident nonshort core edge; at a late endpoint the weight is negative with magnitude in that interval. Which half is used depends only on endpoint order, not clone ranks. An early rank program at gap $\ell$ adds a positive weight $w_\ell\in[B/4,B]$ on the suffix $r>\ell$. A late program adds $-w_\ell$ on the prefix $t\leq\ell$. No program fan meets a nonincident core edge. Its contribution on any incident edge is bounded in magnitude by $B$. The actual unary on a short edge is computed directly. Response weights depend only on one prototype and the base grid; their computation is independent of other multiplicities and core colours.
+
+\begin{lemma}[Affine palette field]\label{lem:affine-palette}
+The palette contribution to a selected edge is
+\begin{equation}\label{eq:affine-palette}
+\sum_{\substack{f\in\mathcal F\\f\sim p_{j,r}q_{j,t}}}(2f^*(f)-1)
+=\beta_j+\gamma_{j,L}(r-1)+\gamma_{j,R}(t-1),
+\end{equation}
+where the integer coefficients are computable by crossing counts and obey
+$|\beta_j|\leq o^2$ and $-o\leq\gamma_{j,L},\gamma_{j,R}<0$.
+\end{lemma}
+\begin{proof}
+A palette edge avoiding both parent clusters contributes independently of $r,t$. One with an endpoint in the early parent crosses according to whether that endpoint precedes or follows $r$. Its other endpoint avoids the late parent, and its colour is constant over the early cluster; its sum is affine in $r$ alone. The late cluster similarly gives a function of $t$. An edge between the two parent clusters is selected, and one inside a cluster is short, so neither contributes a mixed term to the palette field.
+
+The dummy neighbors give exactly
+\[
+-D_m(r-1)+D_m(W-t).
+\]
+The early--dummy edges have colour zero and cross when their parent rank is below $r$; the dummy--late edges have colour one and cross when their parent rank is above $t$. Changing either rank changes at most one contribution for each nondummy endpoint, of which there are at most $2SW$. Thus either slope lies in
+$[-D_m-2SW,-D_m+2SW]\subseteq[-o,0)$. Finally the number of possible palette neighbors is less than $o^2$, proving the intercept bound.
+\end{proof}
+
+\begin{lemma}[Greedy rank correction]\label{lem:rank-correction}
+Each slope in Lemma~\ref{lem:affine-palette} can be corrected with at most $4oW/B+4$ rank programs at that endpoint. After correction the field on bundle $j$ is
+\begin{equation}\label{eq:corrected-field}
+b_j+\eps_{j,L}(r)+\eps_{j,R}(t),\qquad
+0\leq\eps_{j,L}(r),\eps_{j,R}(t)<B,\qquad |b_j|\leq4o^2.
+\end{equation}
+\end{lemma}
+\begin{proof}
+For $\gamma<0$, let $f(r)=-\gamma(r-1)$, so $f(1)=0$ and $f(W)\leq oW$. Starting with $R(1)=0$, at gap $r-1$ add the least nonnegative number of its weight-$w_{r-1}$ programs that makes the new cumulative weight $R(r)$ at least $f(r)$. Inductively
+\begin{equation}\label{eq:greedy}
+f(r)\leq R(r)<f(r)+B.
+\end{equation}
+If copies are added, the final overshoot is smaller than the last weight, at most $B$. If none is added, the preceding overshoot remains below $B$ because the target increased. Each copy weighs at least $B/4$, while $R(W)<oW+B$, giving the stated count. Unoccupied gaps add no copies; there is no extra term proportional to $W$.
+
+At the early endpoint the coefficient is $R(r)$, which cancels the slope with error in $[0,B)$. At the late endpoint the negative prefixes give $-R(W)+R(t)$. Their initial offset must be retained:
+$b_j=\beta_j-R_{j,R}(W)$. Since $W\leq o$ and $B\leq o^2/1024$,
+$|b_j|\leq o^2+oW+B\leq4o^2$. Only the $W-1$ internal gaps are used.
+\end{proof}
+
+\subsection{Forcing the palette inside the core}
+Use
+\[
+T=2^{13}o^2,\qquad A_0=2^{13}(S+1)T,\qquad \theta_j=jT.
+\]
+For early--late edges let $u_{L,j}$ be the ordinary positive half-frame weight at early endpoint $j$, and $u_{R,j}$ the magnitude of the negative weight at its late partner. Choose
+\begin{align}
+C_{L,j}&=\ceil*{\frac{A_0+\theta_j-b_j}{u_{L,j}}},
+& C_{L,j}u_{L,j}&=A_0+\theta_j-b_j+e_{L,j},\notag\\
+C_{R,j}&=\ceil*{\frac{A_0+\theta_j}{u_{R,j}}},
+& C_{R,j}u_{R,j}&=A_0+\theta_j+e_{R,j},
+\label{eq:ordinary-counts}
+\end{align}
+where $0\leq e_{L,j},e_{R,j}<B$. Both targets are positive. These ceilings use only known integer weights and palette crossing counts.
+
+\begin{lemma}[Palette forcing and selected residuals]\label{lem:palette}
+Every minimizer defining $M_C$ agrees with $f^*$ on $\mathcal F$. Once the palette and fans are fixed, each selected edge has unary coefficient $r_e$ with $|r_e|<4B$; in particular $|r_e|\leq10B$.
+\end{lemma}
+\begin{proof}
+For a nonselected early-$j$--late-$k$ edge, $j\ne k$, the ordinary coefficient is
+\[
+\theta_j-\theta_k-b_j+e_{L,j}-e_{R,k}.
+\]
+The first term has absolute value at least $T$. All adverse terms, including arbitrary remaining core colours, have magnitude at most
+\begin{align*}
+|b_j|+2B+2(4oW/B+4)B+\binom{o-2}{2}
+&\leq\tfrac92o^2+8oW+10B\\
+&<5o^2<T.
+\end{align*}
+The last strict bound uses $o\geq514W$ and $B\leq o^2/1024$. The rank term counts both incident endpoint families; nonincident programs contribute nothing. The binomial term bounds the full core crossing degree, without assuming any other palette colour. A wrong colour can therefore be improved by a single flip. The preferred colour is zero for $j>k$ and one for $j<k$.
+
+For an edge on one side, the two ordinary fields have the same sign. Each ordinary multiplicity is at least $A_0/(2B)$ because its target is at least $A_0-4o^2$. Either half-frame then contributes magnitude at least $A_0/8$ from each parent. A side--dummy edge has one such contribution. All adverse rank and core terms have magnitude at most
+\[
+8oW+8B+\binom{o-2}{2}<o^2<A_0/8.
+\]
+Thus early-side edges prefer zero and late-side edges prefer one. This covers the palette simultaneously.
+
+For the selected edge $p_{j,r}q_{j,t}$, the ordinary counts cancel $b_j$ in~\eqref{eq:corrected-field}, leaving exactly
+\begin{equation}\label{eq:selected-residual}
+r_e=\eps_{j,L}(r)+\eps_{j,R}(t)+e_{L,j}-e_{R,j}.
+\end{equation}
+All four errors have magnitude below $B$, proving the residual bound.
+\end{proof}
+
+This lemma is restricted to~\eqref{eq:core-energy}. Before fan freezing, a global optimum need not have this palette. The full-drawing lower bound will use only that its post-freezing core energy is at least $M_C$.
+
+\subsection{Dummy edges and local constraints}
+\begin{lemma}[Exact dummy elimination]\label{lem:dummy}
+With the palette fixed, the optimized dummy-edge contribution, including its palette interactions, is
+\begin{equation}\label{eq:dummy}
+Z(D_m)+SW\binom{D_m}{3},
+\end{equation}
+independently of all selected and short-edge colours.
+\end{lemma}
+\begin{proof}
+A dummy chord with ranks $a<b$ crosses no early--late selected chord and no endpoint-cluster short edge. Its palette neighbors are exactly the side--dummy edges whose dummy endpoint is strictly between $a,b$. It has $SW(b-a-1)$ such neighbors of each colour. Its palette cost is consequently the constant $SW(b-a-1)$ in either colour. There are no program-fan neighbors by Lemma~\ref{lem:nonincident}. Summing over $a<b$ gives $SW\binom{D_m}{3}$. What remains is the full convex drawing on $D_m$ points, with optimum $Z(D_m)$ by the two-page complete-graph theorem \cite{Abrego2013}. Its endpoint-alternation predicate agrees with that of convex straight-line chords.
+\end{proof}
+
+Let $Q_{\rm loc}$ be the crossing constraints internal to one selected bundle, between selected and short edges, and between two short edges. These are crossing-graph constraints, not removed geometric edges.
+
+\begin{lemma}[Conservative local budget]\label{lem:local-count}
+\begin{equation}\label{eq:local-budget}
+|Q_{\rm loc}|\leq2SW^4.
+\end{equation}
+After deleting these constraints and fixing the palette, every short edge has only unary costs. The dummy subsystem remains independent, and the remaining selected-edge graph is that of Lemma~\ref{lem:source-amplification}.
+\end{lemma}
+\begin{proof}
+In one selected bundle, an internal crossing is specified by two early and two late ranks, giving at most $W^4/4$ choices. For a source--short crossing, the short chord belongs to one of that source's two endpoint clusters and its endpoints surround the source endpoint. An upper bound, even without this surrounding condition, is
+$2\binom W2 W^2\leq W^4$ per bundle. A short--short crossing must lie in one cluster; the two clusters contribute at most $2\binom W2^2\leq W^4/2$. The sum is at most $7W^4/4\leq2W^4$.
+
+A short edge cannot cross a selected bundle avoiding its cluster, since the cluster is consecutive in cap order; short edges in distinct clusters cannot alternate. Thus the listed types exhaust its unfixed neighbors, except for dummy edges, which are noncrossing with it by Lemma~\ref{lem:dummy}. The remaining fixed neighbors give unary costs. Removing internal bundle crossings leaves exactly the source graph already identified.
+\end{proof}
+
+\subsection{A computable core baseline}
+Delete $Q_{\rm loc}$ from~\eqref{eq:core-energy}. Fix the palette, set all selected colours to zero, independently minimize each short unary, and insert the dummy optimum~\eqref{eq:dummy}. Call this integer $C_0$, and define
+\begin{equation}\label{eq:core-baseline}
+K_C=C_0-\Delta|E(G)|+\sum_{e\in\mathcal S}\min\{0,r_e\}.
+\end{equation}
+All of these operations are explicit sums, crossing tests, and minima of two integers. In particular neither $g(G)$ nor $M_C$ is used.
+
+For a fixed selected colouring $x$, let $\Psi(x)$ be the minimum of the deleted energy over the short and dummy variables, with the palette fixed. The exact identity is
+\begin{align}
+\Psi(x)
+&=C_0-\Delta|E(G)|+\Phi_{\rm main}(x)+\sum_{e\in\mathcal S}r_ex_e\notag\\
+&=K_C+\Phi_{\rm main}(x)
++\sum_{e\in\mathcal S}\bigl(r_ex_e-\min\{0,r_e\}\bigr).
+\label{eq:core-identity}
+\end{align}
+Indeed, the short minima and dummy value are independent of $x$ after deletion. All remaining source-dependent fixed-neighbor costs have coefficient $r_e$. The all-zero selected colouring contributes exactly $\Delta|E(G)|$ to the main graph, explaining the single subtraction. No internal-bundle contribution is subtracted twice.
+
+\begin{proposition}[Core encoding]\label{prop:core-encoding}
+The baseline $K_C$ is computable in polynomial time, and
+\begin{equation}\label{eq:core-bound}
+K_C+\Delta g(G)\leq M_C\leq
+K_C+\Delta g(G)+10BSW^2+2SW^4.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Every core minimizer has the palette by Lemma~\ref{lem:palette}. Deleting nonnegative local terms and applying~\eqref{eq:core-identity} gives the lower bound, since $\Phi_{\rm main}(x)\geq\Delta g(G)$ and each residual excess is nonnegative.
+
+For the upper bound take a class-uniform selected colouring attaining $\Delta g(G)$, independently minimize every short unary, and choose an optimal dummy colouring. These choices coexist in one complete core colouring. Each selected unary exceeds its separate minimum by at most $|r_e|\leq10B$, and $|\mathcal S|=SW^2$. Restoring all local constraints costs at most $2SW^4$ by Lemma~\ref{lem:local-count}. The formula~\eqref{eq:core-baseline} proves computability with polynomially many exact operations. The optimizers just used certify the inequalities and are not computed by the reduction.
+\end{proof}
+
+The $10BSW^2$ budget is deliberately generous. The exact residual~\eqref{eq:selected-residual} permits $4BSW^2$ in this unordered-edge presentation. The formal development's conservative cardinality bookkeeping yields $8SH^{13}\leq10SH^{13}$, which is the same stated budget because $B=H^5$ and $W=H^4$.
+
+\begin{proposition}[Program count]\label{prop:program-count}
+The number of required program points satisfies
+\begin{equation}\label{eq:program-count}
+s\leq\frac{16SA_0}{B}+\frac{8SoW}{B}+10S
+\leq2^{80}(S+1)^4H^3.
+\end{equation}
+In particular $s\leq o$. All multiplicities are computable before final general-position insertion.
+\end{proposition}
+\begin{proof}
+Each target in~\eqref{eq:ordinary-counts} is at most $A_0+ST+4o^2<2A_0$. A weight is at least $B/4$, so each endpoint uses at most $8A_0/B+1$ ordinary programs. Lemma~\ref{lem:rank-correction} uses at most $4oW/B+4$ rank programs per endpoint. Multiplication by $2S$ gives the first bound.
+
+For $d=S+1$, $o=514SH^4<2^{10}dH^4$ and
+$A_0=2^{26}do^2<2^{46}d^3H^8$.
+Thus the first two terms are below $2^{50}d^4H^3$ and $2^{13}d^2H^3$, respectively, and $10S$ is smaller still. Their sum is below $2^{80}d^4H^3$. Since $H=2^{20000}d^{40}$, this is smaller than $514SH^4=o$ for $S\geq1$. Each step uses only the individually known response weights; placing the resulting number of copies in their open neighborhoods preserves those weights.
+\end{proof}

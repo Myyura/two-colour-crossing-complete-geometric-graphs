@@ -1,0 +1,69 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array,microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\input{metadata}
+\hypersetup{pdftitle={Two-colour crossing minimization in complete geometric graphs is NP-hard},pdfauthor={\paperauthor},pdfsubject={NP-completeness and formalized reduction},pdfkeywords={geometric graph, monochromatic crossings, MaxCut, NP-completeness, Lean}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\N}{\mathbb N}
+\newcommand{\1}{\mathbf 1}
+\newcommand{\eps}{\varepsilon}
+\DeclareMathOperator{\OPT}{OPT}
+\DeclareMathOperator{\MaxCut}{MaxCut}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\orient}{or}
+\DeclareMathOperator{\dist}{dist}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\setlength{\emergencystretch}{2em}
+\title{Two-colour crossing minimization\protect\\ in complete geometric graphs is NP-hard}
+\author{\paperauthor
+\ifx\paperaffiliation\empty\else\\{\normalsize\paperaffiliation}\fi
+\ifx\paperemail\empty\else\\{\normalsize\href{mailto:\paperemail}{\texttt{\paperemail}}}\fi}
+\date{22 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Given a rational point set in general position, colour every edge of its complete straight-line graph with one of two colours and minimize the number of monochromatic properly crossing edge pairs. We prove that the decision problem is NP-complete, even for integer coordinates of polynomial binary length. A deterministic many-one reduction starts from MaxCut on represented permutation graphs. A double-chain comparison grid has two quantitatively stable phases; geometrically realized program points provide controlled fields on a source core. Convex separation excludes grid interactions with program nonfans, while the remaining auxiliary and completion costs are included explicitly. Writing $g(G)=|E(G)|-\MaxCut(G)$, the construction gives a computable baseline $K_{\rm base}$, amplification $\Delta$, and nonnegative errors satisfying
+\[
+K_{\rm base}+\Delta g(G)-E_-\leq\OPT(P)\leq K_{\rm base}+\Delta g(G)+E_+,
+\]
+with the strict gap
+\[
+2^{18}(E_-+E_+)<\Delta.
+\]
+The new analytic, geometric, and combinatorial parts of the reduction have been formalized in Lean. The formalization explicitly assumes the known convex complete-graph optimum formula; source NP-hardness and the machine-complexity argument are supplied separately. We state the verification boundary and the deterministic coordinate construction in detail.
+\end{abstract}
+\noindent\textbf{Keywords.} Complete geometric graph; monochromatic crossings; permutation graph; MaxCut; quantitative stability; Lean.
+\par\smallskip
+\noindent\small\copyright\ 2026 \paperauthor. Licensed under \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}.\normalsize
+\clearpage
+\tableofcontents
+\clearpage
+\input{sections/introduction}
+\input{sections/stability}
+\input{sections/geometry}
+\input{sections/core}
+\input{sections/reduction}
+\input{sections/formalization}
+\appendix
+\input{sections/completion}
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}

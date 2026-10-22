@@ -1,0 +1,6171 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "started_utc": "2026-10-22T02:35:08.373939+00:00",
+  "command": "python3 verify.py",
+  "commands": [
+    {
+      "label": "lean-version",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--version"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.78,
+      "log": "lean-version.log",
+      "sha256": "20f42f897511ec814f7616bd9a193ae7504aa2f52fb05299eb752936eb77ca6e"
+    },
+    {
+      "label": "lake-version",
+      "argv": [
+        "lake",
+        "--version"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.041,
+      "log": "lake-version.log",
+      "sha256": "36526a338068c343bedff5daa38fec328b4f722df1e8f0b5d026d4f0f908f3a3"
+    },
+    {
+      "label": "build-Q4",
+      "argv": [
+        "lake",
+        "build",
+        "Q4"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.303,
+      "log": "build-Q4.log",
+      "sha256": "ce253be9df799c34b821344e84009b48324a19b4f9582988f42aaf97e671dee2"
+    },
+    {
+      "label": "source-001-Q4-Candidate-ActualCatalogBounds",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ActualCatalogBounds.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.723,
+      "log": "source-001-Q4-Candidate-ActualCatalogBounds.log",
+      "sha256": "cb9f72cbda9210a241ad3441a4e75fb3f0723bb3962b672a3851cf439d22c2c1"
+    },
+    {
+      "label": "source-002-Q4-Candidate-ActualCatalogParameters",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ActualCatalogParameters.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.327,
+      "log": "source-002-Q4-Candidate-ActualCatalogParameters.log",
+      "sha256": "89febe9c8180f5e692e2d96d0145c34dd508f6346129a35d2d63a7f408a66a87"
+    },
+    {
+      "label": "source-003-Q4-Candidate-ActualCatalogRegime",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ActualCatalogRegime.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.607,
+      "log": "source-003-Q4-Candidate-ActualCatalogRegime.log",
+      "sha256": "71d67173122f43dc23cc8e829086fb154c5921912a2eea240975edefcfe48fe7"
+    },
+    {
+      "label": "source-004-Q4-Candidate-ActualDummyUnary",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ActualDummyUnary.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.566,
+      "log": "source-004-Q4-Candidate-ActualDummyUnary.log",
+      "sha256": "852535b203b2a91d497ee89c382854bee30204c4cdc1aa992819a1807b280ac5"
+    },
+    {
+      "label": "source-005-Q4-Candidate-ActualProgramGeometry",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ActualProgramGeometry.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.807,
+      "log": "source-005-Q4-Candidate-ActualProgramGeometry.log",
+      "sha256": "525bae0719ea20451a29e3aaa3d43a2fa2fd186a7a3aacc66ebd9a56a588fe32"
+    },
+    {
+      "label": "source-006-Q4-Candidate-ActualRecipe",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ActualRecipe.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.477,
+      "log": "source-006-Q4-Candidate-ActualRecipe.log",
+      "sha256": "1ac5e87d784921c342b4c15c286a81f0cb0c369dde4853ea1856667ea3b34d2a"
+    },
+    {
+      "label": "source-007-Q4-Candidate-ActualReductionValue",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ActualReductionValue.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 8.186,
+      "log": "source-007-Q4-Candidate-ActualReductionValue.log",
+      "sha256": "8c76db3e687594a8c3fe112fe7c2e0bddc0be8959e37ab1ea95b7d0d8fa093b1"
+    },
+    {
+      "label": "source-008-Q4-Candidate-ActualSelectedUnary",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ActualSelectedUnary.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 4.123,
+      "log": "source-008-Q4-Candidate-ActualSelectedUnary.log",
+      "sha256": "7bb89c4b28616bb0996acbd2cfdb6ffbcabd0af011a1eb4aca03ba6fcc0880e6"
+    },
+    {
+      "label": "source-009-Q4-Candidate-ActualSideGeometry",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ActualSideGeometry.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.738,
+      "log": "source-009-Q4-Candidate-ActualSideGeometry.log",
+      "sha256": "fbd36cc676b990d1c476d72a6425acc741c4d73b47ba1f10a1d6d5fedfcab2f0"
+    },
+    {
+      "label": "source-010-Q4-Candidate-AlternatingTriples",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/AlternatingTriples.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.999,
+      "log": "source-010-Q4-Candidate-AlternatingTriples.log",
+      "sha256": "3c69ababe6bcf55eeed21ec79a9584df7ccadac5b07315173c9c0872c5630172"
+    },
+    {
+      "label": "source-011-Q4-Candidate-AlternationKernel",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/AlternationKernel.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.427,
+      "log": "source-011-Q4-Candidate-AlternationKernel.log",
+      "sha256": "a92ed1f479514e5f200d254b27b15729ece83b3f6217a54e227fd25af857bd1f"
+    },
+    {
+      "label": "source-012-Q4-Candidate-AnalyticVariance",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/AnalyticVariance.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.414,
+      "log": "source-012-Q4-Candidate-AnalyticVariance.log",
+      "sha256": "547ad10d83c62afb7be7675200f322a43fb9a5951a56f64850fd5a058c820350"
+    },
+    {
+      "label": "source-013-Q4-Candidate-AntiperiodicReplacement",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/AntiperiodicReplacement.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.51,
+      "log": "source-013-Q4-Candidate-AntiperiodicReplacement.log",
+      "sha256": "23c05c804076d6b867d23e3ee71d6fa8222b4ea9c78962d2a2c5f048ef6d3110"
+    },
+    {
+      "label": "source-014-Q4-Candidate-AntiperiodicThreshold",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/AntiperiodicThreshold.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.655,
+      "log": "source-014-Q4-Candidate-AntiperiodicThreshold.log",
+      "sha256": "bd42e6c4525342124544634387484b7b885b6163a91784a3d9fb9f1d241e0833"
+    },
+    {
+      "label": "source-015-Q4-Candidate-BoxAverage",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/BoxAverage.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.49,
+      "log": "source-015-Q4-Candidate-BoxAverage.log",
+      "sha256": "0caaefd8a099082b06a83d7b30572d1364c4aaedafda061142c808e871a55f52"
+    },
+    {
+      "label": "source-016-Q4-Candidate-BoxDerivative",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/BoxDerivative.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.66,
+      "log": "source-016-Q4-Candidate-BoxDerivative.log",
+      "sha256": "0db93b19a2f564c7ff3a163410621b5df30bd9bbe7ca3e26953f61af141732ce"
+    },
+    {
+      "label": "source-017-Q4-Candidate-CandidateSize",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/CandidateSize.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.076,
+      "log": "source-017-Q4-Candidate-CandidateSize.log",
+      "sha256": "32f95a2ce857d8b2170bade60d7f6ede4b4076ba97bc021d3b0b9c59b8e34dfc"
+    },
+    {
+      "label": "source-018-Q4-Candidate-CanonicalEnergy",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/CanonicalEnergy.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.542,
+      "log": "source-018-Q4-Candidate-CanonicalEnergy.log",
+      "sha256": "4e5af7f57f7f20ab0898fd0f69e782dfd9dd7e777f042bace54f40bcaab5266b"
+    },
+    {
+      "label": "source-019-Q4-Candidate-CanonicalField",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/CanonicalField.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.794,
+      "log": "source-019-Q4-Candidate-CanonicalField.log",
+      "sha256": "725c2cba924bf677e9423fd7c182c44003dc0310446ec6294e7138f524c4ca31"
+    },
+    {
+      "label": "source-020-Q4-Candidate-CatalogDominance",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/CatalogDominance.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.034,
+      "log": "source-020-Q4-Candidate-CatalogDominance.log",
+      "sha256": "68a3fd3c5b2da6e211074a8ee2000a11fe1f52ccc2ce74b3a23319d8eb5a1b54"
+    },
+    {
+      "label": "source-021-Q4-Candidate-CatalogSupport",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/CatalogSupport.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.373,
+      "log": "source-021-Q4-Candidate-CatalogSupport.log",
+      "sha256": "0309d8b8c7cf7d419aaf78d5f50405238f3729c7de6fd2cd6bab451b42b8555a"
+    },
+    {
+      "label": "source-022-Q4-Candidate-CatalogTargets",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/CatalogTargets.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.195,
+      "log": "source-022-Q4-Candidate-CatalogTargets.log",
+      "sha256": "ba7a1bcd0871d483d7b81b1a8f55853697ed445a487412651c1ede3b0dc7835c"
+    },
+    {
+      "label": "source-023-Q4-Candidate-ComparisonEnergy",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ComparisonEnergy.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.149,
+      "log": "source-023-Q4-Candidate-ComparisonEnergy.log",
+      "sha256": "b06698881cb674db20805d59f6dc6457a5d6b9ab2aa7d170b64e4a2a0aee5179"
+    },
+    {
+      "label": "source-024-Q4-Candidate-CompleteBackground",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/CompleteBackground.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.014,
+      "log": "source-024-Q4-Candidate-CompleteBackground.log",
+      "sha256": "a2a1c32f49b7c4311c0466f9f86ac1764ae0d8aac3dba91a4118de4ee5e278b0"
+    },
+    {
+      "label": "source-025-Q4-Candidate-CompleteClassEnergy",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/CompleteClassEnergy.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.815,
+      "log": "source-025-Q4-Candidate-CompleteClassEnergy.log",
+      "sha256": "cce0af906195da4c90f9a94fb33c093ad2fb395adf2ee409467290e26a99317e"
+    },
+    {
+      "label": "source-026-Q4-Candidate-CompleteDrawing",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/CompleteDrawing.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.674,
+      "log": "source-026-Q4-Candidate-CompleteDrawing.log",
+      "sha256": "99917b22618bda13582bec7d5a9e4d31f1a2d744700f194a6dfdf036dc2d7a04"
+    },
+    {
+      "label": "source-027-Q4-Candidate-CompleteFanFields",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/CompleteFanFields.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.683,
+      "log": "source-027-Q4-Candidate-CompleteFanFields.log",
+      "sha256": "808fccaeb0aa777b6e54f8b4fff1316ce9d2252fee8e82eb9031d7c7fbd4931c"
+    },
+    {
+      "label": "source-028-Q4-Candidate-CompleteGridEnergy",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/CompleteGridEnergy.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.799,
+      "log": "source-028-Q4-Candidate-CompleteGridEnergy.log",
+      "sha256": "2a249958e10b4dc2d04fced57ae1c78cde92f71c26c679e7315bb35b983cc138"
+    },
+    {
+      "label": "source-029-Q4-Candidate-CompleteInput",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/CompleteInput.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.194,
+      "log": "source-029-Q4-Candidate-CompleteInput.log",
+      "sha256": "f3ed265cc44d971586d5a7be85d00b900af3781f25157d02011efed35956ac0b"
+    },
+    {
+      "label": "source-030-Q4-Candidate-CompleteProbeFreezing",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/CompleteProbeFreezing.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.166,
+      "log": "source-030-Q4-Candidate-CompleteProbeFreezing.log",
+      "sha256": "eb5b3066c396ce9cf678c30278d75a816b15a533e9c51cb9f3743b930010d160"
+    },
+    {
+      "label": "source-031-Q4-Candidate-ComputedBackground",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ComputedBackground.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.566,
+      "log": "source-031-Q4-Candidate-ComputedBackground.log",
+      "sha256": "18fa94fb9bb6c4fcc765bf0ee964469b8bc382fd0201cb549996c110d62d59a6"
+    },
+    {
+      "label": "source-032-Q4-Candidate-ComputedCore",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ComputedCore.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 4.301,
+      "log": "source-032-Q4-Candidate-ComputedCore.log",
+      "sha256": "f2f59616244d769c5de0b7d68b30fcd28032ca08adac165914f538e0a365b316"
+    },
+    {
+      "label": "source-033-Q4-Candidate-ConservativeGap",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ConservativeGap.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.961,
+      "log": "source-033-Q4-Candidate-ConservativeGap.log",
+      "sha256": "ec6890e8a874706950efa04af4b7bbad8a4986d0c8f9ba80032bb2cdeda442e2"
+    },
+    {
+      "label": "source-034-Q4-Candidate-ConstructedReduction",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ConstructedReduction.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.743,
+      "log": "source-034-Q4-Candidate-ConstructedReduction.log",
+      "sha256": "5d171f6303d04cb68716c173740d0f820542032c7f69fb21d56fdf4ba7b8dac1"
+    },
+    {
+      "label": "source-035-Q4-Candidate-ConvexBackground",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ConvexBackground.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.307,
+      "log": "source-035-Q4-Candidate-ConvexBackground.log",
+      "sha256": "52b44895eb85eb644d30c19bff3577d5183a14e1770b618e6bc29edbe26db6fb"
+    },
+    {
+      "label": "source-036-Q4-Candidate-ConvexSeparation",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ConvexSeparation.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.535,
+      "log": "source-036-Q4-Candidate-ConvexSeparation.log",
+      "sha256": "8c56e4f1b57e16e3057639f97820581770c688b990e089386d7581d85fe878e5"
+    },
+    {
+      "label": "source-037-Q4-Candidate-ConvexSeparationGrid",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ConvexSeparationGrid.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.364,
+      "log": "source-037-Q4-Candidate-ConvexSeparationGrid.log",
+      "sha256": "eb8d31dd161831b0ccedceec922192f212cb25795ca70166da517027afcf316b"
+    },
+    {
+      "label": "source-038-Q4-Candidate-CoreEncoding",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/CoreEncoding.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.191,
+      "log": "source-038-Q4-Candidate-CoreEncoding.log",
+      "sha256": "029c1489b1f7abf4cdaa16eccc8ebeabc8de60a760cc8b161c5ca7b02b2bdb64"
+    },
+    {
+      "label": "source-039-Q4-Candidate-CoreExtension",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/CoreExtension.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.883,
+      "log": "source-039-Q4-Candidate-CoreExtension.log",
+      "sha256": "448cdc8dd0936ab041307c042edb2541d2859f968ff7f1a9626a18b94bf24768"
+    },
+    {
+      "label": "source-040-Q4-Candidate-CoreFixedPalette",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/CoreFixedPalette.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 9.149,
+      "log": "source-040-Q4-Candidate-CoreFixedPalette.log",
+      "sha256": "b7b46cb4e1dba7046a22df60f00d635bd2c2b20e770f4eed254e43abadf1adc7"
+    },
+    {
+      "label": "source-041-Q4-Candidate-CoreLocalGeometry",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/CoreLocalGeometry.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.932,
+      "log": "source-041-Q4-Candidate-CoreLocalGeometry.log",
+      "sha256": "1e9d8e202472985b0ce2b090cd7a76e13c7f192ef51efc0614ed5c7054fb9e23"
+    },
+    {
+      "label": "source-042-Q4-Candidate-CorePaletteForcing",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/CorePaletteForcing.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.232,
+      "log": "source-042-Q4-Candidate-CorePaletteForcing.log",
+      "sha256": "73740374afac796031d1c19185121802f65599436394f6eef2ba9460e2a131b6"
+    },
+    {
+      "label": "source-043-Q4-Candidate-CoreReducedPairs",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/CoreReducedPairs.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.678,
+      "log": "source-043-Q4-Candidate-CoreReducedPairs.log",
+      "sha256": "9c587f04679431199fbf72101aa9d59cdf3271cd509d9cd5646cb5850f1b8bb7"
+    },
+    {
+      "label": "source-044-Q4-Candidate-CoreValueBridge",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/CoreValueBridge.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.559,
+      "log": "source-044-Q4-Candidate-CoreValueBridge.log",
+      "sha256": "78328e051064f1aff818642db52a8d1401c65cbea3fca1adb2a06be1a0fd1c8a"
+    },
+    {
+      "label": "source-045-Q4-Candidate-DiagonalAverage",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/DiagonalAverage.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.605,
+      "log": "source-045-Q4-Candidate-DiagonalAverage.log",
+      "sha256": "6732bfaf05141213f2444bb2759922637c3f3a7904b7dab6d14b0c0fd5091b8c"
+    },
+    {
+      "label": "source-046-Q4-Candidate-DiagonalCoordinates",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/DiagonalCoordinates.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.434,
+      "log": "source-046-Q4-Candidate-DiagonalCoordinates.log",
+      "sha256": "c001f7fdf3972d40879aaa750bf9335918b92f16fab67705faa2d9dd649d1ab6"
+    },
+    {
+      "label": "source-047-Q4-Candidate-DiagonalHalves",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/DiagonalHalves.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.727,
+      "log": "source-047-Q4-Candidate-DiagonalHalves.log",
+      "sha256": "378fdee327de06d7a8d853cd80eb70bfc46c1827750b3ad228648e00f0f3c5aa"
+    },
+    {
+      "label": "source-048-Q4-Candidate-DiagonalRounding",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/DiagonalRounding.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.699,
+      "log": "source-048-Q4-Candidate-DiagonalRounding.log",
+      "sha256": "9708ef7ce5edadf87299043e4fb0bd00546f97674de578108beecd7f52fc7670"
+    },
+    {
+      "label": "source-049-Q4-Candidate-DoubleCapGrid",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/DoubleCapGrid.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.051,
+      "log": "source-049-Q4-Candidate-DoubleCapGrid.log",
+      "sha256": "ac2f842bc4a5d38037acb97f39c201e440ef0a7762fca01294f9d509e6d4f333"
+    },
+    {
+      "label": "source-050-Q4-Candidate-DummyGeometry",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/DummyGeometry.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.954,
+      "log": "source-050-Q4-Candidate-DummyGeometry.log",
+      "sha256": "2db8357cffc42fe9de1089cb85324732657b5a024df90d682301af764be186ba"
+    },
+    {
+      "label": "source-051-Q4-Candidate-DummyPaletteField",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/DummyPaletteField.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 7.29,
+      "log": "source-051-Q4-Candidate-DummyPaletteField.log",
+      "sha256": "965266d36f127f9b276ae8013385ee6f20fd478256197809b32fac827d69c8b2"
+    },
+    {
+      "label": "source-052-Q4-Candidate-EnergyLipschitz",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/EnergyLipschitz.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.986,
+      "log": "source-052-Q4-Candidate-EnergyLipschitz.log",
+      "sha256": "7831f7ee95992f1d3c66312fb3436f1eb54323764e88391effbfc3c514fe45f5"
+    },
+    {
+      "label": "source-053-Q4-Candidate-FreezingErrors",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/FreezingErrors.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.443,
+      "log": "source-053-Q4-Candidate-FreezingErrors.log",
+      "sha256": "b377e21cde4bb22ee26168041a236fc2560679ab538e88063dc0ad739fcbf723"
+    },
+    {
+      "label": "source-054-Q4-Candidate-FreezingParameters",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/FreezingParameters.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.163,
+      "log": "source-054-Q4-Candidate-FreezingParameters.log",
+      "sha256": "f9901475fb0f86c647a83abf3a8b118c7e7098d66c872378c0b1091e27b7fda6"
+    },
+    {
+      "label": "source-055-Q4-Candidate-GeometryEncoding",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/GeometryEncoding.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.067,
+      "log": "source-055-Q4-Candidate-GeometryEncoding.log",
+      "sha256": "6cd785d4ce49b81c25c0e9b2faa5550a7681b2b88e67fc4ef1f03375a481c628"
+    },
+    {
+      "label": "source-056-Q4-Candidate-GlobalGeometryScales",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/GlobalGeometryScales.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.929,
+      "log": "source-056-Q4-Candidate-GlobalGeometryScales.log",
+      "sha256": "b40d12fe2c3c5ecf7cf6847ebed5f4f3d4fa4d2ddc0b75c8073e59610cba39f1"
+    },
+    {
+      "label": "source-057-Q4-Candidate-GridCounts",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/GridCounts.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.97,
+      "log": "source-057-Q4-Candidate-GridCounts.log",
+      "sha256": "88009929b29746ac6f5be2d4e96e1e663639e271ea2fca0d56bc67fd61b50fcb"
+    },
+    {
+      "label": "source-058-Q4-Candidate-GridInitialConstants",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/GridInitialConstants.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.577,
+      "log": "source-058-Q4-Candidate-GridInitialConstants.log",
+      "sha256": "669f74ca4269386b6cb7451a6681d6c9cd92eac861720372f1c4a9d879c44fc8"
+    },
+    {
+      "label": "source-059-Q4-Candidate-GridLocalization",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/GridLocalization.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.505,
+      "log": "source-059-Q4-Candidate-GridLocalization.log",
+      "sha256": "4e52bff04fe459d3f1598d8ef6d4fba58cbd14645c790bd202f7331ae58ad610"
+    },
+    {
+      "label": "source-060-Q4-Candidate-GridStepBridge",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/GridStepBridge.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.936,
+      "log": "source-060-Q4-Candidate-GridStepBridge.log",
+      "sha256": "d99de1f9e59d86e4c73d74a29bc336ba4946d088df281940e4c1b750be2b4ef8"
+    },
+    {
+      "label": "source-061-Q4-Candidate-GridStepExtension",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/GridStepExtension.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.739,
+      "log": "source-061-Q4-Candidate-GridStepExtension.log",
+      "sha256": "1db9f94d1acd4729a3c94d1c1aff1ee2e343533bd825fafcefc1bfc2e1ce7ff8"
+    },
+    {
+      "label": "source-062-Q4-Candidate-IndexedPaletteForcing",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/IndexedPaletteForcing.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.547,
+      "log": "source-062-Q4-Candidate-IndexedPaletteForcing.log",
+      "sha256": "6aa2f127499c8b321c7a3f339ed2a77939edc575ca156f2f2023280c83df7e38"
+    },
+    {
+      "label": "source-063-Q4-Candidate-IntervalPoincare",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/IntervalPoincare.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.468,
+      "log": "source-063-Q4-Candidate-IntervalPoincare.log",
+      "sha256": "a4915f2c5eb1c772754a8b128fca2fcf922a6d590c2242c384ddc36600e5cd3f"
+    },
+    {
+      "label": "source-064-Q4-Candidate-MacroLayout",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/MacroLayout.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.206,
+      "log": "source-064-Q4-Candidate-MacroLayout.log",
+      "sha256": "c7d5fba137e0b9c0ca58c24343ea44e7a45243b82d3454afe3b9d9f45b27eff3"
+    },
+    {
+      "label": "source-065-Q4-Candidate-MainSourceEncoding",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/MainSourceEncoding.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.511,
+      "log": "source-065-Q4-Candidate-MainSourceEncoding.log",
+      "sha256": "e63343c5489b701225cf529e69ffe67965142e3856883aae364218602bdffd4c"
+    },
+    {
+      "label": "source-066-Q4-Candidate-OneDimensionalStability",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/OneDimensionalStability.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.391,
+      "log": "source-066-Q4-Candidate-OneDimensionalStability.log",
+      "sha256": "4cc33e78f9d7ea75960f31ef42e671894e148f535fb081097a62b741ef50c6d4"
+    },
+    {
+      "label": "source-067-Q4-Candidate-OperatorPerturbation",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/OperatorPerturbation.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.545,
+      "log": "source-067-Q4-Candidate-OperatorPerturbation.log",
+      "sha256": "be0c175c8bced654d1f253cddad371bbd735498d1179ebfec96e81a5c8757161"
+    },
+    {
+      "label": "source-068-Q4-Candidate-OrdinaryCoreField",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/OrdinaryCoreField.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.849,
+      "log": "source-068-Q4-Candidate-OrdinaryCoreField.log",
+      "sha256": "4bac1cf1cdf6bd61ecf2923df89f41f0447620f480ef40384ad70d5545a36043"
+    },
+    {
+      "label": "source-069-Q4-Candidate-OrdinaryFan",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/OrdinaryFan.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.841,
+      "log": "source-069-Q4-Candidate-OrdinaryFan.log",
+      "sha256": "3799c317d2842181fdda7e13dd59cb9261b6b7938fcb3ffb5dda652905099ea2"
+    },
+    {
+      "label": "source-070-Q4-Candidate-OrdinaryNonincident",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/OrdinaryNonincident.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.301,
+      "log": "source-070-Q4-Candidate-OrdinaryNonincident.log",
+      "sha256": "35f7812109716a02ad545b345020a3ab7a64ec1eb6c7aa3580316133d6272e7a"
+    },
+    {
+      "label": "source-071-Q4-Candidate-OrdinaryResponse",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/OrdinaryResponse.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.559,
+      "log": "source-071-Q4-Candidate-OrdinaryResponse.log",
+      "sha256": "fb73008045509bcdf5a5ace6f05c0cf5e3cbe96c02e573eb51720e016d3e5af7"
+    },
+    {
+      "label": "source-072-Q4-Candidate-OrdinarySoftRows",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/OrdinarySoftRows.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.755,
+      "log": "source-072-Q4-Candidate-OrdinarySoftRows.log",
+      "sha256": "8e50a243681feec7e1f10210c00220f02b72c308c9f02da8d44c8911edfbd669"
+    },
+    {
+      "label": "source-073-Q4-Candidate-OrdinaryTablePreservation",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/OrdinaryTablePreservation.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.793,
+      "log": "source-073-Q4-Candidate-OrdinaryTablePreservation.log",
+      "sha256": "43cffabe6d6a1f23ebad411ed5160f3ea3a238a020d264c5458896a2578a39d9"
+    },
+    {
+      "label": "source-074-Q4-Candidate-OrientationPreservation",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/OrientationPreservation.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.015,
+      "log": "source-074-Q4-Candidate-OrientationPreservation.log",
+      "sha256": "fc7294c87fd3fefc14f3692ebcd6bdb287a991c43547e16235360cee9113c257"
+    },
+    {
+      "label": "source-075-Q4-Candidate-OriginalCapAlternation",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/OriginalCapAlternation.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.207,
+      "log": "source-075-Q4-Candidate-OriginalCapAlternation.log",
+      "sha256": "9c1adaaa51752ee78ebbb41bd5eddd255bb008b3f7ecae15c34db6dd413b5666"
+    },
+    {
+      "label": "source-076-Q4-Candidate-OriginalCapCrossing",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/OriginalCapCrossing.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.934,
+      "log": "source-076-Q4-Candidate-OriginalCapCrossing.log",
+      "sha256": "a38d9afa5a69484ca20aeb16e15328e8112ac58fe129af451a594429dcc71a38"
+    },
+    {
+      "label": "source-077-Q4-Candidate-OriginalVertexLayout",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/OriginalVertexLayout.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.336,
+      "log": "source-077-Q4-Candidate-OriginalVertexLayout.log",
+      "sha256": "5c58cee77629ab8b20803fbfd92ee10549b2d366ac671680c5a5d940af023f36"
+    },
+    {
+      "label": "source-078-Q4-Candidate-PaletteBounds",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/PaletteBounds.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.923,
+      "log": "source-078-Q4-Candidate-PaletteBounds.log",
+      "sha256": "0d7a21d3573a68f6b380c687749150214047976bf80292c90a5c7dbf6d7a4988"
+    },
+    {
+      "label": "source-079-Q4-Candidate-PaletteCounting",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/PaletteCounting.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.241,
+      "log": "source-079-Q4-Candidate-PaletteCounting.log",
+      "sha256": "43430b118dcffb6780cfffd6318048755bd5ce64572f2140fcb33b2b4032d6cd"
+    },
+    {
+      "label": "source-080-Q4-Candidate-PaletteExhaustion",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/PaletteExhaustion.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.864,
+      "log": "source-080-Q4-Candidate-PaletteExhaustion.log",
+      "sha256": "f9d8af66b605c5dd3447f855834f023ec4ee892a35fbb5ca7d9d85246b447e6e"
+    },
+    {
+      "label": "source-081-Q4-Candidate-PaletteForcing",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/PaletteForcing.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.329,
+      "log": "source-081-Q4-Candidate-PaletteForcing.log",
+      "sha256": "72171b48c5609bb24c45cd571b1103544fc8abeca81469d635d3cd6e98b644db"
+    },
+    {
+      "label": "source-082-Q4-Candidate-ParentBlockExclusion",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ParentBlockExclusion.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.833,
+      "log": "source-082-Q4-Candidate-ParentBlockExclusion.log",
+      "sha256": "98b24919a6f08fd2ac644e951638dcf1faf7422e0869599b9230323e37374911"
+    },
+    {
+      "label": "source-083-Q4-Candidate-PlacedOrdinaryField",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/PlacedOrdinaryField.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.944,
+      "log": "source-083-Q4-Candidate-PlacedOrdinaryField.log",
+      "sha256": "9325039f8023fb6d905e659eaf66208589e92bcc3e224ad80994e11519a13ac1"
+    },
+    {
+      "label": "source-084-Q4-Candidate-ProbeFreezing",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ProbeFreezing.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.198,
+      "log": "source-084-Q4-Candidate-ProbeFreezing.log",
+      "sha256": "2f75c0aed6282c2097f8987a556d59f85fce2c9b909c35b1896391c2e42a43ff"
+    },
+    {
+      "label": "source-085-Q4-Candidate-ProbeFreezingReal",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ProbeFreezingReal.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.112,
+      "log": "source-085-Q4-Candidate-ProbeFreezingReal.log",
+      "sha256": "08e426ccb109f85a010d632085632e6125042b42ac505a06c88a3f16e7932643"
+    },
+    {
+      "label": "source-086-Q4-Candidate-ProgramCatalog",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ProgramCatalog.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.938,
+      "log": "source-086-Q4-Candidate-ProgramCatalog.log",
+      "sha256": "e78a4a9527a37585aef98d4ac7a911d9e11856dbb4c9feb30d24dd7d34182f35"
+    },
+    {
+      "label": "source-087-Q4-Candidate-ProgramCount",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ProgramCount.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.664,
+      "log": "source-087-Q4-Candidate-ProgramCount.log",
+      "sha256": "8e799a067728495c01a386139058327c237e9a8c306282178435e51336ebdf6f"
+    },
+    {
+      "label": "source-088-Q4-Candidate-ProgramExclusion",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ProgramExclusion.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.404,
+      "log": "source-088-Q4-Candidate-ProgramExclusion.log",
+      "sha256": "3681c6b7edf35d2559f662e9781633047696113d124bae38865759e30b8eee3e"
+    },
+    {
+      "label": "source-089-Q4-Candidate-ProgramField",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ProgramField.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.112,
+      "log": "source-089-Q4-Candidate-ProgramField.log",
+      "sha256": "e9345a2d9102b38e6c8c6310fa2fe1174dcb348960b1ad4e3e08e332bd99b075"
+    },
+    {
+      "label": "source-090-Q4-Candidate-ProgramGeometry",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ProgramGeometry.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.999,
+      "log": "source-090-Q4-Candidate-ProgramGeometry.log",
+      "sha256": "4b496e79f76acbc9d2c630375b6af75336aab34addfc55fb736a3b9b7ecc4eb6"
+    },
+    {
+      "label": "source-091-Q4-Candidate-ProgramIndex",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ProgramIndex.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.606,
+      "log": "source-091-Q4-Candidate-ProgramIndex.log",
+      "sha256": "392a22b7232cbe227a498c04c0ba040f030ff9f2c2472eba012831ae033172a5"
+    },
+    {
+      "label": "source-092-Q4-Candidate-ProgramPlacement",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ProgramPlacement.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.602,
+      "log": "source-092-Q4-Candidate-ProgramPlacement.log",
+      "sha256": "5f484261be3e0e7edba63c791a5616b42c1ca8724a9b8b165a8eaad5f67c65d2"
+    },
+    {
+      "label": "source-093-Q4-Candidate-ProposedPalette",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ProposedPalette.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.351,
+      "log": "source-093-Q4-Candidate-ProposedPalette.log",
+      "sha256": "2670363e30f16365e516f5e271e8f0427da8e10315d70030e2b7613ccc40196a"
+    },
+    {
+      "label": "source-094-Q4-Candidate-RankCorrection",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/RankCorrection.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.95,
+      "log": "source-094-Q4-Candidate-RankCorrection.log",
+      "sha256": "a61c24bae5535bbc0872ecf753eaa9a58c7458f103dc929351037fdd239dd324"
+    },
+    {
+      "label": "source-095-Q4-Candidate-RankGap",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/RankGap.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.485,
+      "log": "source-095-Q4-Candidate-RankGap.log",
+      "sha256": "e8017818a0d0282b70d7af7d699f14804c20c03623a99eec464c369d3f800bb0"
+    },
+    {
+      "label": "source-096-Q4-Candidate-RankGapPreservation",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/RankGapPreservation.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.976,
+      "log": "source-096-Q4-Candidate-RankGapPreservation.log",
+      "sha256": "e904046fb47f2d373b9f1442a6e6b9a778f9f50ed819a06b7c55e30064a069ba"
+    },
+    {
+      "label": "source-097-Q4-Candidate-RankNonincident",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/RankNonincident.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.369,
+      "log": "source-097-Q4-Candidate-RankNonincident.log",
+      "sha256": "62e2053fa7440cefeec690573b6a1aa623621231de613ac5fabb70cd77e3f916"
+    },
+    {
+      "label": "source-098-Q4-Candidate-RankNonselected",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/RankNonselected.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.725,
+      "log": "source-098-Q4-Candidate-RankNonselected.log",
+      "sha256": "5b19b2c122c8db1da6c37fd5aab6681e9a1dc40d68af0bcb0da06a9127518a80"
+    },
+    {
+      "label": "source-099-Q4-Candidate-RankResponse",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/RankResponse.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.435,
+      "log": "source-099-Q4-Candidate-RankResponse.log",
+      "sha256": "bfb6cea3224b49783a4056340e80f24c24b9fb9cbcf5cde8812c8f7a4a1ceaee"
+    },
+    {
+      "label": "source-100-Q4-Candidate-RankSoftRows",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/RankSoftRows.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.96,
+      "log": "source-100-Q4-Candidate-RankSoftRows.log",
+      "sha256": "92cc678e81b210e4de794d7558f8787d53d53b35b934179d4a9876d360df9377"
+    },
+    {
+      "label": "source-101-Q4-Candidate-RankTablePreservation",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/RankTablePreservation.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.736,
+      "log": "source-101-Q4-Candidate-RankTablePreservation.log",
+      "sha256": "0eda30fba14b55fbc8df9691090c0488a3919de3a1ce7b8698471f32e8060ba4"
+    },
+    {
+      "label": "source-102-Q4-Candidate-RationalEncoding",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/RationalEncoding.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.317,
+      "log": "source-102-Q4-Candidate-RationalEncoding.log",
+      "sha256": "3d8c5a149f4530ed226e27639717cd9032ead8a0f2b7cd6f41aea8d481d1326d"
+    },
+    {
+      "label": "source-103-Q4-Candidate-ReductionGap",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ReductionGap.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.963,
+      "log": "source-103-Q4-Candidate-ReductionGap.log",
+      "sha256": "915fde8721e960da331df9b7a2af9a069eefba8affbbf3ccc3f7ff8446d71531"
+    },
+    {
+      "label": "source-104-Q4-Candidate-SideCatalog",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/SideCatalog.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.841,
+      "log": "source-104-Q4-Candidate-SideCatalog.log",
+      "sha256": "e0e806d96a5f1178d64603a470633e371a479b9c2c25a42f40adb54b96d9d15c"
+    },
+    {
+      "label": "source-105-Q4-Candidate-SideDominance",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/SideDominance.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.634,
+      "log": "source-105-Q4-Candidate-SideDominance.log",
+      "sha256": "cb5ae41ab4ec3fe6c15013229783e2196ccf37d331460ac1e6921a78b5be0eb2"
+    },
+    {
+      "label": "source-106-Q4-Candidate-SliceStability",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/SliceStability.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.644,
+      "log": "source-106-Q4-Candidate-SliceStability.log",
+      "sha256": "df137986db181e2aeeb10a533dfc1e5d92be2388ece0452e54b290cf348a1fc9"
+    },
+    {
+      "label": "source-107-Q4-Candidate-SmoothingApproximation",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/SmoothingApproximation.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.479,
+      "log": "source-107-Q4-Candidate-SmoothingApproximation.log",
+      "sha256": "3d251faba347ae580426519eb7df3f993b9aafe4adff8df5c7a468cc589be3fe"
+    },
+    {
+      "label": "source-108-Q4-Candidate-SourceChordGeometry",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/SourceChordGeometry.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.021,
+      "log": "source-108-Q4-Candidate-SourceChordGeometry.log",
+      "sha256": "36a1a2f55c76395ace346104f7f53ec0d9eca3129e7566d6c1e690479ae08380"
+    },
+    {
+      "label": "source-109-Q4-Candidate-SourceCutBridge",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/SourceCutBridge.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.726,
+      "log": "source-109-Q4-Candidate-SourceCutBridge.log",
+      "sha256": "eb40678791698e2f5a3b80c56d7ae3d5f628b2ab9216cf9119b67cc15932c7c7"
+    },
+    {
+      "label": "source-110-Q4-Candidate-SourceSelectedEdges",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/SourceSelectedEdges.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.971,
+      "log": "source-110-Q4-Candidate-SourceSelectedEdges.log",
+      "sha256": "2cd37cb8ffa4ca0b19fc8e89aa99cbe92a6969103594c54a26f1685a74350a56"
+    },
+    {
+      "label": "source-111-Q4-Candidate-SquareTranslation",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/SquareTranslation.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.675,
+      "log": "source-111-Q4-Candidate-SquareTranslation.log",
+      "sha256": "f8a01393d8ecef3b2418cad239ad3ede4dc4ebfa8aedbfffb545e3ee849dd180"
+    },
+    {
+      "label": "source-112-Q4-Candidate-StabilityConstants",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/StabilityConstants.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.585,
+      "log": "source-112-Q4-Candidate-StabilityConstants.log",
+      "sha256": "ed606562f422178cc3c0b4ec0cdd0118770f086761a8c4091caa423e3989db43"
+    },
+    {
+      "label": "source-113-Q4-Candidate-ThresholdApproximation",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ThresholdApproximation.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.501,
+      "log": "source-113-Q4-Candidate-ThresholdApproximation.log",
+      "sha256": "9f67434135f36e40f23850a0eaf5e861ee7ea56de544aa6737271aa4138efb57"
+    },
+    {
+      "label": "source-114-Q4-Candidate-ThresholdHalfSelection",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ThresholdHalfSelection.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.608,
+      "log": "source-114-Q4-Candidate-ThresholdHalfSelection.log",
+      "sha256": "45ba6756f4b111377c9cdf19bcb40b50d63fd83bae908ec5535e1d1d9a503172"
+    },
+    {
+      "label": "source-115-Q4-Candidate-ThresholdTranslation",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/ThresholdTranslation.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.794,
+      "log": "source-115-Q4-Candidate-ThresholdTranslation.log",
+      "sha256": "76fd0df4f2d928bebecce8f48da4f6ca1b1cf455342b8894ccb510f31d1a9022"
+    },
+    {
+      "label": "source-116-Q4-Candidate-TwoPhaseStability",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/TwoPhaseStability.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.039,
+      "log": "source-116-Q4-Candidate-TwoPhaseStability.log",
+      "sha256": "e7ab71889b535eb691143f39b7009a7503dc96b6171cabccdba8ee5f8a89a8bb"
+    },
+    {
+      "label": "source-117-Q4-Candidate-UniformInsertion",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/UniformInsertion.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.019,
+      "log": "source-117-Q4-Candidate-UniformInsertion.log",
+      "sha256": "2397cc10f03ff06ac4f5dd074eb5cbff1e108b4498b077b22a80d20ff40b6969"
+    },
+    {
+      "label": "source-118-Q4-Candidate-UnitIntervalMeasure",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/UnitIntervalMeasure.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.226,
+      "log": "source-118-Q4-Candidate-UnitIntervalMeasure.log",
+      "sha256": "5e79bc0d581d01864e8b1ceb9cea248f1e7a02fe12f4bc884cf557c7570cc0c7"
+    },
+    {
+      "label": "source-119-Q4-Candidate-VirtualColumnField",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/VirtualColumnField.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.988,
+      "log": "source-119-Q4-Candidate-VirtualColumnField.log",
+      "sha256": "92fc798b4db1dc7c7ade6437b45d8aaa9d46b21087115acd30d932e47408728d"
+    },
+    {
+      "label": "source-120-Q4-Candidate-VirtualColumnMidpoint",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/VirtualColumnMidpoint.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.278,
+      "log": "source-120-Q4-Candidate-VirtualColumnMidpoint.log",
+      "sha256": "4bde0db3d93024da5f9b8e558d2a9f6e1fb232a9943b0a452df6c9d13991e66c"
+    },
+    {
+      "label": "source-121-Q4-Candidate-VirtualColumnShape",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/VirtualColumnShape.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.26,
+      "log": "source-121-Q4-Candidate-VirtualColumnShape.log",
+      "sha256": "02464f979181d2fd9ed0d8fdf0bfb358773d781849da4d641eb7865ef871f097"
+    },
+    {
+      "label": "source-122-Q4-Candidate-VirtualColumnSoftRows",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/VirtualColumnSoftRows.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.661,
+      "log": "source-122-Q4-Candidate-VirtualColumnSoftRows.log",
+      "sha256": "7504898c95b03859358b082929aea20e24a7fb5761e9c2a69e5827dc6686242c"
+    },
+    {
+      "label": "source-123-Q4-Candidate-VirtualColumnSoftSupport",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Candidate/VirtualColumnSoftSupport.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.134,
+      "log": "source-123-Q4-Candidate-VirtualColumnSoftSupport.log",
+      "sha256": "71727dd84e923839fb71d2b3dfb403d147493148045292604f9bf4fa92a8eac2"
+    },
+    {
+      "label": "source-124-Q4-CleanWire",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/CleanWire.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 26.432,
+      "log": "source-124-Q4-CleanWire.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "source-125-Q4-Counting",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/Counting.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.289,
+      "log": "source-125-Q4-Counting.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "source-126-Q4-JointProbe",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/JointProbe.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.584,
+      "log": "source-126-Q4-JointProbe.log",
+      "sha256": "7f76d1d5d0296c2315ed6db6a51b4510557098948d74ddd78df7dc58ff06c92d"
+    },
+    {
+      "label": "source-127-Q4-SimultaneousFlip",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4/SimultaneousFlip.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.115,
+      "log": "source-127-Q4-SimultaneousFlip.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "source-128-Q4",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Q4.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 10.761,
+      "log": "source-128-Q4.log",
+      "sha256": "5ea4f920546b649225e8bff9a3f864ba4b798f5c7fa0469f275a4464cd286a3e"
+    }
+  ],
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "trust_boundary": [
+    "Lean 4.34.1 kernel and runtime; installed compiler and hardware",
+    "Pinned mathlib and transitive dependencies, using their existing build artifacts",
+    "ConvexOptimum is an explicit mathematical hypothesis in the final theorem",
+    "Source NP-hardness, machine-time, NP-membership and target-threshold bit bound are not formalized here"
+  ],
+  "source_audit": {
+    "status": "PASS",
+    "entry_module": "Q4.Candidate.ConstructedReduction",
+    "source_count": 128,
+    "closure_module_count": 127,
+    "candidate_module_count": 123,
+    "other_modules": [
+      "Q4.CleanWire",
+      "Q4.Counting",
+      "Q4.JointProbe",
+      "Q4.SimultaneousFlip"
+    ],
+    "exact_source_set": true,
+    "explicit_root_coverage": true,
+    "exact_transitive_local_import_closure": true,
+    "forbidden_proof_tokens": [],
+    "manifest_hashes_match": true,
+    "original_sources_compared": true
+  },
+  "input_sha256": {
+    "Q4.lean": "cf12a2dc7bfcc904a36cc7b69b187d429e17884171889c8004d07823ee1c8b01",
+    "Q4/Candidate/ActualCatalogBounds.lean": "20734071067db79bbd190bdc6121d9bf13b5e433921992d31e19e5876f30dd40",
+    "Q4/Candidate/ActualCatalogParameters.lean": "161778a12ad4ca7dd45da5b84f0f3b9ab9252a0b9ec24e745cf498b61e4ed84a",
+    "Q4/Candidate/ActualCatalogRegime.lean": "0d71abb2c119c81771909c18bc9b6088073efc2e8cb02baed3e3502c35260b27",
+    "Q4/Candidate/ActualDummyUnary.lean": "a2f39846e18c394f368a4dd4743f8be376c9cd453d4b7c9e898ce71a95eb3d91",
+    "Q4/Candidate/ActualProgramGeometry.lean": "c90cb48e3c230417b7de4f3806c9fae4586b8e960ace19692410b4ca5746ff24",
+    "Q4/Candidate/ActualRecipe.lean": "cdb83bc513dad7503af4c007623f273cdac6ad1edf8a0a88c1b9503ad40401e8",
+    "Q4/Candidate/ActualReductionValue.lean": "6b0acc2fb214264c3b3a216d5de4f230de1bcc0b3a7190b07f7048a84c09bffd",
+    "Q4/Candidate/ActualSelectedUnary.lean": "ace5fd768e4c892bf09bab5413f0f46a61d1f58a724826f22c0d504ad4814ca1",
+    "Q4/Candidate/ActualSideGeometry.lean": "40b899f8605f63d5b340df7b337311a31a0263d12b29f84e1475fbb7a6b7bfc3",
+    "Q4/Candidate/AlternatingTriples.lean": "07e12d080c93b4a4eda5200461121ddf30df0c962964d6cdb99ba398d8d61583",
+    "Q4/Candidate/AlternationKernel.lean": "63cc8af5b771cf3f2286a3d2e44e288ea96c0b2e80568b95299f335df861c0ee",
+    "Q4/Candidate/AnalyticVariance.lean": "6cbd03e22ae4e2fa6ab536fa261c34a35f1cdf51bde03b3f3dead63aa8ed175f",
+    "Q4/Candidate/AntiperiodicReplacement.lean": "d9793180e594bf185d0857bb42aef4a1f31084528e9df120338fc325260efd9b",
+    "Q4/Candidate/AntiperiodicThreshold.lean": "32757318cde27b48b99adcb5d9c05d52cd1ab7353d661a49e1a8c243390c8984",
+    "Q4/Candidate/BoxAverage.lean": "c0f9c7ba3223b3ef0b79ae4086215308cf5bcd50ee8bd3f482734dca7dd4e58b",
+    "Q4/Candidate/BoxDerivative.lean": "e2a8d60f83cf51004f65754aba0c6eb49d851a7e78365ca6bf3bf9a187be2c7c",
+    "Q4/Candidate/CandidateSize.lean": "8c5fd580d80ac3c42035b69370d8b11a5f3ee62576ce3750f84120697cadb7e4",
+    "Q4/Candidate/CanonicalEnergy.lean": "5b2a02fb358fbe783315a3d5051cec6606cbe2305da5640608962c7ce00745a7",
+    "Q4/Candidate/CanonicalField.lean": "2f82c0c9d28bff0d81c5e20656185aebd1adc9221932b94db5135fc7dcb1ad4f",
+    "Q4/Candidate/CatalogDominance.lean": "64626c71ecd91bc40b740bbffcbbf9081b3f92547a89ea75dc72387856ede49f",
+    "Q4/Candidate/CatalogSupport.lean": "c76162174f4417e4fe3114dd0afa47dd901e946501447bd795f8434afbd3877f",
+    "Q4/Candidate/CatalogTargets.lean": "3f01bf94cdad0bec9655cdad516a2b3fa7ac02ac0cd5dd8cf1893aa28bcf3375",
+    "Q4/Candidate/ComparisonEnergy.lean": "03117eb4cbd12649890c93ebc798fa8270e6c6aa0f786e9745dd418bc2ddd4ce",
+    "Q4/Candidate/CompleteBackground.lean": "6e48099321291bec1f03674eb77461ee324293fd50eb857660fc49313250907d",
+    "Q4/Candidate/CompleteClassEnergy.lean": "7c4d163318c60122d1c8e1fb8ad52a8a73890b16811b5e9041266830f6ec36cd",
+    "Q4/Candidate/CompleteDrawing.lean": "07d07cbebf194a30aead43ebf37a6ff4f52f75ca12bae0d9d1bded30902952c4",
+    "Q4/Candidate/CompleteFanFields.lean": "d79119eaeaf0323206aadba94be50da46323eb32b8a51f89032baecf4193b14a",
+    "Q4/Candidate/CompleteGridEnergy.lean": "09d588d6b30289187bda471b4ea10d8ebf60153a6c8d24cf03100e08778474e9",
+    "Q4/Candidate/CompleteInput.lean": "f2b975d8ef42b093b2390da011e92da545310bd5a87619db0c2cb01441d04634",
+    "Q4/Candidate/CompleteProbeFreezing.lean": "f881400dcf3b7b08f6d189849ae931fd971154397ba923565fddb34177bb774a",
+    "Q4/Candidate/ComputedBackground.lean": "a2ef51391207037907a3cceec012c6481ef4290e057eabf83df69b11eb559497",
+    "Q4/Candidate/ComputedCore.lean": "f5db091ce6db87a2af6eaee94d9047131331b0889d2f610f7e6304a552cd85bf",
+    "Q4/Candidate/ConservativeGap.lean": "af10a26b64490fcd3d5fc5614d1771461c07b46d6c95cd31a77f3d949a0e5e07",
+    "Q4/Candidate/ConstructedReduction.lean": "111517c8c88c665ca08c75f6ee1e96842c204b5fb877656f21100f4f8264b5f3",
+    "Q4/Candidate/ConvexBackground.lean": "a43efbf3f0ddcb10b457107ecda08acb4c0a1d139582219d15028b75634e8067",
+    "Q4/Candidate/ConvexSeparation.lean": "f7ed1807816cf6b84c7bd667da4b6e6ecf6ab2e98397c3bbad4bf722d4c1af0b",
+    "Q4/Candidate/ConvexSeparationGrid.lean": "9b4dc76e56c2e2b46a88e86ec658317180bc80528e740b87862b43dd9bf4d64f",
+    "Q4/Candidate/CoreEncoding.lean": "9895579fac431ce9ed01db6e585990a4e7e227fef118f9b3237141a38205a65a",
+    "Q4/Candidate/CoreExtension.lean": "d26a30f676624b43987d9f5e199aed40d5ba8a098db4a7240d9b49f2eb4dc598",
+    "Q4/Candidate/CoreFixedPalette.lean": "87c3e598356f409e92fb834cea589cc5fae14a4607ea03415a8686e978664c40",
+    "Q4/Candidate/CoreLocalGeometry.lean": "32aed44fbbd433d69b658ec36ca5e3f06d23d8c2c17a248bd89814cbe3014099",
+    "Q4/Candidate/CorePaletteForcing.lean": "7b5c195829bed17147d7f4faf32a568744cbe4bab771c89cd40f3bd882cccfaa",
+    "Q4/Candidate/CoreReducedPairs.lean": "0e2998b9dde0b90bca95c0f8be56fbe1ee87243870ca78c2105dc93c81cf0eff",
+    "Q4/Candidate/CoreValueBridge.lean": "bd79a1480ab2d5ffde75a00a113d7cd2a56d17d8978e7a6f9c24575802414d39",
+    "Q4/Candidate/DiagonalAverage.lean": "e8e702807069838f270e847575c72457c5af202d8498361d951c6664161f2cae",
+    "Q4/Candidate/DiagonalCoordinates.lean": "ff516fe6a1de466fb2c7c79402d64e060221f0a647b9eb2f72f24848a552a5bb",
+    "Q4/Candidate/DiagonalHalves.lean": "19abbc9121f2a23322462d5f1fda550ea347f74a0ee6e9e410654d37b55a288e",
+    "Q4/Candidate/DiagonalRounding.lean": "c15f0e1ce5daab2cfb3b68c1b532f0877cbc4e93a104da1101403c375ff6a10d",
+    "Q4/Candidate/DoubleCapGrid.lean": "662ae8c75d9c2a72e808bd2dfbd2e6299f12dc07aa12065bcab99920584ad13a",
+    "Q4/Candidate/DummyGeometry.lean": "0ce5ffe189fdd595dd9349dc2da8ec569c9841c66a414eb8d77101a1520bd27d",
+    "Q4/Candidate/DummyPaletteField.lean": "dd4ec0558c5eed882c1d1b0c23d453571b176534c91baa3545243f95e9e6f949",
+    "Q4/Candidate/EnergyLipschitz.lean": "f0e14c3ca1d90b8199daf8525cf3c28519b875bba921d5864176061965fda9ad",
+    "Q4/Candidate/FreezingErrors.lean": "af5cf266b17f74ca34fce701b6d66f1153051055e7e81054672054d7bee5f2c8",
+    "Q4/Candidate/FreezingParameters.lean": "c497dc4ad0886f17f6cc46935d9fab25b8a5b91ac1c1f20c4f23ab8f41113f4c",
+    "Q4/Candidate/GeometryEncoding.lean": "a0800e6d01436eb9cefaa1ff1b2beb935f122590326700bd402108dd309fe793",
+    "Q4/Candidate/GlobalGeometryScales.lean": "d9fdad082624c5f597851d7577333d59db2049fcd7b62450e15561ecd6f00296",
+    "Q4/Candidate/GridCounts.lean": "038d055e94811087e531e492a38bd37d60f2e290733f6ebe6a2a6def4b6f442a",
+    "Q4/Candidate/GridInitialConstants.lean": "a2e0a062d77f453312081911ceb829af0ea29e3781562cecf42929689357005a",
+    "Q4/Candidate/GridLocalization.lean": "384bb8968b531ad6c6e52a1e64cf7bac15fa00567dca487525892738e0a5a256",
+    "Q4/Candidate/GridStepBridge.lean": "95bd2c4608a9e9153d4dad224fb7b906b07b77843eb68b18e1a9b08210f3be45",
+    "Q4/Candidate/GridStepExtension.lean": "ababb163209b306bbc6ecafb4de7a438024aeaa4df92cf59826fecd6b70ae89a",
+    "Q4/Candidate/IndexedPaletteForcing.lean": "3863b3a98272c80e5a7433641379dc6a76a7e796eafc492e42c529a6a92afbf8",
+    "Q4/Candidate/IntervalPoincare.lean": "7bfb70571048c06b837e5ec21c27e2ed76ebf586daf6c889a8de3d9d98270143",
+    "Q4/Candidate/MacroLayout.lean": "03b6520bf65368c2eded01c8f3010621967a03512b471476d73e8764148c1b7d",
+    "Q4/Candidate/MainSourceEncoding.lean": "ed81e5f0d780aded505199637de8206cb61a15f8d0e9b741b92817e837e0fd4e",
+    "Q4/Candidate/OneDimensionalStability.lean": "5dc141671b8fa2dc18ecd7343f77eef26cff9a47d0bd1287bb13834b4d0c4b11",
+    "Q4/Candidate/OperatorPerturbation.lean": "d405ff1e53fb6026650850f6b3872395c27c21b94368b32190784e71d6b8a52f",
+    "Q4/Candidate/OrdinaryCoreField.lean": "f86dd95ab6d6298db5bef2663f6f35522512771e2bc9e92d5fcfce701a840bc5",
+    "Q4/Candidate/OrdinaryFan.lean": "89600a8b398520c3fdbfd52709f3b1a3eda6774ffd4f529a29c995f3434ecafb",
+    "Q4/Candidate/OrdinaryNonincident.lean": "64792799916960b95c83afaf73822062013edf1085583b91499547a23232ef44",
+    "Q4/Candidate/OrdinaryResponse.lean": "496f3d140dc6d1a6d87b99bcf4a668b0b2fb63a95d698a240dc47f6fdeabaf02",
+    "Q4/Candidate/OrdinarySoftRows.lean": "3f5859abf935daf1dab8a381226e4286939ed8a941944bdead7a4cf93d036917",
+    "Q4/Candidate/OrdinaryTablePreservation.lean": "223513f56c34dac5aa4c20796eac44a8eee69bbda13ccff88c1e6cbde42e6e3d",
+    "Q4/Candidate/OrientationPreservation.lean": "6c7326a97d9e3a806296f7fb187f086ed30051cbcd652c5371260bac30da32ed",
+    "Q4/Candidate/OriginalCapAlternation.lean": "5e1b3a83d8db4932e49427b2c08b989b356f2b8ccf60583c1919bdf44f4f5255",
+    "Q4/Candidate/OriginalCapCrossing.lean": "b10c469f0709509c0fb3a8b0627aa9779ee18b44a3be0af14e997b0fe89ea53e",
+    "Q4/Candidate/OriginalVertexLayout.lean": "8e4d1aeb8f74689b6afd5ba37edc65464740736070daa497ff1e57533d82f9b7",
+    "Q4/Candidate/PaletteBounds.lean": "04ca5892269036a71f0389574c7ef58992de99af6dd9b84a07f47e271b8cbaf8",
+    "Q4/Candidate/PaletteCounting.lean": "6044c8a2afc134b93da29461303f23196e2b7a9ccd1f99f3005e8693370f739b",
+    "Q4/Candidate/PaletteExhaustion.lean": "0afb0162b438a15f3ff6bb97297806142e9dadb7494bd4ea12bdf349e05c6240",
+    "Q4/Candidate/PaletteForcing.lean": "2805d68984d5ea9a465897c009ad8ebf747152c4ff1af98f6da0859273059abd",
+    "Q4/Candidate/ParentBlockExclusion.lean": "d7ee47bf85e5ad25ec8d71c6e8c729e53ae54f6629b6cf8eedf6c7f5cfade124",
+    "Q4/Candidate/PlacedOrdinaryField.lean": "9a33a86548cd3edcb1f77daf1be8c3914fa06cc35514c0ca855d0583e53017ce",
+    "Q4/Candidate/ProbeFreezing.lean": "2904453ea2f4911c80e08e0490b9341072aba45e6a4e793cc7dfc41cd686f20e",
+    "Q4/Candidate/ProbeFreezingReal.lean": "8bbed0343dbbfdb921ae5d1dc554afa142c080a8e35177c77db779c2cb72434f",
+    "Q4/Candidate/ProgramCatalog.lean": "b8149fdaa86feff1fc1385b4fb816788b2ede51f551f599cd3736fa5f7b2cdf1",
+    "Q4/Candidate/ProgramCount.lean": "2315fbdbc9df46b175cfada4cb3ef25bb2767f5ef2e627591f57b298b83aa333",
+    "Q4/Candidate/ProgramExclusion.lean": "7c64937b35cf0303bac72a938e1e6ae211b8292faaf2576b6589c6d2d2ee9da4",
+    "Q4/Candidate/ProgramField.lean": "6a0ccd8ad3b8a055ca155dc4cd08561bd57773a67496f0b19cd82163beac8bb9",
+    "Q4/Candidate/ProgramGeometry.lean": "5e87574faf4edbd85cc58644310f7e895a63cebd1192ca8c9567ad4766b37e66",
+    "Q4/Candidate/ProgramIndex.lean": "5df39ea06a43f53f5ca6225a034d1aeb901e96f5b97385ed4ff1ef8224519195",
+    "Q4/Candidate/ProgramPlacement.lean": "0e3aca0593fbfe7a9dd9ae6ee8263edb1bc37cecd5c0a2f2a904d60811499a2b",
+    "Q4/Candidate/ProposedPalette.lean": "fa30a419c87adf9731c2e43cbda1a411f4f6f6367a5e3f87e3e24e092f89990e",
+    "Q4/Candidate/RankCorrection.lean": "b0df0d22d732546cf0de1b22a81a2127f6921b90cd20cfb1d814cbc2ae1a6d36",
+    "Q4/Candidate/RankGap.lean": "69f800e67cb2b1df2b4f1f64a7a208e4fd60290ab0b1102a36a0d41cc8ac3239",
+    "Q4/Candidate/RankGapPreservation.lean": "9d08f8e85ecffda0b4e3c6bdcd8a8861d64c7922405aef53b284163bb5d02b52",
+    "Q4/Candidate/RankNonincident.lean": "1089a159438102b5df5748f60632a88c7e1a50a954936f9893d1fd65871d237b",
+    "Q4/Candidate/RankNonselected.lean": "d7c9ad929d88898a3927a4a7aead65aaa2c06e7b54a6250d233ee815641bc90e",
+    "Q4/Candidate/RankResponse.lean": "b11aacc4f1de7b097b77fc0a96d4b5bbe3585f54f757e32bf024ee7f7bd8fe04",
+    "Q4/Candidate/RankSoftRows.lean": "aa1d4a2b5e1e932311c63d94cf347d6b3a9f3dd0fa30ff5f4795f9226b6e46d1",
+    "Q4/Candidate/RankTablePreservation.lean": "29542c07329de79b90e9de6b43a6c2ce8a08391b5142e86bf8cf9318784cfd78",
+    "Q4/Candidate/RationalEncoding.lean": "fea31eecc7695bc2957360c0472b9ac8ce9f900d1d84e51ef61515980e278c5f",
+    "Q4/Candidate/ReductionGap.lean": "d2ed4d11f9ee012d4d21884ddae20a57e7821a4543dbb590342b244ac155fb12",
+    "Q4/Candidate/SideCatalog.lean": "f386c3f8bbca084ffe8864f68cc8be00581a91cd9b445846d41618c41c93c0d7",
+    "Q4/Candidate/SideDominance.lean": "b0d9ac30106481d4b34ad5a130dffdb8e01de955efff6fc2b7ee780d4a593dfe",
+    "Q4/Candidate/SliceStability.lean": "f07225b4babd2a7678dddd76c92b4acc9491e881929561f499d0458f6976da13",
+    "Q4/Candidate/SmoothingApproximation.lean": "b648e1f530b05714349eefa0350b5b4c034e8d5f012c4bb6032a42aed015c79c",
+    "Q4/Candidate/SourceChordGeometry.lean": "e6c345593ce5bd5c0ae612e2d9c1699c9b8b66cfd544f17c0aa25710b54bf6e2",
+    "Q4/Candidate/SourceCutBridge.lean": "6b3629f7e8f978166c45c91df7652bd6b13c557d44171cc5ed622114cf423832",
+    "Q4/Candidate/SourceSelectedEdges.lean": "b1a2c671def6ae4e5c4e7489d5410769613a0cd11b58bd5e16dfe3063c0baefb",
+    "Q4/Candidate/SquareTranslation.lean": "d736f4cf75d0a153e9867fdaf6a43483fc2ea6e69e1428fdfa13e0acae18c868",
+    "Q4/Candidate/StabilityConstants.lean": "3c35d1f33ae4d799f08db41e1dc5671545f8353a1b2eb0b90e1102ee28f41f6e",
+    "Q4/Candidate/ThresholdApproximation.lean": "91065fc74fe7b45c193e164463b64814d07545d5a00323d9f941348d4c3c99ad",
+    "Q4/Candidate/ThresholdHalfSelection.lean": "e3047f773ca201d86635e2497b3a711ccb2aa2c1d9297c3cabe0237993e1a8f5",
+    "Q4/Candidate/ThresholdTranslation.lean": "74fabd8325bb78344a0eaebd9c31808f8d51c9badc48ca45d490b2e8efaca5bc",
+    "Q4/Candidate/TwoPhaseStability.lean": "77fd83ffe62379ebec373af5775e394f9fd1a2cf1d82dc5cb1f1f57689930ba4",
+    "Q4/Candidate/UniformInsertion.lean": "1459f33baf09567017df2e587f048a2d98bddbb76877b520e529085431eccecf",
+    "Q4/Candidate/UnitIntervalMeasure.lean": "203cf6d1edf1cfb5e759cea62578075721a25f48ed5239142e666bc5565bd173",
+    "Q4/Candidate/VirtualColumnField.lean": "9beab32b6da3e8f98c21e4f4d0929efd1a7dd9638bd787e9788d6bc9110c3b09",
+    "Q4/Candidate/VirtualColumnMidpoint.lean": "75880b8fed41b242ade39f87261b43b248c9b3d184c5646637e7ca06792f5d06",
+    "Q4/Candidate/VirtualColumnShape.lean": "e095cfbff92cd805cc245239b144aaee8d334bf2ca3325dd0711c01225bff369",
+    "Q4/Candidate/VirtualColumnSoftRows.lean": "e734ad6490d92357c4c20bdc2e35b927b4eb571a7ee8386f8016ed7e4ad63258",
+    "Q4/Candidate/VirtualColumnSoftSupport.lean": "cffc5426bcedc587776d4b62a9a13760fed5eddba74157aa83c62ad0a7a73700",
+    "Q4/CleanWire.lean": "31ff694d15c21dc542a9ea49fd67895e652805235be3ae44a0dcee889a0f11a5",
+    "Q4/Counting.lean": "44033dde926140a9a7b7bc80c3deaf6f45685fb149e597bcaf6fd0fba62285ac",
+    "Q4/JointProbe.lean": "cfcd8be7ed4984df972c550ad1b0f0a530db6e0ab92a8045b213433ca8535265",
+    "Q4/SimultaneousFlip.lean": "a9e3598892759f16e76f4d5dfa1269778db535a0fad2da9dad770924d99f53f0",
+    "audit_sources.py": "a73f444c9b1447d777803dac56fff6b9ab8ba69831dc7ee96b18565b929f5342",
+    "lake-manifest.json": "0b82985800cd14809c5a52370fbe67d146e871dfb95d645077e50adda76ee0d0",
+    "lakefile.toml": "8687d09c237d376a0f37f2a8a65917324dd0830c4fd087157f8692c02464dc87",
+    "lean-toolchain": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
+    "source-manifest.json": "d028da55f780609ec4f9a41f13ea1121175d9f5ffb6171b9116d34aeb53f3562",
+    "verify.py": "0c6670a583e96defb7e53be5e32f52e2df9a1cb907c898af8fb138c625e51cf3"
+  },
+  "lean_version": "Lean (version 4.34.1, arm64-apple-darwin24.6.0, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
+  "lake_version": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)",
+  "full_build_passed": true,
+  "per_file_rechecks": 128,
+  "all_source_and_configuration_hashes_unchanged": true,
+  "axiom_query_count": 883,
+  "distinct_declarations_audited": 882,
+  "axiom_dependencies": {
+    "Q4.Candidate.ActualCatalogBounds.every_minimizer_palette": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualCatalogBounds.pair_dominance": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualCatalogParameters.actual_count": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualCatalogRegime.cross_sides": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualCatalogRegime.opposite_sides": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualCatalogRegime.ordinary_weights": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualCatalogRegime.rank_weights": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualCatalogRegime.regime": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualDummyUnary.program_cost_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualDummyUnary.unary_constant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualProgramGeometry.block_nonincident": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualProgramGeometry.cross_support": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualProgramGeometry.dummy_nonincident": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualProgramGeometry.nonincident_at_indices": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualProgramGeometry.selected": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualProgramGeometry.selected_indices": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualProgramGeometry.selected_other": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualProgramGeometry.selected_other_nonincident": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualRecipe.ordinary_weights_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualRecipe.palette_affine": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualRecipe.rankLeftWeight_cast": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualRecipe.rankRightWeight_cast": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualRecipe.rank_left_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualRecipe.rank_right_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualRecipe.selected_left_weight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualRecipe.selected_residual": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualRecipe.selected_right_weight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualRecipe.unary_difference": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualReductionValue.actual_reduction_threshold": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualReductionValue.actual_source_threshold": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualReductionValue.combined_interval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualReductionValue.finite_minimum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualReductionValue.integer_threshold_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualReductionValue.source_main_minimum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualSelectedUnary.dummy_unary_equal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualSelectedUnary.selected_from_rank_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualSelectedUnary.selected_rank_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualSelectedUnary.selected_unary_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualSideGeometry.dummy_side_support": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualSideGeometry.side_dummy_support": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualSideGeometry.side_margins": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualSideGeometry.side_pair_support": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ActualSideGeometry.support_reverse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.AlternatingTriples.integral_quantile": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.AlternatingTriples.ordered_integral_quantiles": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.AlternatingTriples.positive_quantiles": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.AlternatingTriples.quantile_blocks_force_alternations": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.AlternatingTriples.rectangle_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.AlternatingTriples.threshold_distance_cubic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.AlternationKernel.ae_distinct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.AlternationKernel.cyclic_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.AlternationKernel.integral_altIndicator": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.AlternationKernel.kernel_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.AlternationKernel.normSq_eq_triple_integral": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.AnalyticVariance.affine_interval_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.AnalyticVariance.affine_ramp_integral": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.AnalyticVariance.affine_ramp_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.AnalyticVariance.double_difference_eq_twice_variance": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.AntiperiodicReplacement.close_to_phase": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.AntiperiodicReplacement.replacement_cost": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.AntiperiodicThreshold.anti_phase_distance": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.AntiperiodicThreshold.antiperiodic_threshold_mean": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.AntiperiodicThreshold.diagonal_density": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.AntiperiodicThreshold.exists_phase_le_twice_abs_mean": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.AntiperiodicThreshold.nearest_phase_distance": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.AntiperiodicThreshold.nearest_phase_le_twice_abs_mean": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxAverage.average_integrable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxAverage.averaging_error": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxAverage.averaging_error_of_translation_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxAverage.boxMeasure_supported": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxAverage.box_averaging_error": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxAverage.translated_joint_integrable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxAverage.translation_triangle": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxDerivative.average_eq_rectangle": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxDerivative.boundary_eq_corner": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxDerivative.box_diagonal_ac": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxDerivative.box_diagonal_corner_deriv": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxDerivative.box_diagonal_poincare": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxDerivative.cmp_increment": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxDerivative.cornerQuotient_L1_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxDerivative.corner_boundary_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxDerivative.moving_interval_ae_derivative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxDerivative.operatorDifference_L1_sq_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxDerivative.operator_corner_L1_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxDerivative.operator_corner_small_energy": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxDerivative.rectangle_col_ae_derivative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxDerivative.rectangle_diagonal_ac": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxDerivative.rectangle_diagonal_ae_derivative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxDerivative.rectangle_diagonal_corner_deriv": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxDerivative.rectangle_fderiv_col": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxDerivative.rectangle_fderiv_row": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxDerivative.rectangle_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxDerivative.rectangle_lipschitz": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxDerivative.rectangle_row_ae_derivative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxDerivative.transform_increment": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.BoxDerivative.zero_corner_boundary_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CandidateSize.actual_size_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CandidateSize.source_polynomial_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CandidateSize.source_scale_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CanonicalEnergy.canonical_difference": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CanonicalEnergy.canonical_energy": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CanonicalEnergy.canonical_mean": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CanonicalEnergy.canonical_row_norm": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CanonicalEnergy.strict_threshold_no_alternations": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CanonicalField.canonical_diagonal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CanonicalField.canonical_field_with_unaries": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CanonicalField.canonical_grid_delta_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CanonicalField.canonical_phase_upper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CanonicalField.finite_grid_optimum_interval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CanonicalField.minimizer_localization_from_initial_stability": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CanonicalField.negativeBelow_upper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CanonicalField.phase_diagonal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CanonicalField.phase_field_with_unaries": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CanonicalField.positiveAbove_upper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CanonicalField.positive_ranks_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CanonicalField.triangle_lattice_upper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CatalogDominance.cross_dominance": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CatalogDominance.cross_field_reference": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CatalogDominance.offset_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CatalogSupport.cross_field": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CatalogSupport.cross_rank_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CatalogSupport.ordinary_left_incident": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CatalogSupport.ordinary_left_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CatalogSupport.ordinary_right_incident": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CatalogSupport.rank_left_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CatalogSupport.rank_left_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CatalogSupport.rank_right_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CatalogTargets.dimensions": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CatalogTargets.frame_small": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CatalogTargets.margins": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CatalogTargets.target_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ComparisonEnergy.colNormSq_le_third": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ComparisonEnergy.deficit_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ComparisonEnergy.deficit_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ComparisonEnergy.difference_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ComparisonEnergy.energy_ge_twelfth": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ComparisonEnergy.energy_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ComparisonEnergy.inner_eq_cross_integral": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ComparisonEnergy.rowNormSq_le_third": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteBackground.common_background": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteBackground.complete_minimum_interval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteBackground.core_minimum_phase": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteBackground.freeze_in_phase": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteBackground.frozen_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteBackground.full_decomposition": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteBackground.phaseValue_complement": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteBackground.simultaneous_upper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteClassEnergy.coreUnary_difference": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteClassEnergy.full_Y_interval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteClassEnergy.full_attainment": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteClassEnergy.full_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteClassEnergy.outside_attainment": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteClassEnergy.outside_class_decomposition": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteClassEnergy.outside_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteClassEnergy.yFloor_complement": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteClassEnergy.yRemainder_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteClassEnergy.yResidual_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteDrawing.I_no_cross_nonI": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteDrawing.X_cross_X": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteDrawing.X_cross_outside_only_T": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteDrawing.edges_exhaustive": [
+      "propext"
+    ],
+    "Q4.Candidate.CompleteDrawing.unordered_endpoints_injective": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteFanFields.complete_freezing_from_program_geometry": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteFanFields.full_field_eq_pointField": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteFanFields.full_left_rank_soft_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteFanFields.full_ordinary_soft_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteFanFields.full_placed_left_rank_soft_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteFanFields.full_placed_ordinary_soft_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteFanFields.full_placed_right_rank_soft_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteFanFields.full_right_rank_soft_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteFanFields.placed_ordinary_field": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteFanFields.witnessed_soft_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteGridEnergy.complete_minimizer_interval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteGridEnergy.complete_minimizer_localization": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteGridEnergy.energy_double_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteGridEnergy.energy_grid_decomposition": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteGridEnergy.gridOutsideDegree_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteGridEnergy.unary_amplitude": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteInput.actual_edge_endpoints_distinct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteInput.actual_point_image": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteInput.actual_point_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteInput.complete_fin_input_exists": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteInput.complete_input_exists": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteInput.crossing_transport": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteInput.decision_transport": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteInput.edgeEquiv": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteInput.energy_transport": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteInput.plainEnergy_double_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteProbeFreezing.complete_probe_freezing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteProbeFreezing.complete_probe_freezing_from_rows": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteProbeFreezing.crossingPairs_neighbors_nodup": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteProbeFreezing.field_complement": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteProbeFreezing.field_eq_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteProbeFreezing.global_soft_from_rows": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteProbeFreezing.mem_crossingPairs_neighbors": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CompleteProbeFreezing.outside_neighbors_card_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ComputedBackground.background_cast": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ComputedBackground.canonical_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ComputedBackground.fans_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ComputedBackground.gridValue_cast": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ComputedBackground.phaseValue_cast": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ComputedCore.baseFloor_cast": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ComputedCore.baseline_cast": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ComputedCore.paletteCost_cast": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ComputedCore.unary_cast": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConservativeGap.actual_error_window": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConservativeGap.local_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConservativeGap.quarter_gap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConstructedReduction.constructed_maxcut_instance": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConstructedReduction.placed_maxcut_threshold": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConstructedReduction.placed_source_threshold": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConstructedReduction.reindexed_program_witnesses": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexBackground.dummyEquiv": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexBackground.dummy_minimum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexBackground.dummy_pairs_half": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexBackground.dummy_value_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexBackground.frame_cross_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexBackground.frame_minimum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexSeparation.I_isolated": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexSeparation.X_C_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexSeparation.X_no_cross_C_or_Y": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexSeparation.candidate_grid_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexSeparation.exists_general_position_extension": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexSeparation.exists_grid_point_avoiding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexSeparation.exists_insertion_point": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexSeparation.exists_inward_general_position_extension": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexSeparation.exists_valid_program_extension": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexSeparation.frame_fan_no_cross_I": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexSeparation.generalPosition_insert": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexSeparation.gridPoint_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexSeparation.insertion_in_box": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexSeparation.lineIndices_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexSeparation.nonframe_no_cross_I": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexSeparation.oldPointIndices_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexSeparation.ordinary_inside": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexSeparation.ordinary_valid": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexSeparation.original_frame_no_cross_inside": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexSeparation.perturbation_inside": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexSeparation.properCross_fromInt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexSeparation.properCross_has_open_intersection": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexSeparation.rank_midpoint_inside": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ConvexSeparation.rank_midpoint_valid": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreEncoding.blowEnergy_eq_monoCount": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreEncoding.blowup_rounding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreEncoding.core_encoding_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreEncoding.deleted_core_minimum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreEncoding.independent_blowup_minimum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreEncoding.source_coloring_extension": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreEncoding.uniformize_one": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreEncoding.zero_constant_evaluation": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreExtension.indexed_selected_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreExtension.merge_dummy_energy": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreExtension.merge_main_energy": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreExtension.merge_unary_upper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreExtension.restored_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreExtension.restored_upper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreFixedPalette.core_fixed_palette_decomposition": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreFixedPalette.freePairHalf_eq_actual_pairs": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreFixedPalette.freeUnary_congr_T": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreFixedPalette.halfSum_partition": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreFixedPalette.indexed_full_core_decomposition": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreFixedPalette.paletteBaseline_congr": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreFixedPalette.palette_neighbor_cost": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreLocalGeometry.actual_local_restoration": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreLocalGeometry.free_classification": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreLocalGeometry.indexed_allLocalPairs_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreLocalGeometry.indexed_short_cross_free_local": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreLocalGeometry.local_edges_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreLocalGeometry.local_pairs_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreLocalGeometry.local_unique": [
+      "propext"
+    ],
+    "Q4.Candidate.CoreLocalGeometry.short_cross_free_local": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreLocalGeometry.short_pair_in_local": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CorePaletteForcing.core_card_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CorePaletteForcing.every_minimizer_palette": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CorePaletteForcing.every_minimizer_palette_of_square": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CorePaletteForcing.pair_change_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CorePaletteForcing.unary_difference": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CorePaletteForcing.wrong_bit_improves": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreReducedPairs.dummy_no_local_cross": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreReducedPairs.free_energy_decomposition": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreReducedPairs.free_pairs_decomposition": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreReducedPairs.local_dummy_disjoint": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreReducedPairs.local_main_disjoint": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreReducedPairs.main_dummy_disjoint": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreValueBridge.actual_core_decomposition": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreValueBridge.actual_core_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreValueBridge.actual_core_minimum_interval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.CoreValueBridge.actual_core_upper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DiagonalAverage.diagonal_poincare": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DiagonalAverage.fiber_integral_integrable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DiagonalAverage.lineMean_abs_le_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DiagonalAverage.lineMean_measurable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DiagonalAverage.lineMean_poincare": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DiagonalAverage.lineMean_zero_of_empty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DiagonalCoordinates.diagonal_integral": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DiagonalCoordinates.diagonal_preserving": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DiagonalCoordinates.fiber_membership": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DiagonalCoordinates.interior_diagonal_integral": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DiagonalHalves.agreement_cubic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DiagonalHalves.agreement_cubic_of_operator_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DiagonalHalves.agreement_opposite": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DiagonalHalves.agreement_same": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DiagonalHalves.differenceSq_eq_twice_variance": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DiagonalHalves.kernel_integral_split": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DiagonalHalves.operator_difference": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DiagonalHalves.threshold_ramp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DiagonalRounding.boundary_area_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DiagonalRounding.exists_diagonal_rounding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DiagonalRounding.interior_area": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DiagonalRounding.roundedProfile_measurable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DiagonalRounding.rounded_distance": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DiagonalRounding.rounded_energy": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DiagonalRounding.spin_diagonal_error": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DoubleCapGrid.actual_frame_grid_crossing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DoubleCapGrid.base_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DoubleCapGrid.base_general_position": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DoubleCapGrid.fan_crossing_scalar": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DoubleCapGrid.frameParameter_antitone": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DoubleCapGrid.frameParameter_unit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DoubleCapGrid.frame_pair_original": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DoubleCapGrid.frame_vandermonde": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DoubleCapGrid.indexed_grid_crossing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DoubleCapGrid.original_pair_frame": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DoubleCapGrid.original_vandermonde": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DummyGeometry.all_gap_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DummyGeometry.dummy_late_crossing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DummyGeometry.early_dummy_crossing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DummyGeometry.no_early_late_crossing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DummyGeometry.no_early_short_crossing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DummyGeometry.no_late_short_crossing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DummyGeometry.paletteCost_constant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DummyGeometry.totalPaletteCost_constant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DummyPaletteField.global_field_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DummyPaletteField.indexed_coefficient": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DummyPaletteField.indexed_dummy_cost_constant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.DummyPaletteField.indexed_dummy_field_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.EnergyLipschitz.energy_lipschitz": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.EnergyLipschitz.indicator_difference_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.EnergyLipschitz.mean_lipschitz": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.FreezingErrors.actual_class_counts": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.FreezingErrors.actual_conservative_signal_window": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.FreezingErrors.actual_signal_window": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.FreezingErrors.actual_y_remainder_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.FreezingErrors.cubic_scale_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.FreezingErrors.freezing_error_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.FreezingErrors.grid_error_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.FreezingErrors.total_error_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.FreezingErrors.y_error_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.FreezingParameters.actual_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.FreezingParameters.actual_complete_freezing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.FreezingParameters.actual_large": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.FreezingParameters.alpha_small": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.FreezingParameters.catalog_scale_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.FreezingParameters.program_scale_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.FreezingParameters.scalar_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GeometryEncoding.actual_base_encoding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GeometryEncoding.actual_original_encoding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GeometryEncoding.actual_placed_binary_coordinates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GeometryEncoding.actual_placed_encoding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GeometryEncoding.actual_prototype_encoding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GeometryEncoding.cap_point_encoding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GeometryEncoding.cloneAt_encoding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GeometryEncoding.frame_encoding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GeometryEncoding.ordinary_encoding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GeometryEncoding.rank_encoding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GeometryEncoding.source_macro_encoding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GlobalGeometryScales.actual_clone_conditions": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GlobalGeometryScales.common_scale_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GlobalGeometryScales.nonincident_margins": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GlobalGeometryScales.nonparent_distance_order": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GlobalGeometryScales.nonparent_ray_margins": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GlobalGeometryScales.nonselected_partner_gap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GlobalGeometryScales.ordinary_strict_valid": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GlobalGeometryScales.pair_scale_conditions": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GlobalGeometryScales.rank_strict_valid": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridCounts.corners_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridCounts.crossEdges_card_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridCounts.interval_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridCounts.localized_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridCounts.localized_edges_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridCounts.rectangle_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridCounts.rectangle_card_normalized": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridCounts.strip_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridCounts.strip_card_rows": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridCounts.strip_edges_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridCounts.strip_forward_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridCounts.strip_neighbors_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridCounts.twice_inducedEdges_le_square": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridInitialConstants.initial_fraction_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridLocalization.absorb_disagreement": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridLocalization.energy_flip_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridLocalization.energy_lower_by_internal_edges": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridLocalization.finite_grid_localization": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridLocalization.finite_grid_localization_from_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridLocalization.grid_internalDegree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridLocalization.initial_grid_localization": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridLocalization.localized_grid_energy_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridLocalization.minimizer_flipback_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridLocalization.minimizer_grid_localization": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridLocalization.negative_mask_upper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridLocalization.prescribed_phase_upper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridStepBridge.actual_energy_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridStepBridge.canonical_extension_distance": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridStepBridge.extension_distance_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridStepBridge.finite_grid_optimum_interval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridStepBridge.initial_disagreement_estimate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridStepBridge.minimizer_extension_energy": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridStepBridge.minimizer_initial_stability": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridStepBridge.minimizer_localization": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridStepExtension.cell_area": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridStepExtension.cell_cover": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridStepExtension.extension_distance": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridStepExtension.extension_energy_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridStepExtension.extension_energy_upper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridStepExtension.extension_measurable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridStepExtension.extension_on_cell": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.GridStepExtension.integral_cell_constant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.IndexedPaletteForcing.every_minimizer_palette": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.IndexedPaletteForcing.fan_field_eq_catalog": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.IntervalPoincare.distance_to_mean_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.IntervalPoincare.interval_poincare": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.IntervalPoincare.oscillation_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.MacroLayout.common_source_width": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.MacroLayout.dummy_encoding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.MacroLayout.dummy_strictMono": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.MacroLayout.macro_box": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.MacroLayout.macros_card_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.MacroLayout.macros_encoding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.MacroLayout.source_clone_regions": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.MacroLayout.source_macros_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.MainSourceEncoding.actual_main_minimum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.MainSourceEncoding.encodePair_injective_on": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.MainSourceEncoding.encodePair_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.MainSourceEncoding.encodePair_surjective_on": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.MainSourceEncoding.main_energy_eq_retained": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.MainSourceEncoding.main_selected_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.MainSourceEncoding.selectedCore_crossing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.MainSourceEncoding.selectedCore_exhaustive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.MainSourceEncoding.selectedCore_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.MainSourceEncoding.selected_coloring_extension": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.MainSourceEncoding.source_coloring_lift": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OneDimensionalStability.deficit_eq_alternations": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OneDimensionalStability.deficit_nonneg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OneDimensionalStability.one_dimensional_stability": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OperatorPerturbation.col_square_perturbation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OperatorPerturbation.differenceSq_perturbation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OperatorPerturbation.near_optimal_perturbation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OperatorPerturbation.row_square_perturbation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OperatorPerturbation.transform_difference_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryCoreField.core_cost_difference": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryCoreField.early_incident_coefficient": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryCoreField.incident_coefficient": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryCoreField.incident_rank_independent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryCoreField.late_incident_coefficient": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryCoreField.nonincident_coefficient_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryFan.fan_crossing_epsilon": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryFan.frameSide_positive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryFan.ordinary_clone_core_indexed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryFan.ordinary_clone_indexed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryFan.ordinary_clone_sign": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryFan.ordinary_core_indexed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryFan.ordinary_nonparent_indexed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryFan.ordinary_parent_crossing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryFan.ordinary_parent_indexed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryFan.original_parameter_lipschitz": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryNonincident.chord_margin_between": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryNonincident.chord_margin_nonzero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryNonincident.curvature_from_macro_boxes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryNonincident.ordinary_nonincident_determinants": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryNonincident.ordinary_nonincident_no_cross": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryNonincident.placed_ordinary_nonincident_no_cross": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryNonincident.simultaneous_scales": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryResponse.actual_shape_estimate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryResponse.band_avoids_switch": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryResponse.early_half_weights": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryResponse.early_middle_response": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryResponse.late_half_weights": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryResponse.late_middle_response": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryResponse.ordinary_increment_small": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryResponse.ordinary_soft_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryResponse.response_minimizes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryTablePreservation.ordinary_clone_core_determinants": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryTablePreservation.ordinary_clone_ray_nonzero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryTablePreservation.placed_ordinary_clone_core": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryTablePreservation.placed_ordinary_clone_fan": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrdinaryTablePreservation.placed_ordinary_nonparent_fan": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrientationPreservation.batch_insertion_preserving_tables": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrientationPreservation.constructionRadius_positive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrientationPreservation.double_cap_batch_insertion": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrientationPreservation.fixed_base_orientation_preserved": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrientationPreservation.one_program_crossing_preserved": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrientationPreservation.orient_change_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OrientationPreservation.orientationMargin_positive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OriginalCapAlternation.cap_ordered": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OriginalCapAlternation.cross_ordered": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OriginalCapAlternation.cross_reverse_second": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OriginalCapCrossing.indexed_separated": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OriginalCapCrossing.separated_order": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OriginalCapCrossing.separated_scalar": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OriginalVertexLayout.actual_grid_crossing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OriginalVertexLayout.fixedBase_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OriginalVertexLayout.fixedBase_encoding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OriginalVertexLayout.fixedBase_general_position": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OriginalVertexLayout.fixedBase_provenance": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OriginalVertexLayout.flatClone_strictMono": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OriginalVertexLayout.latePhysical_sourceBlock": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OriginalVertexLayout.palette_endpoints_match": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OriginalVertexLayout.parameter_provenance": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OriginalVertexLayout.parameter_strictMono": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OriginalVertexLayout.parameter_unit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OriginalVertexLayout.site_source_fibers": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.OriginalVertexLayout.source_endpoints_match": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteBounds.crossing_adverse_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteBounds.nonselected_direction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteBounds.rank_copy_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteBounds.rounded_other_half": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteBounds.selected_residual_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteBounds.side_adverse_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteCounting.dummy_field": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteCounting.early_cross": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteCounting.early_field_affine": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteCounting.family_card_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteCounting.family_field_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteCounting.family_no_reverse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteCounting.late_cross": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteCounting.late_field_affine": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteCounting.neutral_cross_independent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteCounting.palette_cost_difference": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteCounting.palette_field_affine": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteCounting.palette_field_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteCounting.palette_parameters": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteCounting.palette_slopes_negative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteExhaustion.all_allowed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteExhaustion.early_exists": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteExhaustion.late_exists": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteForcing.core_flip_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteForcing.every_minimizer_palette": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteForcing.frozenField_cost_difference": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteForcing.multiplicity_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PaletteForcing.wrong_palette_improves": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ParentBlockExclusion.ordinary_parent_block_rays": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ParentBlockExclusion.placed_leftRank_parent_block": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ParentBlockExclusion.placed_no_cross_of_same_rays": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ParentBlockExclusion.placed_ordinary_parent_block": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ParentBlockExclusion.placed_rightRank_parent_block": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PlacedOrdinaryField.ordinary_response": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PlacedOrdinaryField.placed_field_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PlacedOrdinaryField.placed_incident_coefficient": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PlacedOrdinaryField.placed_nonincident_coefficient_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PlacedOrdinaryField.placed_parent_coefficient_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PlacedOrdinaryField.placed_response_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.PlacedOrdinaryField.point_coefficient_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProbeFreezing.canonicalResponse_best": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProbeFreezing.complement_best_response": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProbeFreezing.energy_single_flip": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProbeFreezing.field_eq_cost_difference": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProbeFreezing.freeze_cost_bound": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProbeFreezing.frozen_optimum_gap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProbeFreezing.full_field_error": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProbeFreezing.grid_field_error": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProbeFreezing.hard_probe_already_correct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProbeFreezing.maxOutsideDegree_real_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProbeFreezing.probe_freezing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProbeFreezing.probe_freezing_real": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProbeFreezing.softProbes_le_realSoftProbes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProbeFreezing.soft_probe_step": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramCatalog.field_eq_groups": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramCatalog.group_nonincident_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramCatalog.left_nonincident_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramCatalog.right_nonincident_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramCatalog.selected_field": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramCatalog.selected_group_field": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramCount.ceil_count_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramCount.label_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramCount.program_count_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramExclusion.all_no_cross": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramExclusion.cost_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramExclusion.field_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramField.cost_difference": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramField.field_from_copies": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramField.placed_left_selected_fixed_weight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramField.placed_left_weight_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramField.placed_right_selected_fixed_weight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramField.placed_right_weight_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramField.rank_prefix": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramField.rank_suffix": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramField.sum_prototype": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramGeometry.Block.leftGeometry": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramGeometry.Block.nonparent_macro_ne": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramGeometry.Block.ordinaryGeometry": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramGeometry.Block.outside_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramGeometry.Block.rightGeometry": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramGeometry.catalog_cuts": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramGeometry.geometries": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramGeometry.parameter_near_macro": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramGeometry.programWitness": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramGeometry.proportions": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramGeometry.prototype_below": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramIndex.actual_unary_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramIndex.core_unary_eq_catalog": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramIndex.frozen_eq_response": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramPlacement.finite_batch": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramPlacement.placement_exists": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramPlacement.placement_exists_encoded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramPlacement.pointBounded_binary": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProgramPlacement.prototype_provenance": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProposedPalette.familyToCore_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProposedPalette.family_color_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProposedPalette.family_mem_palette": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProposedPalette.global_cost_difference": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProposedPalette.global_field_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProposedPalette.indexed_dummy_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProposedPalette.indexed_fibers": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProposedPalette.indexed_palette_parameters": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProposedPalette.ordered_eq_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProposedPalette.outside_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProposedPalette.palette_exhaustive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ProposedPalette.proposed_palette_parameters": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankCorrection.affine_correction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankCorrection.count_weight_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankCorrection.cumulative_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankCorrection.cumulative_eq_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankCorrection.greedy_correction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankCorrection.step_overshoot": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankCorrection.step_target": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankGap.frame_endpoint_signs": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankGap.frame_fan_crossing_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankGap.full_gap_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankGap.full_gap_lower_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankGap.full_gap_positive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankGap.height_between_all_clones": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankGap.leftRank_actual_fan_crossing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankGap.leftRank_crossing_table": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankGap.lower_ranks_below_midpoint": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankGap.rightRank_crossing_table": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankGap.rightRank_reflection": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankGap.upper_ranks_above_midpoint": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankGapPreservation.leftRank_determinants_nonzero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankGapPreservation.leftRank_endpoint_sides": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankGapPreservation.placed_leftRank_crossing_table": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankGapPreservation.placed_rightRank_crossing_table": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankGapPreservation.rightRank_determinants_nonzero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankNonincident.chord_offset_change": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankNonincident.leftRank_nonincident": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankNonincident.nonincident_of_close": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankNonincident.placed_leftRank_nonincident": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankNonincident.placed_rightRank_nonincident": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankNonincident.rank_curvature_from_macro_boxes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankNonincident.rightRank_displacement": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankNonincident.rightRank_nonincident": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankNonselected.leftRank_nonparent_fan_indexed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankNonselected.leftRank_nonparent_ray_sign": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankNonselected.leftRank_nonselected_core": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankNonselected.leftRank_parent_fan_indexed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankNonselected.leftRank_steering_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankNonselected.rightRank_nonparent_fan_indexed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankNonselected.rightRank_nonselected_core": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankNonselected.rightRank_parent_fan_indexed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankResponse.coreCoefficient_cost_difference": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankResponse.early_middle_of_virtual": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankResponse.late_middle_of_virtual": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankResponse.left_weight_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankResponse.placed_left_selected_coefficient": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankResponse.placed_left_weight_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankResponse.placed_right_selected_coefficient": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankResponse.placed_right_weight_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankResponse.response_minimizes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankResponse.right_weight_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankSoftRows.left_crossing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankSoftRows.left_field_eq_virtual": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankSoftRows.left_soft_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankSoftRows.placed_left_field_eq_virtual": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankSoftRows.placed_left_soft_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankSoftRows.placed_right_field_eq_virtual": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankSoftRows.placed_right_soft_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankSoftRows.pointField_cost_difference": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankSoftRows.right_crossing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankSoftRows.right_field_eq_virtual": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankSoftRows.right_soft_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankTablePreservation.fan_preserved_of_rays": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankTablePreservation.leftRank_nonselected_determinants": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankTablePreservation.placed_leftRank_nonparent_fan": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankTablePreservation.placed_leftRank_nonselected_core": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankTablePreservation.placed_leftRank_parent_fan": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankTablePreservation.placed_rightRank_nonparent_fan": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankTablePreservation.placed_rightRank_nonselected_core": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankTablePreservation.placed_rightRank_parent_fan": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RankTablePreservation.rightRank_nonselected_determinants": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RationalEncoding.Bounded.add": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RationalEncoding.Bounded.inv": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RationalEncoding.Bounded.mul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RationalEncoding.baseBudget_encoding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RationalEncoding.binary_certificate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RationalEncoding.bounded_sum_pow": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RationalEncoding.constructionRadius_encoding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RationalEncoding.gridSide_encoding_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RationalEncoding.insertionPoint_encoding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RationalEncoding.macroSpacing_encoding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RationalEncoding.orient_encoding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RationalEncoding.orientationMargin_encoding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RationalEncoding.placed_binary_coordinates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RationalEncoding.placed_encoding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.RationalEncoding.scales_encoding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ReductionGap.actual_error_window": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ReductionGap.actual_scale_large": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ReductionGap.actual_scale_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ReductionGap.algebraic_error_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ReductionGap.error_window": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ReductionGap.local_error_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ReductionGap.threshold_equivalence": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ReductionGap.unary_error_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SideCatalog.field_support": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SideCatalog.ordinary_incident": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SideDominance.dominance": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SideDominance.incident_weight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SideDominance.ordinary_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SideDominance.rank_support_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SliceStability.average_envelope_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SliceStability.col_average_stability": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SliceStability.col_threshold_exists": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SliceStability.integral_colDeficit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SliceStability.integral_cube_ge_cube_integral": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SliceStability.integral_rowDeficit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SliceStability.row_average_stability": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SliceStability.row_threshold_exists": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SmoothingApproximation.smoothed_abs_le_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SmoothingApproximation.smoothed_integrable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SmoothingApproximation.smoothed_measurable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SmoothingApproximation.smoothing_error": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SmoothingApproximation.smoothing_error_52": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SourceChordGeometry.blockIndex_order": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SourceChordGeometry.clone_blocks_order": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SourceChordGeometry.deleted_selected_crossing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SourceChordGeometry.different_vertex_crossing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SourceChordGeometry.same_vertex_nested": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SourceChordGeometry.separated_parameters": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SourceCutBridge.permutation_threshold": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SourceCutBridge.sourceOpt_threshold": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SourceSelectedEdges.clone_parameter_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SourceSelectedEdges.retained_energy": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SourceSelectedEdges.retained_exhaustive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SourceSelectedEdges.retained_minimum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SourceSelectedEdges.selected_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SourceSelectedEdges.selected_endpoints_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SourceSelectedEdges.selected_unordered_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SquareTranslation.col_slice_translation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SquareTranslation.col_translation_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SquareTranslation.row_slice_translation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SquareTranslation.row_translation_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SquareTranslation.translation_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.SquareTranslation.zeroSquare_integrable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.StabilityConstants.agreement_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.StabilityConstants.fourth_root_small": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.StabilityConstants.large_parameter": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.StabilityConstants.scaled_root": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.StabilityConstants.total_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ThresholdApproximation.attained_threshold_L1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ThresholdApproximation.attained_threshold_L1_cubic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ThresholdApproximation.attained_threshold_cubic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ThresholdApproximation.minimum_threshold_exists": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ThresholdApproximation.sign_l1_distance": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ThresholdApproximation.unit_attained_threshold_L1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ThresholdHalfSelection.diagonal_halves_distance_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ThresholdHalfSelection.lower_half_exists": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ThresholdHalfSelection.lower_threshold_transfer": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ThresholdHalfSelection.select_interval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ThresholdHalfSelection.select_row": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ThresholdHalfSelection.two_threshold_halves": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ThresholdHalfSelection.two_threshold_halves_rpow": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ThresholdHalfSelection.upper_half_exists": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ThresholdHalfSelection.upper_threshold_transfer": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ThresholdTranslation.interval_translation_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ThresholdTranslation.threshold_translation_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ThresholdTranslation.translation_transfer": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ThresholdTranslation.zeroExtend_threshold": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.ThresholdTranslation.zeroExtend_translation_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.TwoPhaseStability.positive_parameter_stability": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.TwoPhaseStability.small_parameter_stability": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.TwoPhaseStability.two_phase_stability": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.TwoPhaseStability.zero_excess_stability": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.UniformInsertion.batch_program_insertion": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.UniformInsertion.fixed_grid_extension": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.UniformInsertion.placed_in_box": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.UnitIntervalMeasure.unit_atomless": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.UnitIntervalMeasure.unit_eq_closed_interval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.UnitIntervalMeasure.unit_probability": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.UnitIntervalMeasure.zero_left_mass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.UnitIntervalMeasure.zero_right_mass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.VirtualColumnField.ordinaryColumn_eq_virtual": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.VirtualColumnField.ordinaryField_eq_cost_difference": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.VirtualColumnField.ordinary_field_error": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.VirtualColumnField.ordinary_field_increment_error": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.VirtualColumnField.ordinary_parent_increment": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.VirtualColumnField.virtualField_increment": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.VirtualColumnMidpoint.positiveIn_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.VirtualColumnMidpoint.positiveIn_midpoint_error": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.VirtualColumnMidpoint.signedIn_midpoint_error": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.VirtualColumnMidpoint.virtualField_increment_estimate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.VirtualColumnShape.rampPrefix_error": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.VirtualColumnShape.rampPrefix_exact": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.VirtualColumnShape.virtualField_shape_estimate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.VirtualColumnSoftRows.band_soft_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.VirtualColumnSoftRows.soft_supported": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.Candidate.VirtualColumnSoftRows.virtual_soft_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.CleanWire.all_colorings6_lower": [
+      "propext"
+    ],
+    "Q4.CleanWire.all_colorings7_lower": [
+      "propext"
+    ],
+    "Q4.CleanWire.compressed6_lower": [],
+    "Q4.CleanWire.compressed7_lower": [],
+    "Q4.CleanWire.compression6_covers": [
+      "propext"
+    ],
+    "Q4.CleanWire.compression7_covers": [
+      "propext"
+    ],
+    "Q4.CleanWire.crossings6_exact": [
+      "propext"
+    ],
+    "Q4.CleanWire.crossings7_exact": [
+      "propext"
+    ],
+    "Q4.CleanWire.diff6_exact": [
+      "propext"
+    ],
+    "Q4.CleanWire.diff6_upper": [
+      "propext"
+    ],
+    "Q4.CleanWire.diff7_exact": [
+      "propext"
+    ],
+    "Q4.CleanWire.diff7_upper": [
+      "propext"
+    ],
+    "Q4.CleanWire.extendFiniteColoring_agrees": [
+      "propext"
+    ],
+    "Q4.CleanWire.monoCount_xor": [
+      "propext"
+    ],
+    "Q4.CleanWire.normalization_preserves_score": [
+      "propext"
+    ],
+    "Q4.CleanWire.normalized_zero": [
+      "propext"
+    ],
+    "Q4.CleanWire.points6_distinct": [],
+    "Q4.CleanWire.points6_general": [],
+    "Q4.CleanWire.points7_distinct": [],
+    "Q4.CleanWire.points7_general": [],
+    "Q4.CleanWire.same6_exact": [
+      "propext"
+    ],
+    "Q4.CleanWire.same6_upper": [
+      "propext"
+    ],
+    "Q4.CleanWire.same7_exact": [
+      "propext"
+    ],
+    "Q4.CleanWire.same7_upper": [
+      "propext"
+    ],
+    "Q4.CleanWire.signals6_indices": [
+      "propext"
+    ],
+    "Q4.CleanWire.signals7_indices": [
+      "propext"
+    ],
+    "Q4.JointProbe.absZ_le_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.JointProbe.absZ_neg_two": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.JointProbe.absZ_nonneg": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.JointProbe.bridgeEnergy_change_field": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.JointProbe.bridgeEnergy_joint_difference": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.JointProbe.bridgeEnergy_single_difference": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.JointProbe.complement_fieldDifference": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.JointProbe.cutCoefficient_complement": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.JointProbe.cutCoefficient_equal_readers": [
+      "propext"
+    ],
+    "Q4.JointProbe.cutField_complement": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.JointProbe.cut_fieldDifference": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.JointProbe.cut_global_complement_probe": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.JointProbe.cut_global_joint_probe": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.JointProbe.cut_global_single_port_complement": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.JointProbe.field_single_difference": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.JointProbe.global_joint_probe": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.JointProbe.global_single_nonnegative": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.JointProbe.intSum_mul_left": [
+      "propext"
+    ],
+    "Q4.JointProbe.intSum_mul_right": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.JointProbe.intSum_neg": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.JointProbe.internalCost_complement": [
+      "propext"
+    ],
+    "Q4.JointProbe.monoCount_single_difference": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.JointProbe.pair_single_spin": [
+      "propext"
+    ],
+    "Q4.JointProbe.readerField_neg": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.JointProbe.readerField_pairing": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.JointProbe.readerField_single_port": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.JointProbe.readerField_sub": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.JointProbe.soft_fees_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.JointProbe.spin_not": [],
+    "Q4.SimultaneousFlip.edgeEnergy_eq_monoCount": [
+      "propext"
+    ],
+    "Q4.SimultaneousFlip.edge_flip_identity": [],
+    "Q4.SimultaneousFlip.edge_single_identity": [
+      "propext"
+    ],
+    "Q4.SimultaneousFlip.intSum_add": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.SimultaneousFlip.intSum_congr": [
+      "propext"
+    ],
+    "Q4.SimultaneousFlip.intSum_point": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.SimultaneousFlip.intSum_point_absent": [
+      "propext"
+    ],
+    "Q4.SimultaneousFlip.intSum_sub": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.SimultaneousFlip.intSum_swap": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.SimultaneousFlip.intSum_zero": [
+      "propext"
+    ],
+    "Q4.SimultaneousFlip.selected_add": [
+      "propext"
+    ],
+    "Q4.SimultaneousFlip.selected_point": [
+      "propext"
+    ],
+    "Q4.SimultaneousFlip.selected_sum": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.SimultaneousFlip.singleDelta_local": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.SimultaneousFlip.sum_singleDelta": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.SimultaneousFlip.totalEnergy_flip_identity": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.SimultaneousFlip.unary_single_identity": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.mono_add_cut": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.mono_eq_total_sub_cut": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.mono_le_iff_cut_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.mono_lt_iff_cut_lt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.mono_minimizer_iff_cut_maximizer": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Q4.mono_threshold_iff_cut_threshold": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "final_theorem": "Q4.Candidate.ConstructedReduction.constructed_maxcut_instance",
+  "final_theorem_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "warning_lines": [
+    "Q4/Candidate/AlternatingTriples.lean:197:23: warning: Variable name `x` is not explicitly referenced.",
+    "Q4/Candidate/AlternatingTriples.lean:208:17: warning: Variable name `hP` is not explicitly referenced.",
+    "Q4/Candidate/RankGap.lean:422:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice",
+    "Q4/Candidate/RankGap.lean:425:44: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice",
+    "Q4/Candidate/ReductionGap.lean:80:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice"
+  ],
+  "elapsed_seconds": 390.112,
+  "finished_utc": "2026-10-22T02:41:38.481886+00:00"
+}

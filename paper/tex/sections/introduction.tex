@@ -1,0 +1,149 @@
+\section{Introduction}\label{sec:introduction}
+
+Let $P=(p_0,\ldots,p_{N-1})$ be a labelled set of points in the plane.
+The complete geometric graph on $P$ contains the straight segment $p_ip_j$
+for every $i<j$. We assign one of two colours to every edge and count pairs
+of edges that cross properly and have the same colour. Both the point set
+and the drawing are fixed; the edge colours are the only variables.
+
+The complexity of this problem for complete geometric graphs was posed at
+the Crossing Number Workshop in 2019 and appears as Vogtenhuber's Problem~2
+in Section~4.12 of the report of Dagstuhl Seminar~21293
+\cite{Dagstuhl2021}. Completeness is a substantial restriction. A reduction
+that represents a hard graph by segments does not automatically survive
+adding every missing segment between their endpoints: the new edges are
+free variables and their optimal contribution can depend on the source
+colours. Appendix~\ref{app:completion} gives a six-point example of this
+dependence. At the other extreme, for points in convex position the optimum
+is the known two-page crossing number of a complete graph
+\cite{Abrego2013}.
+
+\begin{definition}\label{def:problem}
+The input to \emph{complete geometric two-colour crossing minimization}
+is a list of pairwise distinct points $P\in(\Q^2)^N$ with no three
+collinear, together with an integer $k$ in the decision version.
+Coordinates and $k$ are encoded in binary. Write
+\[
+ E(P)=\{ij:0\leq i<j<N\},\qquad
+ M(P,\chi)=\sum_{\{e,f\}\subseteq E(P)}
+       \1[e\text{ and }f\text{ cross properly}]\,\1[\chi(e)=\chi(f)]
+\]
+for $\chi:E(P)\to\{0,1\}$, and put
+$\OPT(P)=\min_\chi M(P,\chi)$.
+The decision question is whether $\OPT(P)\leq k$.
+\end{definition}
+
+A proper crossing is an intersection of two open segments with four
+distinct endpoints. Several crossing pairs may have the same geometric
+intersection point; each pair is counted separately. The colouring is
+unrestricted: it is not a proper edge colouring in the graph-theoretic
+sense. There are no weights or prescribed colours.
+
+\begin{theorem}\label{thm:main}
+The decision problem in Definition~\ref{def:problem} is NP-complete under
+deterministic polynomial-time many-one reductions. Consequently, computing
+$\OPT(P)$ exactly is NP-hard. The decision problem remains NP-complete
+when all coordinates are integers encoded in binary.
+\end{theorem}
+
+We reduce from \textsc{MaxCut} on permutation graphs, with a permutation
+representation supplied as part of the input. Its NP-completeness follows
+from de Figueiredo et al.\ \cite{Figueiredo2023}: their construction
+explicitly produces the two permutations. After relabelling the first
+order, a source graph can be described by a permutation $\pi$ of $[n]$,
+with an edge $ij$ when $i<j$ and $\pi(i)>\pi(j)$.
+For a source graph $G$, set
+\[
+ g(G)=\min_{x:V(G)\to\{0,1\}}
+          \sum_{uv\in E(G)}\1[x(u)=x(v)]
+      =|E(G)|-\MaxCut(G).
+\]
+Thus a source threshold $k$ becomes the equivalent integer threshold
+$g(G)\leq t$, where $t=|E(G)|-k$.
+
+Our construction has three interacting components. A large rectangular
+comparison grid forces one of two stable colour phases. Small families of
+geometric program points then produce controlled fields on the edges
+encoding the source. Finally, an exact convex separation removes the
+potentially dominant interaction between the grid and program nonfans.
+The remaining added edges are included in an explicit error bound. The
+conclusion is a uniform interval
+\begin{equation}\label{eq:main-sandwich}
+ K_{\mathrm{base}}+\Delta g(G)-E_-
+ \ \leq\ \OPT(P)\ \leq\
+ K_{\mathrm{base}}+\Delta g(G)+E_+,
+ \qquad 2^{18}(E_-+E_+)<\Delta,
+\end{equation}
+where $K_{\mathrm{base}}$ is computable without an optimization oracle.
+The lower bound holds for an unrestricted optimum of the complete graph;
+the upper bound is attained within the stated error by a single complete
+colouring. No colour restrictions are part of the output instance.
+
+\subsection{Conventions and scales}
+
+We use $N$ for the number of points of the final geometric instance.
+The letter $N_g$ will denote the number of vertices of a comparison grid
+when a distinction is needed. For nonnegative integers $v$, define
+\[
+ Z(v)=\frac14\left\lfloor\frac v2\right\rfloor
+                  \left\lfloor\frac{v-1}{2}\right\rfloor
+                  \left\lfloor\frac{v-2}{2}\right\rfloor
+                  \left\lfloor\frac{v-3}{2}\right\rfloor
+ \quad(v\geq3),\qquad Z(0)=Z(1)=Z(2)=0.
+\]
+The theorem of \'{A}brego et al.\ \cite[Theorem~7]{Abrego2013} says that
+$Z(v)$ is the optimum for a convex complete geometric graph: a same-page
+pair of edges in a two-page drawing crosses exactly when its endpoints
+alternate in the linear order. Boundary edges do not affect this count.
+We use this established value for two convex background components.
+
+For a source with $n\geq1$, the parameters are
+\begin{equation}\label{eq:parameters}
+\begin{gathered}
+ q=2^{20}(n+1),\quad S=nq,\quad d=S+1,\quad H=2^{20000}d^{40},\\
+ W=H^4,\quad B=H^5,\quad D_m=512SW,\quad o=2SW+D_m=514SW,\\
+ T=2^{13}o^2,\qquad A_0=2^{13}dT,\qquad
+ \Delta=q^2W^4.
+\end{gathered}
+\end{equation}
+All exponents and constants are absolute. These deliberately generous
+scales simplify exact error separation; no practical implementation of the
+full, extremely large target instances is claimed.
+
+\subsection{Membership in NP and integer coordinates}
+
+\begin{proposition}\label{prop:np}
+The problem in Definition~\ref{def:problem} belongs to NP. Rational and
+integer coordinate versions are polynomial-time equivalent.
+\end{proposition}
+\begin{proof}
+Let $L$ be the total input bit length. Normalize denominators to be
+positive and let $D$ be the product of all coordinate denominators.
+Its bit length is $O(L)$. Multiplying every coordinate by this same
+positive integer yields integer coordinates of $O(L)$ bits and preserves
+all orientation signs. Computing $D$ and the scaled coordinates takes
+polynomial time by ordinary integer arithmetic.
+
+Pairwise distinctness and absence of collinear triples can be checked
+by examining point pairs and the determinants
+\[
+ \orient(a,b,c)=(b_x-a_x)(c_y-a_y)-(b_y-a_y)(c_x-a_x).
+\]
+Declare invalid inputs to be no-instances. A certificate consists of the
+$\binom N2$ edge colours. For every unordered pair $ab,cd$ with four
+distinct endpoints, a proper crossing is equivalent to
+\[
+ \orient(a,b,c)\orient(a,b,d)<0,
+ \qquad \orient(c,d,a)\orient(c,d,b)<0.
+\]
+There are $O(N^4)$ such tests, each using a constant number of operations
+on integers of polynomial bit length. Count those crossing pairs with
+equal colours and compare the result with $k$. Negative thresholds are
+immediate no-instances. This verifies a certificate in polynomial time.
+The same positive scaling is a reduction from rational to integer inputs;
+the converse inclusion is immediate.
+\end{proof}
+
+The rest of the paper establishes the reduction and the quantitative
+interval~\eqref{eq:main-sandwich}. The formalization and its precise
+external dependencies are described in Section~\ref{sec:formalization}.

@@ -1,0 +1,164 @@
+\section{The complete drawing and the decision reduction}\label{sec:reduction}
+
+All coordinates and crossing predicates in this section refer to the final general-position drawing from Proposition~\ref{prop:realization}. Its total number of points is $N=B+o+s$; the comparison grid has $N_g=Bo$ vertices. The notation $\Phi_{AB}$ means the sum of monochromatic constraints with one endpoint in each of the distinct crossing-graph vertex classes $A,B$; $\Phi_A$ counts unordered pairs within $A$.
+
+\subsection{A common computable background}
+Let $G_0$ be the crossing graph with $Y$ deleted. Its remaining constraints are precisely
+\[
+X\!:\!X,\quad X\!:\!T_f,\quad T_f\!:\!T_f,\quad C\!:\!C,\quad C\!:\!T_f,\quad I\!:\!I.
+\]
+Write $c^+$ for the canonical grid colouring and $t^+$ for the independently computed program-fan responses, with colour zero at a zero field. Define
+\begin{align}
+E_X(x;t^+)&=\Phi_X(x)+\Phi_{XT_f}(x,t^+),\notag\\
+d_v&=E_X(c^+\oplus\{v\};t^+)-E_X(c^+;t^+),\notag\\
+L_+&=E_X(c^+;t^+)+\sum_{v\in X}\min\{0,d_v\},\notag\\
+K_0&=Z(B)+\Phi_{T_f}(t^+).
+\label{eq:background}
+\end{align}
+The fan--fan term is evaluated after insertion, including every crossing that changed during program placement. These constants require no optimal grid or fan colouring.
+
+\begin{proposition}[Decoupling with the grid fixed]\label{prop:decoupling}
+Suppose the hypotheses of Theorem~\ref{thm:grid} and Proposition~\ref{prop:freezing} hold with grid dimensions $B,o$, grid size $N_g=Bo$,
+\[
+\rho=1/B+1/o,\quad a=\alpha+\rho\leq2^{-4096},\quad
+Q=12s/o,\quad b=104a+\beta\leq1/100.
+\]
+Set $E_g=2^{32}N_g^2a^3$ and $E_{\rm fr}=2Q(b+\rho)bN_g^2$. Then
+\begin{align}
+K_0+L_++M_C-E_{\rm fr}-E_g
+&\leq\OPT(G_0)\leq K_0+L_++M_C+E_g,\label{eq:decoupling-zero}\\
+K_0+L_++M_C-E_{\rm fr}-E_g
+&\leq\OPT(P)\leq K_0+L_++M_C+E_g+R_Y.
+\label{eq:decoupling-full}
+\end{align}
+\end{proposition}
+\begin{proof}
+Take an actual optimum of $G_0$. Conditional on every other colour, its grid minimizes a unary-perturbed comparison energy with unary differences bounded by $\alpha N_g$. Theorem~\ref{thm:grid} supplies a canonical phase and a localized flip set of size at most $52aN_g$. If necessary complement every colour in the whole graph to make the phase positive. There are no prescribed colours, and complementation preserves every monochromatic count.
+
+Keep this grid unchanged. By Lemma~\ref{lem:soft-fields}, the probe soft-count hypothesis holds. Proposition~\ref{prop:freezing} changes only the program fans to $t^+$, with cost increase at most $E_{\rm fr}$. The grid retains its localized flip set, so the localized lower estimate in Theorem~\ref{thm:grid}, now for the frozen unary energy in~\eqref{eq:background}, gives at least $L_+-E_g$. The current core colouring costs at least $M_C$, irrespective of whether its palette was forced before the fans were frozen. The frame class costs at least $Z(B)$, and the fan--fan cost is exactly $\Phi_{T_f}(t^+)$. These terms exhaust $G_0$. Thus the altered colouring has cost at least $K_0+L_++M_C-E_g$ but at most $\OPT(G_0)+E_{\rm fr}$, proving the lower bound.
+
+For the upper bound, use the same $t^+$, the grid colouring
+$c^+\oplus\{v:d_v<0\}$, a core minimizer, and a convex frame optimum. The prescribed-phase upper witness in Theorem~\ref{thm:grid} has grid cost at most $L_++E_g$. All these choices coexist, since the edge classes are disjoint and no further cross-class constraints remain. This proves~\eqref{eq:decoupling-zero}. Restoring $Y$ with~\eqref{eq:nonfan-delete} proves~\eqref{eq:decoupling-full}. Optimizers are used only as witnesses for inequalities.
+\end{proof}
+
+\subsection{One parameter choice verifies every hypothesis}
+Use the parameters of~\eqref{eq:parameters}, namely
+\[
+q=2^{20}(n+1),\quad S=nq,\quad d=S+1,\quad
+H=2^{20000}d^{40},\quad W=H^4,\quad B=H^5,\quad o=514SW.
+\]
+Take
+\begin{equation}\label{eq:field-scales}
+\alpha=\beta=\frac{2^{84}d^4}{H},\qquad
+a=\alpha+\rho\leq\frac{2^{85}d^4}{H},\qquad
+b=104a+\beta.
+\end{equation}
+Proposition~\ref{prop:program-count} gives $s\leq o$ and the convenient bounds
+\begin{equation}\label{eq:all-sizes}
+N_g\leq2^{10}dH^9,\qquad p=Bs\leq2^{80}d^4H^8,\qquad
+c\leq2^{19}d^2H^8,\qquad h\leq2os\leq2^{91}d^5H^7.
+\end{equation}
+Also $B\geq2o$, $B\leq o^2/1024$, $o\geq1000$, $8\mid B$, and $W/o\leq1/514$. These verify the geometric and core hypotheses. Each follows directly by substituting $W=H^4$ and $B=H^5$ and using $H=2^{20000}d^{40}$, $d\geq1$, $S\geq1$.
+
+In $G_0$, a grid vertex has at most $p$ outside neighbors: it has no neighbors in $C$ or $I$. A program fan has at most $p+c$ neighbors outside $X$, since $I$ is isolated. Thus
+\[
+p/N_g=s/o\leq\alpha,\qquad
+(p+c)/N_g\leq\beta,\qquad
+Q=12s/o\leq\alpha\leq a.
+\]
+For the second inequality, $c/N_g<o/(2B)$ and the spare factor in $2^{84}$ dominates this term together with $s/o$. The mesh satisfies $\rho\leq\alpha$. Finally the scale of $H$ gives $a<2^{-4096}$ and $b<1/100$. The two phases, the localized grid estimate, and fan freezing therefore apply to this one actual drawing.
+
+Substitution in their error bounds gives
+\begin{equation}\label{eq:individual-errors}
+E_g\leq2^{307}d^{14}H^{15},\qquad
+E_{\rm fr}\leq2^{290}d^{14}H^{15},\qquad
+R_Y\leq2^{182}d^{10}H^{15}.
+\end{equation}
+For the freezing term, $Q\leq a$, $b\leq105a$, and $b+\rho\leq106a$, whence
+$E_{\rm fr}\leq2\cdot105\cdot106N_g^2a^3<2^{15}N_g^2a^3$.
+For $R_Y$, use $p+c\leq2^{81}d^4H^8$ and~\eqref{eq:all-sizes}. The resulting product is at most $2^{172}d^9H^{15}$, and $h^2/2\leq2^{181}d^{10}H^{14}$, both covered by the stated bound. Consequently
+\begin{equation}\label{eq:algebraic-error}
+E_{\rm fr}+2E_g+R_Y<2^{310}d^{14}H^{15}.
+\end{equation}
+
+\subsection{Quantitative reduction and threshold}
+\begin{theorem}[A computable source-value window]\label{thm:quantitative-reduction}
+Given a represented permutation graph $G$ with $n\geq1$, the construction computes a general-position rational point set $P$, a baseline $K_{\rm base}$, and a positive integer $\Delta=q^2H^{16}$, with explicit nonnegative errors such that
+\begin{equation}\label{eq:final-window}
+K_{\rm base}+\Delta g(G)-E_-
+\leq\OPT(P)\leq
+K_{\rm base}+\Delta g(G)+E_+,\qquad
+2^{18}(E_-+E_+)<\Delta.
+\end{equation}
+All output data and threshold constants have polynomial binary length and are computable in deterministic polynomial time. The points can instead be returned with integer coordinates.
+\end{theorem}
+\begin{proof}
+Put
+\begin{align}
+K_{\rm base}&=K_0+L_++K_C,\notag\\
+E_-&=E_{\rm fr}+E_g,\notag\\
+E_+&=E_g+R_Y+10BSW^2+2SW^4.
+\label{eq:final-errors}
+\end{align}
+The core bound~\eqref{eq:core-bound} and Proposition~\ref{prop:decoupling} give the two-sided interval.
+
+Divide its total error by $\Delta=q^2H^{16}$. The part in~\eqref{eq:algebraic-error} is less than
+\[
+\frac{2^{310}d^{14}}{q^2H}
+\leq2^{-19690}d^{-26}<2^{-40}.
+\]
+The selected unary term satisfies
+\[
+\frac{10BSW^2}{\Delta}=\frac{10n}{qH^3}<2^{-40},
+\]
+and the conservative local term satisfies
+\[
+\frac{2SW^4}{\Delta}=\frac{2n}{q}<2^{-19}.
+\]
+Hence the total is less than $2^{-39}+2^{-19}<2^{-18}$, proving the required strict window. No sharper local enumeration or narrower aggregate window is used.
+
+To compute the baseline, first enumerate proper crossings on the actual final coordinates by exact determinants. Evaluate $c^+$, each fan response, the actual fan--fan cost, and each single-flip difference $d_v$. Evaluate $K_C$ by~\eqref{eq:core-baseline}: set the palette, use the all-zero source colour as a reference, minimize each short unary separately, insert the known dummy value, subtract the explicit $\Delta|E(G)|$, and add the residual unary minima. Finally insert $Z(B)$. These are finite sums and minima of two known integers. The source optimum, core optimum, and target optimum never occur as computational subroutines.
+
+The output point count is $N=B+o+s\leq3H^5$. Since $S=2^{20}n(n+1)$, it is bounded by a fixed polynomial of degree $400$ in $n$. Proposition~\ref{prop:realization} proves polynomial coordinate bit length and construction time; it also gives the integer-coordinate version by a common positive scaling.
+\end{proof}
+
+We make the bit bound for the decision threshold explicit as well. For actual total point count $N$, all grid, fan, and core edge counts are at most $N^2$. Each unnormalized crossing contribution is zero or one, and all fields are differences of finite such sums. The baseline formula~\eqref{eq:background} and~\eqref{eq:core-baseline} therefore gives the deliberately loose bound
+\[
+|K_{\rm base}|\leq16N^6.
+\]
+One may also see this by computing each baseline from its fixed colouring cost and at most $N^2$ single-edge unary corrections, each bounded by a fixed multiple of $N^2$; $\Delta|E(G)|$ is the all-zero main crossing count, at most $N^4$. Since $q,H\leq N$, we have $\Delta\leq N^{18}$, and $|E(G)|\leq N^2$.
+
+For a source MaxCut threshold $k\in\Z$, put $t=|E(G)|-k$ and output
+\begin{equation}\label{eq:decision-threshold}
+\kappa=\floor*{K_{\rm base}+\Delta t+\Delta/4}.
+\end{equation}
+In particular
+\begin{equation}\label{eq:threshold-bits}
+|\kappa|\leq32N^{20}(|k|+1),
+\end{equation}
+so the threshold bit length is $O(\log N+\operatorname{bits}(k))$. The baseline is integral in the counting presentation above; the floor also accommodates its equivalent rational presentation in the formalization.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Use the NP-hard represented permutation-graph problem with threshold $k$, or equivalently $g(G)\leq t$. For $n\geq1$ apply Theorem~\ref{thm:quantitative-reduction} and output~\eqref{eq:decision-threshold}. If $g(G)\leq t$, then
+\[
+\OPT(P)\leq K_{\rm base}+\Delta t+E_+
+<K_{\rm base}+\Delta t+\Delta/4.
+\]
+Since the objective is an integer, it is at most $\kappa$. If $g(G)>t$, integrality gives $g(G)\geq t+1$, and
+\[
+\OPT(P)\geq K_{\rm base}+\Delta(t+1)-E_-
+>K_{\rm base}+\Delta t+\Delta/4\geq\kappa.
+\]
+Thus the same point set and threshold give both directions.
+
+Empty source inputs can be decided directly. A fixed yes instance consists of two distinct integer points and threshold zero. A fixed no instance is the five points $(i,i^2)$, $0\leq i<5$, with threshold zero: their diagonal crossing graph is a five-cycle and cannot be properly two-coloured. If the target convention permits only nonnegative thresholds and the computed $\kappa$ is negative, output this fixed no instance. A source yes instance would otherwise imply the impossible inequality $0\leq\OPT(P)\leq\kappa<0$. Thresholds outside the source edge-count range may also be handled directly, though the displayed equivalence already covers them.
+
+Proposition~\ref{prop:realization} and~\eqref{eq:threshold-bits} prove a deterministic polynomial-time many-one reduction with a single complete geometric target instance. Every target edge colour is a free certificate bit. The palette and frozen colours enter the proof through minimizer properties and one compatible upper-bound colouring, not through precolouring restrictions on the output. Scaling produces the same hardness on integer coordinates. Membership in NP follows by assigning colours to all $\binom N2$ edges and testing the $O(N^4)$ edge pairs with exact orientation determinants. This proves NP-completeness and, consequently, NP-hardness of exact minimization.
+\end{proof}
+
+\begin{corollary}
+If collinear input points are permitted while the objective still counts only proper crossings using strict orientation tests, the decision problem remains NP-complete.
+\end{corollary}
+\begin{proof}
+The general-position hard instances are also inputs in the larger class. The same polynomial verifier excludes every zero orientation determinant and therefore handles the stipulated crossing convention on degenerate inputs. No perturbation of an arbitrary degenerate input is used.
+\end{proof}

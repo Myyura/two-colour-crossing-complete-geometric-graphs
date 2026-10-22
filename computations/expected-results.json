@@ -1,0 +1,288 @@
+{
+  "scope": "Exact finite diagnostics only; not a full reduction instance or universal proof.",
+  "script_sha256": {
+    "appendix_completion.py": "7b76b3d797874b069dbe2ec911b4ea8e4e143884816b8e9b5195c0660623af8d",
+    "core_combinatorics.py": "8b8c6c558cefef9985c66bbec32d1b3a5e6035cd99b5d7a596f2000ebe54d44c",
+    "parameter_checks.py": "5e87a3d65075e23dcb9740e83018507a228ff465867a889034b3120f222c7cd0",
+    "program_geometry.py": "6baaae36064373bda16ca49cf9f9f0e7f40fb47f324ba4f0308ee20e8a23c1ae",
+    "run_checks.py": "a0a55b05979af843b840cef1ee5ef9a8e0dabaf5070033129edf88dddc2dfc54"
+  },
+  "results": {
+    "appendix_completion": {
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          16
+        ],
+        [
+          5,
+          25
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "proper_crossing_pairs": 15,
+      "colouring_representatives": 16384,
+      "minimum_source_same": 3,
+      "minimum_source_different": 3,
+      "minimum_extra_same": 2,
+      "minimum_extra_different": 3,
+      "witness_same": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "witness_different": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "scope": "Exhaustive fixed K6; not a growing-family hardness proof."
+    },
+    "core_combinatorics": [
+      {
+        "late_order": [
+          0,
+          1,
+          2
+        ],
+        "points": 41,
+        "source_edges": 54,
+        "local_constraints": 90,
+        "main_constraints": 972,
+        "status": "PASS"
+      },
+      {
+        "late_order": [
+          0,
+          2,
+          1
+        ],
+        "points": 41,
+        "source_edges": 54,
+        "local_constraints": 90,
+        "main_constraints": 648,
+        "status": "PASS"
+      },
+      {
+        "late_order": [
+          1,
+          0,
+          2
+        ],
+        "points": 41,
+        "source_edges": 54,
+        "local_constraints": 90,
+        "main_constraints": 648,
+        "status": "PASS"
+      },
+      {
+        "late_order": [
+          1,
+          2,
+          0
+        ],
+        "points": 41,
+        "source_edges": 54,
+        "local_constraints": 90,
+        "main_constraints": 324,
+        "status": "PASS"
+      },
+      {
+        "late_order": [
+          2,
+          0,
+          1
+        ],
+        "points": 41,
+        "source_edges": 54,
+        "local_constraints": 90,
+        "main_constraints": 324,
+        "status": "PASS"
+      },
+      {
+        "late_order": [
+          2,
+          1,
+          0
+        ],
+        "points": 41,
+        "source_edges": 54,
+        "local_constraints": 90,
+        "main_constraints": 0,
+        "status": "PASS"
+      }
+    ],
+    "program_geometry": [
+      {
+        "S": 2,
+        "W": 3,
+        "B": 8,
+        "Dm": 3,
+        "pairing": [
+          1,
+          0
+        ],
+        "points": 47,
+        "originals": 15,
+        "prototypes": 12,
+        "program_copies": 24,
+        "crossing_predicates": 175428,
+        "insertion_candidates": 13596,
+        "delta": "1/18889465931478580854784",
+        "coordinate_common_den_bits": 105,
+        "result": "all exact checks passed"
+      },
+      {
+        "S": 2,
+        "W": 4,
+        "B": 16,
+        "Dm": 4,
+        "pairing": [
+          0,
+          1
+        ],
+        "points": 68,
+        "originals": 20,
+        "prototypes": 16,
+        "program_copies": 32,
+        "crossing_predicates": 1043728,
+        "insertion_candidates": 37640,
+        "delta": "1/37778931862957161709568",
+        "coordinate_common_den_bits": 113,
+        "result": "all exact checks passed"
+      }
+    ],
+    "parameter_checks": {
+      "cases": [
+        {
+          "n": 1,
+          "H_bits": 20841,
+          "conservative_error_less_than_Delta_over_2pow18": true
+        },
+        {
+          "n": 2,
+          "H_bits": 20904,
+          "conservative_error_less_than_Delta_over_2pow18": true
+        },
+        {
+          "n": 5,
+          "H_bits": 20997,
+          "conservative_error_less_than_Delta_over_2pow18": true
+        },
+        {
+          "n": 10,
+          "H_bits": 21072,
+          "conservative_error_less_than_Delta_over_2pow18": true
+        },
+        {
+          "n": 100,
+          "H_bits": 21333,
+          "conservative_error_less_than_Delta_over_2pow18": true
+        }
+      ],
+      "rational_coefficient_checks": 5,
+      "scope": "Five source sizes; all-n statements are Lean theorems."
+    }
+  }
+}

@@ -1,0 +1,133 @@
+\section{Formal verification and reproducible computations}\label{sec:formalization}
+
+The accompanying Lean development formalizes the new mathematical
+construction and its final interface with the complete geometric graph
+problem. The principal declaration is
+\begin{center}
+\texttt{Q4.Candidate.ConstructedReduction.}\\
+\texttt{constructed\_maxcut\_instance}.
+\end{center}
+For every $n\geq1$, permutation $\pi$ and integer source threshold $k$,
+it produces one point count $N$, one coordinate function
+$\mathrm{coords}:\mathrm{Fin}(N)\to\Q^2$, and one integer threshold
+$\kappa$. The same witness satisfies injectivity, general position,
+coordinate encoding bounds and the equivalence
+\[
+ \exists\chi\;M(\mathrm{coords},\chi)\leq\kappa
+ \quad\Longleftrightarrow\quad
+ \exists\text{ a cut of the inversion graph of }\pi\text{ of size at least }k.
+\]
+The colours on the left range over every edge of $K_N$ freely.
+The formal construction gives, with
+$\widehat H=2^{20840}(n+1)^{80}$,
+\[
+ N\leq3\widehat H^5,
+ \qquad L_{\mathrm{coord}}\leq2^{17}\widehat H^{10},
+\]
+where each coordinate has an integer numerator and nonzero denominator
+of absolute value at most $2^{L_{\mathrm{coord}}}$.
+
+\subsection{What the theorem assumes and what it proves}
+
+The final Lean declaration has the explicit mathematical hypothesis
+\begin{center}
+\texttt{forall m, ConvexOptimum m (knownZ m)}.
+\end{center}
+Here \texttt{ConvexOptimum} asserts both a lower bound for every free
+two-colouring of the chords and existence of an attaining colouring;
+\texttt{knownZ} is the value $Z$ above. This hypothesis is supplied in the
+mathematical proof by the established two-page theorem
+\cite{Abrego2013}. Its conversion to the actual frame and dummy chord
+objectives is formalized. The literature theorem itself is not reproved
+in this development and is not introduced as a custom Lean axiom.
+
+All other construction obligations in the final declaration are
+instantiated: actual program multiplicities, geometry, general-position
+placement, palette forcing in the appropriate core optimization,
+selected-edge residual fields, source amplification, the complete edge
+partition, the computable background, and the strict error gap.
+In particular, an unknown source optimum or background optimum is not
+an input to the reduction.
+
+\begin{center}
+\small
+\begin{tabular}{p{.29\linewidth}p{.64\linewidth}}
+\hline
+Proof component & Principal module families\\
+\hline
+Analytic and discrete stability &
+\texttt{TwoPhaseStability}, \texttt{GridStepBridge},
+\texttt{GridLocalization}\\
+Complete energy and freezing &
+\texttt{CompleteProbeFreezing}, \texttt{CompleteClassEnergy},
+\texttt{CompleteBackground}\\
+Actual geometric programs &
+\texttt{ProgramGeometry}, \texttt{ActualProgramGeometry},
+\texttt{ActualRecipe}, \texttt{ProgramPlacement}\\
+Free core and source signal &
+\texttt{ActualCatalogBounds}, \texttt{ActualSelectedUnary},
+\texttt{MainSourceEncoding}, \texttt{CoreValueBridge}\\
+Effective baseline and encoding &
+\texttt{ComputedBackground}, \texttt{ComputedCore},
+\texttt{RationalEncoding}, \texttt{CandidateSize}\\
+Final complete-input equivalence &
+\texttt{CompleteInput}, \texttt{ActualReductionValue},
+\texttt{SourceCutBridge}, \texttt{ConstructedReduction}\\
+\hline
+\end{tabular}
+\end{center}
+
+The development uses the conservative local bound $2SW^4$ and proves
+$2^{18}(E_-+E_+)<\Delta$. These are the bounds used in the final
+reduction here. No stronger constant from an earlier draft is needed.
+
+The source NP-hardness theorem \cite{Figueiredo2023}, complexity classes,
+machine running times, membership in NP, and the separate output-threshold
+bit bound are not formalized in Lean. Their mathematical proofs and
+references are given in this paper and in the effective-reduction notes.
+In particular, a small-coordinate existence theorem alone would not
+prove the required polynomial construction time; the explicit finite
+selection algorithm supplies this additional fact.
+
+\subsection{Verification procedure}
+
+The public proof artifact contains exactly the transitive project import
+closure of the final theorem: 123 construction modules and four shared
+foundation modules, with a separate explicit aggregate entry point.
+The Lean version is fixed to 4.34.1 and the mathlib dependency and its
+transitive revisions are fixed by the Lake manifest.
+
+The verification script first compares the source set with this closure
+and its SHA256 manifest. It checks for proof placeholders and custom
+axioms, builds the aggregate entry point, elaborates every source file
+individually, and checks the outputs of the retained explicit
+\texttt{\#print axioms} commands, including the final theorem. It also
+checks that source and configuration hashes did not change during the
+run. The permitted kernel axiom dependencies are
+\texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}.
+The axiom queries cover the designated key declarations; they are not
+described as a separate enumeration of every declaration in mathlib.
+The trust boundary includes Lean, the pinned dependencies and their
+compiled artifacts, and the ordinary compiler and hardware stack.
+
+\subsection{Finite diagnostics and review scope}
+
+Four standard-library Python programs provide exact finite diagnostics:
+the six-point completion obstruction in Appendix~\ref{app:completion};
+core combinatorics for all six orders of three source vertices; two
+reduced geometric realizations with actual general-position insertion
+and crossing-table checks; and rational or integer checks of selected
+parameter inequalities. The programs use exact arithmetic. Their
+recorded inputs and expected outputs are distributed with the source.
+They do not generate or solve the extremely large target instances of
+the reduction and are not used as proofs of statements for unbounded
+input sizes.
+
+AI systems assisted the exploration, formalization and preparation of
+the manuscript. Independent LLM-assisted reviews were used to examine
+definitions, interfaces and the effective construction, followed by
+kernel checks of the formal development. The artifact records this
+scope explicitly; these reviews do not constitute human journal peer
+review. The repository retains the final proof and useful diagnostics,
+with intermediate exploratory records kept outside the public source
+set.

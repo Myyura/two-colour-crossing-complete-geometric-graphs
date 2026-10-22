@@ -1,0 +1,322 @@
+\section{Geometric interfaces and effective coordinates}\label{sec:geometry}
+
+We construct three sets of points: originals, frames, and programs. Original--frame edges realize the comparison grid; program--frame edges are the probes to which Proposition~\ref{prop:freezing} will apply. All other edges of the complete graph remain present.
+
+\subsection{Two convex chains}
+For rational $D\geq10$, $F\geq1$, and $0<\kappa,\kappa_f\leq1/100$, set
+\begin{equation}\label{eq:caps}
+ P(y)=(-D-\kappa y^2,y),\qquad A(t)=(F+\kappa_f t^2,t),\qquad -1<y,t<1.
+\end{equation}
+Choose originals $P_j=P(y_j)$ in increasing parameter order, and frames $A_i=A(t_i)$ in decreasing parameter order, with $0\leq j<o$ and $0\leq i<B$.
+
+\begin{lemma}[The base drawing]\label{lem:double-chain}
+The base points are in general position. The edges $A_iP_j$ induce the strict comparison grid:
+\[
+A_iP_j\sim A_kP_l\quad\Longleftrightarrow\quad (i<k\ \text{and}\ j<l)\ \text{or}\ (k<i\ \text{and}\ l<j).
+\]
+An edge within either chain does not cross an edge joining the chains.
+\end{lemma}
+\begin{proof}
+For $a<b<c$, direct expansion gives
+\begin{align*}
+\orient(P(a),P(c),A(t))&=-(c-a)[D+F+\kappa_f t^2+\kappa((a+c)t-ac)]<0,\\
+\orient(P(a),P(c),P(b))&=-\kappa(c-a)(b-a)(c-b)<0,\\
+\orient(A(a),A(c),P(y))&=(c-a)[D+F+\kappa y^2+\kappa_f((a+c)y-ac)]>0,\\
+\orient(A(a),A(c),A(b))&=\kappa_f(c-a)(b-a)(c-b)>0.
+\end{align*}
+The brackets are at least $D+F-3\kappa$ and $D+F-3\kappa_f$, respectively. These formulas cover every single-chain and mixed triple. With three points on one chain, the middle point lies strictly inside the triangle formed by the other two and any point on the other chain: the displayed chord test and the mixed tests for the two subpairs give its three side tests. This excludes an internal-chain edge crossing a joining edge. Two points on each chain form a convex quadrilateral, since the opposite chain lies strictly on one side of either same-chain chord. Its diagonals give the stated comparison relation, with the two parameter orders reversed.
+\end{proof}
+
+There are $S$ early source endpoint clusters and $S$ late clusters, each containing $W$ consecutive originals. Between them lie $D_m=512SW$ dummy originals, so $o=514SW$. Each cluster is an equally spaced interval of parameter diameter $\tau$ around a macro parameter. Early, dummy, and late parameters lie, respectively, in $(-3/4,-5/8)$, $(-1/2,1/2)$, and $(5/8,3/4)$. A matching pairs the early and late clusters; Section~\ref{sec:core} specifies it from the source permutation.
+
+Every original chord has direction $(b-a)(-\kappa(a+b),1)$, while an original--frame vector has horizontal component at least $D+F$ and vertical component of absolute value at most two. These direction cones are separated. Programs will lie in $x<-D/2$, $|y|<2$. The preliminary interfaces below use small displacements and clone diameter $\tau$; the effective construction then chooses both by explicit simultaneous bounds.
+
+\subsection{Ordinary programs}
+Take $8\mid B$ and $t_i=1-2(i+1)/(B+1)$. The artificial point $A_*=A(0)$ lies in the strict angular gap between the middle frame rows, as viewed from every original. At a macro point $p=P(a)$, an ordinary program has prototype
+\begin{equation}\label{eq:ordinary-prototype}
+r=p-\mu_o(A_*-p),\qquad \mu_o>0.
+\end{equation}
+
+\begin{lemma}[Ordinary interface]\label{lem:ordinary-table}
+For sufficiently small $\mu_o$, followed by sufficiently small $\tau$, every clone $p_s$ of the parent satisfies
+\begin{equation}\label{eq:ordinary-own}
+rA_k\sim p_sA_i\quad\Longleftrightarrow\quad
+\begin{cases}i<k,&k<B/2,\\i>k,&k\geq B/2.\end{cases}
+\end{equation}
+Outside the parent block, the program fan has the neighborhood of a virtual column inserted at that block. A core edge from a parent clone to a different macro or a dummy crosses exactly the first half of the program fans when its other endpoint is later, and exactly the last half when it is earlier. These tables hold on an open neighborhood of the prototype.
+\end{lemma}
+\begin{proof}
+Put $\epsilon_i=\sgn\orient(r,p_s,A_i)$. The strict central gap gives $\epsilon_i=1$ on the first half and $-1$ on the last half, uniformly for all clones after choosing $\tau$. Both endpoint tests for proper crossing are needed. When $i<k$, they require $\epsilon_i=\epsilon_k=1$; when $i>k$, they require $\epsilon_i=\epsilon_k=-1$. For $i=k$ there is a common endpoint. Here $r$ and $p_s$ lie on the same strict side of each frame chord: on $|y|\leq2$ that chord has supporting coordinate
+\[
+x=F+\kappa_f((t_i+t_k)y-t_it_k)\geq F-5\kappa_f>0,
+\]
+whereas both points lie in the left strip. This proves~\eqref{eq:ordinary-own}. In every nonparent column the nonzero macro determinants persist under displacement and cloning, giving the virtual-column prefix or suffix.
+
+For the core table, let $w=P(b)$ with $b\ne a$. Then
+$\orient(p,w,r)=-\mu_o\orient(p,w,A_*)$, so $r$ and every frame point lie on opposite sides of $pw$. The other test compares the signs of $\orient(r,A_k,p)$ and $\orient(r,A_k,w)$. The former is negative on the first half and positive on the last; at zero displacement the latter has the sign of $b-a$, and this strict sign persists. This gives the claimed halves for the actual clones. All signs have positive margins, hence hold on an open neighborhood. No half-frame assertion is made for a short edge inside the parent cluster; its exact unary cost is retained later.
+\end{proof}
+
+\subsection{Rank programs}
+For a selected macro chord $P(a)P(b)$, $a<b$, write $d_0=b-a$ and let $a_s,b_t$, $1\leq s,t\leq W$, be its clone parameters. Choose
+\[
+0<\mu_r<\frac1{100W},\qquad 0<\tau\leq\frac{\mu_rd_0}{100},\qquad
+y_L=a+\mu_rd_0,\quad y_R=b-\mu_rd_0.
+\]
+The supporting horizontal coordinate of an actual selected chord at height $y$ is
+\begin{equation}\label{eq:rank-support}
+T_{s,t}(y)=-D-\kappa((a_s+b_t)y-a_sb_t).
+\end{equation}
+
+\begin{lemma}[Rank interface]\label{lem:rank-table}
+At each internal gap $1\leq\ell<W$ there are open regions for left and right programs. Every left program fan crosses precisely the selected edges with $s>\ell$; every right fan crosses precisely those with $t\leq\ell$. The test is independent of the opposite clone rank.
+
+The grid neighborhood is the exact virtual column after the entire early parent block, or before the entire late parent block, independently of $\ell$. On an incident nonselected core edge to $P(w)$, every fan crosses if $a<w<b$, and none crosses otherwise.
+\end{lemma}
+\begin{proof}
+At the unsteered center $r_0=(1-\theta)P(a)+\theta P(b)$, where $\theta=\mu_r$ or $1-\mu_r$,
+\[
+\orient(r_0,A,P(a))=\theta\orient(P(a),P(b),A)<0,\quad
+\orient(r_0,A,P(b))=(1-\theta)\orient(P(a),A,P(b))>0.
+\]
+Cloning and sufficiently small horizontal steering preserve these opposite endpoint signs for every frame point. The remaining crossing test is exactly
+\begin{equation}\label{eq:rank-cross}
+rA\sim P(a_s)P(b_t)\quad\Longleftrightarrow\quad x_r<T_{s,t}(y_r).
+\end{equation}
+Thus this is an internal segment crossing, not merely a support-line intersection.
+
+At $y_L$, the support increases in $s$ and decreases in $t$. The full ranges over the opposite rank satisfy
+\begin{align}
+G_{L,\ell}
+&=T_{\ell+1,W}(y_L)-T_{\ell,1}(y_L)\notag\\
+&=\kappa[(a_{\ell+1}-a_\ell)(b_W-y_L)-(y_L-a_\ell)(b_W-b_1)]
+\geq\frac{\kappa\tau d_0}{2W}>0.\label{eq:rank-gaps}
+\end{align}
+Indeed $a_{\ell+1}-a_\ell\geq\tau/W$, $b_W-y_L\geq0.98d_0$, and $y_L-a_\ell\leq1.005\mu_rd_0<0.011d_0/W$. Thus choose
+\[
+x_{L,\ell}=\tfrac12(T_{\ell,1}(y_L)+T_{\ell+1,W}(y_L)).
+\]
+At $y_R$, reflection and rank reversal give
+$T_{1,\ell}(y_R)-T_{W,\ell+1}(y_R)\geq\kappa\tau d_0/(2W)$, so
+\[
+x_{R,\ell}=\tfrac12(T_{W,\ell+1}(y_R)+T_{1,\ell}(y_R))
+\]
+gives exactly $t\leq\ell$. These prototypes tend to the unsteered centers as $\tau\to0$, retaining the endpoint tests above.
+
+For grid neighbors, marker-to-parent directions remain in the original-chord cone, outside the entire frame cone. The sign $\epsilon_i$ in the preceding proof is now constant over frame rows, positive for an original before the marker and negative for one after it. Consequently
+\[
+rA_k\sim P_jA_i\quad\Longleftrightarrow\quad
+\begin{cases}i<k,&P_j\text{ precedes the marker},\\ i>k,&P_j\text{ follows it}.\end{cases}
+\]
+The left marker is above its whole parent block and the right marker below its whole parent block. Their displacement remains below the next macro gap, and steering does not change these signs.
+
+For a nonselected incident chord, put $L_{a,w}(y)=-D-\kappa((a+w)y-aw)$. At the left unsteered center,
+\[
+(r_0)_x-L_{a,w}((r_0)_y)=-\kappa\mu_r(b-a)(b-w).
+\]
+The support-side test excludes $w>b$. For $w<b$, the other endpoint test excludes $w<a$, since its sign at $P(w)$ tends to the sign of $w-a$, while the near-endpoint sign is negative. Thus precisely $a<w<b$ remains. The right support difference is $\kappa\mu_r(b-a)(a-w)$; its near sign is positive and the other endpoint sign is negative precisely for $w<b$, giving the same interval. Strict macro margins preserve these statements. Parent-cluster short edges and the selected partner are excluded from this last table.
+\end{proof}
+
+\begin{lemma}[Nonincident exclusion]\label{lem:nonincident}
+A program fan does not cross a core edge whose endpoints both avoid its parent block.
+\end{lemma}
+\begin{proof}
+For endpoints in different nonparent blocks, the fan at the parent macro is noncrossing by Lemma~\ref{lem:double-chain}, with nonzero macro determinants. Small displacement and then cloning preserve the exclusion. For a short edge in one nonparent block, the macro fan has positive distance from that block's center. Choose the displacement and clone neighborhood below this distance. The whole short edge remains disjoint from the fan. This argument avoids applying a strict determinant test to a collapsed zero-length edge.
+\end{proof}
+
+\subsection{Canonical response fields}
+Let $N_g=Bo$, $\rho=1/B+1/o$, $u_k=(k+1/2)/B$, and $v_j=(j+1/2)/o$. The canonical grid spins are
+$\sigma_{kj}=2\1_{u_k+v_j<1}-1$. The field of a fan is its grid cost in colour one minus its grid cost in colour zero. Its canonical response minimizes this cost, with colour zero at a tie. For a virtual column after $r_0$ originals, put $v=r_0/o$; its exact field is
+\begin{align}
+H_k&=\sum_{j<r_0}\sum_{i<k}\sigma_{ij}+\sum_{j\geq r_0}\sum_{i>k}\sigma_{ij},\notag\\
+H_{k+1}-H_k&=\sum_{j<r_0}\sigma_{kj}-\sum_{j\geq r_0}\sigma_{k+1,j}.\label{eq:virtual-field}
+\end{align}
+There is no contribution from row $k$, whose fan shares a frame endpoint.
+
+\begin{lemma}[Field and soft-row bounds]\label{lem:soft-fields}
+Write $s_k=1-u_k-v$. Then
+\begin{align}
+|H_{k+1}-H_k-o(1-2|s_k|)|&\leq2+2o/B,\notag\\
+|H_k/N_g+s_k(1-|s_k|)|&\leq6\rho.\label{eq:virtual-estimates}
+\end{align}
+A rank program has field $g_k=H_k$. For an ordinary program, choose a virtual position at a parent-block boundary. Then $|g_k-H_k|\leq2BW$, and away from the central ordinary switch the increment error is at most $2W$.
+
+Suppose $B\geq o\geq1000$, $8\mid B$, and $W/o\leq1/514$. For either program type and $0\leq z\leq1/100$,
+\begin{equation}\label{eq:soft-rows}
+|\{k:|g_k|\leq zBo\}|\leq12Bz+3.
+\end{equation}
+An early program has response spin $+1$ on the middle $3B/4$ rows; a late program has spin $-1$ there. Each early half-frame sum is at least $B/4$ and its full sum at least $B/2$; the late sums have the opposite bounds. For $s$ programs the total soft count is at most $Q(z+\rho)N_g$, where $Q=12s/o$.
+\end{lemma}
+\begin{proof}
+For $f_u(y)=2\1_{y<1-u}-1$, any midpoint sum over a prefix or suffix of column cells differs from $o$ times the integral by at most one: only the threshold cell matters, including a midpoint tie. Also changing $u$ by $1/B$ changes a suffix integral by at most $2/B$. Since
+\[
+\int_0^v f_u(y)\,dy-\int_v^1 f_u(y)\,dy=1-2|1-u-v|,
+\]
+the first estimate follows from~\eqref{eq:virtual-field}. The two rectangles $[0,u_k]\times[0,v]$ and $[u_k,1]\times[v,1]$ differ from the actual cell union only in row $k$, of area $1/B$. The cellwise canonical function differs from $2\1_{x+y<1}-1$ in $L^1$ by at most $2\rho$. Integrating the latter function over the rectangles gives $-s_k(1-|s_k|)$, proving even the bound $3\rho$. Only the $W$ parent columns differ for an ordinary program. Each prefix or suffix has absolute sum at most $B$ and changes by at most one away from its switch. This proves its two error bounds.
+
+For early programs $v\leq1/514$, and for late programs $v\geq1-1/514$. A soft row satisfies
+\[
+|s_k|(1-|s_k|)\leq z+2W/o+6\rho<0.042<7/64.
+\]
+It therefore belongs to one of $|s_k|\leq1/8$, $s_k\geq7/8$, or $s_k\leq-7/8$. For early ranks these lie in $u\leq1/8$ or $u\geq3/4$; for late ranks in $u\leq1/4$ or $u\geq7/8$. Each lies away from the ordinary switch. On each interval the main increment has constant sign and magnitude at least $3o/4$. Even the weaker error $6+2W$ leaves magnitude at least $o/2$. A field interval of length $2zBo$ contains at most $4Bz+1$ such rows, proving~\eqref{eq:soft-rows}.
+
+On $u_k\in[1/8,7/8]$, an early rank has $1/9<s_k<8/9$, so $s_k(1-s_k)\geq8/81$. The error $2/514+12/o<0.016$ cannot change the negative field sign, hence the response colour is one. The late case reverses the sign. Each half-frame has $3B/8$ controlled and at most $B/8$ other rows, giving the claimed sums. Finally $12sBz+3s\leq(12s/o)(z+\rho)N_g$.
+\end{proof}
+
+A frozen fan of colour $c$ contributes $2c-1$ to the core unary coefficient. Early ordinary halves thus contribute positively, and late halves negatively. Early rank programs add positive suffix steps; late ones add negative prefixes whose disappearance is a positive step. Their full weights lie in $[B/2,B]\subseteq[B/4,B]$. All internal gaps at an endpoint have the same response sequence; copies in one open prototype region retain it, independently of other programs.
+
+\subsection{All remaining edge classes}
+Partition the complete graph into $X$ (original--frame), $T_f$ (program--frame), $C$ (original--original), $Y$ (program--original or program--program), and $I$ (frame--frame).
+\begin{lemma}[Convex separation]\label{lem:separation}
+The programs can all be placed strictly inside $\mathcal H=\{(x,y):\phi(x,y)\leq0\}$, where $\phi(x,y)=x+D+\kappa y^2$. Every open $X$ segment lies outside $\mathcal H$. Consequently $X$ has no crossing with $C$ or $Y$. The frame class $I$ has no crossing-graph neighbor outside itself.
+\end{lemma}
+\begin{proof}
+The set $\mathcal H$ is convex. For $z_\lambda=(1-\lambda)P(a)+\lambda A(t)$,
+\begin{equation}\label{eq:cap-ray}
+\phi(z_\lambda)=\lambda[D+F+\kappa_ft^2+\kappa(2at-a^2)]+\kappa\lambda^2(t-a)^2.
+\end{equation}
+Its bracket is positive, so every open grid segment is outside. Substituting $\lambda=-\mu_o$ gives, for $0<\mu_o\leq1$,
+$\phi(r)\leq-\mu_o(D+F-7\kappa)<0$ at an ordinary prototype. At a rank height, $a_s<y_r<b_t$ and
+\[
+\phi(T_{s,t}(y_r),y_r)=-\kappa(y_r-a_s)(b_t-y_r)<0.
+\]
+Its steered horizontal coordinate is a midpoint of two such supports; $\phi$ is affine in $x$, so the actual prototype is inside. If $\eta_{\rm cap}=\min_r(-\phi(r))>0$, perturbation by at most $\delta\leq\min(1/4,\eta_{\rm cap}/8)$ in both coordinates changes $\phi$ by less than $2\delta$ on $|y|\leq2$. Hence every final program remains inside. All $C,Y$ endpoints lie in $\mathcal H$, so convexity excludes their crossing with $X$.
+
+For the frame component put $\psi(x,y)=F+\kappa_fy^2-x$ and use $\mathcal H_f=\{(x,y):\psi(x,y)\leq0\}$. It contains all $I$ segments. Every nonframe point $r$ has $x_r\leq-D$, $|y_r|\leq2$, and along a frame fan
+\[
+\psi((1-\lambda)A(t)+\lambda r)
+=\lambda[F-x_r+\kappa_f(2ty_r-t^2)]+\kappa_f\lambda^2(y_r-t)^2>0
+\]
+for $0<\lambda\leq1$, since the bracket is at least $D+F-5\kappa_f$. Thus no fan crosses $I$. The remaining $C,Y$ segments lie in $x\leq-D$, disjoint from $\mathcal H_f\subseteq\{x\geq F\}$.
+\end{proof}
+
+The isolated component $I$ has optimum $Z(B)$, not zero. Besides $I$--$I$, the only possible crossing types are
+\[
+X\!:\!X,\quad X\!:\!T_f,\quad T_f\!:\!T_f,\quad
+C\!:\!C,\quad C\!:\!T_f,\quad Y\!:\!T_f,\quad Y\!:\!C,\quad Y\!:\!Y.
+\]
+All interactions involving multiple programs are retained. Let $G_0$ be the crossing graph after deleting $Y$, and set
+\begin{equation}\label{eq:nonfan-budget}
+p=Bs,\qquad c=\binom o2,\qquad h=os+\binom s2,\qquad
+R_Y=h(p+c)+\binom h2.
+\end{equation}
+Deletion removes only the last three crossing types, so
+\begin{equation}\label{eq:nonfan-delete}
+\OPT(G_0)\leq\OPT(P)\leq\OPT(G_0)+R_Y.
+\end{equation}
+The upper bound extends any colouring of $G_0$ by arbitrary colours on $Y$, charging at most one per deleted constraint.
+
+\subsection{A deterministic rational realization}\label{subsec:realization}
+We now give explicit rational scales that instantiate all preceding open-region statements. These are the scales used in the formal development.
+
+Fix $D=10$, $F=1$, and $\kappa=\kappa_f=1/100$. Having fixed the integer counts and source pairing, choose the early macros, physically ordered late macros, dummies, and frames by
+\begin{equation}\label{eq:base-parameters}
+a_j=-\tfrac34+\frac{j}{8(S+1)},\quad
+b_l=\tfrac58+\frac{l}{8(S+1)},\quad
+z_v=-\tfrac14+\frac{v}{2(D_m+1)},\quad
+t_i=1-\frac{2(i+1)}{B+1}.
+\end{equation}
+Here $1\leq j,l\leq S$, $1\leq v\leq D_m$, and $0\leq i<B$. Let $\mathcal A$ be the set of early and late macro parameters and all dummy parameters; frame parameters are not included. Define
+\begin{equation}\label{eq:explicit-scales}
+\eta=\min\bigl(\{1\}\cup\{|a-c|:a,c\in\mathcal A,\ a\ne c\}\bigr),\quad
+\mu=\frac{\eta^2}{10000(W+1)},\quad
+\tau=\frac{\mu\eta^2}{1000(B+1)}.
+\end{equation}
+Use $\mu_o=\mu_r=\mu$ and clone parameters
+$a_r=a+\tau\vartheta_r$, where $\vartheta_r=(2r-W-1)/(2(W-1))$.
+All internal rank prototypes use the midpoint formulas of Lemma~\ref{lem:rank-table}; there are $2S(W-1)$ candidates, including those assigned zero copies later.
+
+\begin{lemma}[Simultaneous quantitative margins]\label{lem:common-scales}
+The choices~\eqref{eq:explicit-scales} satisfy all geometric interfaces above for the actual clones and every candidate program. In particular no choice depends on later program multiplicities.
+\end{lemma}
+\begin{proof}
+The set $\mathcal A$ is finite with distinct parameters, so $0<\eta\leq1$. Direct substitution gives
+\begin{gather}
+0<\mu\leq1/10000,\quad 100W\mu<1,\quad
+10000\mu\leq\eta^2,\quad 4800\mu<\eta^2,\notag\\
+0<\tau\leq\eta/1000,\quad 1000\tau\leq\mu\eta^2,\quad
+3(B+1)\tau/2\leq\mu,\quad
+100\tau\leq\mu(b-a)
+\label{eq:scale-margins}
+\end{gather}
+for any selected $a<b$, since $b-a\geq\eta$. Every clone remains in $(-1,1)$ and within $\tau/2$ of its macro. A nonparent original parameter $z$ remains on the same side of the parent macro $a$ as its own macro and obeys $|z-a|\geq\eta/2$. Consequently
+\begin{equation}\label{eq:ray-margins}
+5\mu\leq|z-a|,\qquad 2\mu(b-a)\leq|z-a|.
+\end{equation}
+If $z$ also avoids the selected partner macro $b$, then $|b-z|\geq\eta/2$ and
+\begin{equation}\label{eq:partner-margin}
+20\tau\leq\mu(b-a)|b-z|.
+\end{equation}
+For two nonparent actual parameters $z,v$, even when they are clones of the same macro, their distances to $a$ are each at least $\eta/2$. Thus
+\begin{equation}\label{eq:curvature-margins}
+1200\mu<|z-a||v-a|,\qquad
+200\mu(b-a)<|z-a||v-a|.
+\end{equation}
+The second inequality uses $b-a\leq2$.
+
+We check that these numerical inequalities pay for both segment-side tests, rather than only support-line intersections. In the ordinary own-column test, the unperturbed parent determinant has magnitude at least $10\mu|t_i|\geq10\mu/(B+1)$. Moving its original parameter from $a$ to a clone $c$ changes it by at most $25|c-a|$. The bound $3(B+1)|c-a|\leq\mu$ therefore preserves its sign. The constant 25 follows by expanding the determinant difference:
+\[
+\orient(r,P(c),A(t))-\orient(r,P(a),A(t))
+=(c-a)\bigl(r_x-A(t)_x-(a+c)(t-r_y)/100\bigr);
+\]
+here $|r_x|\leq22$, $|r_y|\leq2$. For a nonparent ray, ordinary displacement changes the determinant by at most $36\mu$, while its macro magnitude is at least $10|z-a|$. Inequality~\eqref{eq:ray-margins} preserves that sign. These bounds establish the full ordinary grid table, including its central switch.
+
+For a core support $L_{c,z}(y)=-10-((c+z)y-cz)/100$, the ordinary offset is exactly
+\[
+r_x-L_{c,z}(r_y)
+=-\frac{(a-c)(a-z)}{100}-\mu C(a,c,z),
+\qquad C(a,c,z)=11+\frac{a^2-ac-az}{100},
+\]
+with $10\leq C(a,c,z)\leq12$ for parameters in $[-1,1]$.
+When $c$ is a parent clone, the first term has absolute value at most $\tau/100$; the second is strictly negative and dominates it. Combining with the parent and nonparent ray signs gives the ordinary core half-frame table. For two nonparent endpoints, the product margin~\eqref{eq:curvature-margins} preserves the macro support sign when the parent lies between them; if they are on one side, both ray signs agree. In either case there is no crossing. This also proves nonincidence for a short edge in a different cluster without taking a zero-length limit.
+
+For rank programs, the last inequality of~\eqref{eq:scale-margins} and $100W\mu<1$ are exactly the full-range gap hypotheses in~\eqref{eq:rank-gaps}. The midpoint has horizontal steering from its unsteered macro-chord support at most $\tau/50$, obtained by expanding~\eqref{eq:rank-support} with endpoint deviations at most $\tau/2$. Its $L^\infty$ displacement from its parent is at most $\mu(b-a)$. For either actual selected endpoint $c$, the height gap is at least $\tau$ and
+\[
+|x_r-P(c)_x|\leq |y_r-c|/10.
+\]
+Indeed for a support through parameters $u,v$,
+\[
+L_{u,v}(y)-P(c)_x
+=\bigl((c-u)(c-v)-(u+v)(y-c)\bigr)/100;
+\]
+one endpoint differs from $c$ by at most $\tau$, $|c-u|,|c-v|,|u+v|\leq2$, and averaging preserves the bound. The horizontal distance to every frame point is at least 11, while its vertical distance is at most two. The endpoint determinant thus has the strict sign prescribed by whether $c<y_r$ or $c>y_r$. This proves the endpoint-side test in~\eqref{eq:rank-cross} uniformly over both ranks.
+
+A rank displacement bounded by $\delta_r=\mu(b-a)$ changes a nonparent ray determinant by at most $14\delta_r$, compared with macro magnitude at least $10|z-a|$; use~\eqref{eq:ray-margins}. For a nonselected incident edge from parent clone $c$ to actual $z$, the left support offset has the explicit error bound
+\[
+\left|r_x-L_{c,z}(r_y)+\frac{\mu(b-a)(b-z)}{100}\right|
+\leq\frac{3\tau}{100}.
+\]
+It is the steering error $\tau/50$ plus clone error at most $\tau/100$. Inequality~\eqref{eq:partner-margin} preserves its sign, so the ray and support tests together give exactly $a<z<b$. The right statement follows by reflection. Finally any rank displacement of size $\delta_r$ changes a nonincident chord offset by at most $2\delta_r$, whereas its initial curvature offset is $|(a-z)(a-v)|/100$. Inequality~\eqref{eq:curvature-margins} again preserves the sign. Endpoints on the same side give equal ray signs, and endpoints straddling the parent put program and frame on the same side of their chord. This proves rank nonincidence in all cases.
+
+The strict inwardness formulas in Lemma~\ref{lem:separation} apply directly to these ordinary and steered rank prototypes. Their heights have absolute value below two. Thus all prototypes are valid simultaneously. The argument uses only fixed base data and the candidate gap index.
+\end{proof}
+
+Compute each candidate's exact grid neighbors and response sequence. These determine the ordinary and rank weights. The greedy and ceiling rules of Section~\ref{sec:core} now determine the actual multiplicities and hence $s$. None of the earlier choices is repeated.
+
+Let $\mathcal B$ be the set of all fixed original and frame points, and $\mathcal R$ the finite set of used prototypes. Define positive rational margins
+\begin{align*}
+\eta_{\rm or}&=\min\bigl(\{1\}\cup
+ \{|\orient(u,v,r)|:u,v\in\mathcal B,\ r\in\mathcal R,\ \orient(u,v,r)\ne0\}\bigr),\\
+\eta_{\rm cap}&=\min\bigl(\{1\}\cup\{-\phi(r):r\in\mathcal R\}\bigr),\\
+\eta_{\rm ht}&=\min\bigl(\{1\}\cup\{2-|r_y|:r\in\mathcal R\}\bigr),\\
+L_{\mathcal B}&=1+2\sum_{u\in\mathcal B}(|u_x|+|u_y|),\\
+\delta&=\min\{1/4,\eta_{\rm cap}/8,\eta_{\rm ht},\eta_{\rm or}/(8L_{\mathcal B})\}.
+\end{align*}
+These are the finite-minimum radius formulas used in the formalization. The value one handles empty sets. Every nonzero one-program determinant retains its sign under a coordinate change at most $\delta$: its change is bounded by $\delta(|u_x-v_x|+|u_y-v_y|)<L_{\mathcal B}\delta\leq\eta_{\rm or}/8$. At the insertion points below the displacement is less than $\delta/2$ per coordinate. Hence the cap and height bounds are preserved as well.
+
+An unused zero determinant need not retain its value. Every prescribed crossing has four strict determinant tests. A pair sharing a base endpoint remains noncrossing by definition; each other prescribed exclusion has either a strict same-side support pair or strict same-side fan rays. The quantitative proof above supplies these certificates, including parent-cluster short edges, whose two fan rays have the same nonzero sign. Thus preserving the nonzero determinants suffices.
+Let $N=B+o+s$ be the final total point count.
+Set $m=N^2+N+2$. For each required copy of prototype $r$, test in lexicographic order the $m^2$ rational candidates
+\begin{equation}\label{eq:fixed-grid}
+r+\delta\left(\frac{i}{m+1}-\frac12,\frac{j}{m+1}-\frac12\right),\qquad 1\leq i,j\leq m.
+\end{equation}
+Reject coincidences with existing points and collinearity with any existing pair. At most $\binom N2$ forbidden lines each meet this grid in at most $m$ points, and at most $N$ further points are forbidden. Since $\binom{N}{2}m+N<m^2$, some candidate survives. Induction gives distinct points in general position. The same radius and denominator are used throughout. All required one-program tables and response colours persist; actual fan--fan crossings and short-edge unary costs are evaluated after insertion, while program nonfans are covered by~\eqref{eq:nonfan-budget}.
+
+\begin{proposition}[Effective realization]\label{prop:realization}
+The construction is a deterministic polynomial-time algorithm with rational coordinates of polynomial binary length. It preserves all stated interfaces simultaneously and yields general position. A common positive scaling yields integer coordinates of polynomial binary length with the same crossing relation.
+\end{proposition}
+\begin{proof}
+Proposition~\ref{prop:program-count} bounds the actual program count, and $2S(W-1)$ bounds the candidate prototypes. Both, together with $B,o$, are fixed polynomials in the source size. The base coordinates have
+$O(\log(B+1)+\log(W+1)+\log(S+1)+\log(D_m+1)+1)$ bits. The fixed formulas for $\eta,\mu,\tau$ use a bounded number of rational operations on base parameters and counts. Prototype coordinates are bounded-degree expressions in these values. Each determinant margin therefore has polynomial bit length; finite minima select existing values. The sum defining $L_{\mathcal B}$ has polynomially many terms, so its denominator bit length is bounded by the sum of their polynomial bit lengths. The same holds for $\delta$. Internal rank gaps use direct formulas, not a chain of nested scales.
+
+The integer greedy recurrence is evaluated with cached cumulative weights. Inserting at most $N$ programs tests $O(N^4)$ candidates per insertion, each against $O(N^2)$ exact equations and determinants, for $O(N^7)$ rational operations. All intermediate bit lengths are polynomial; standard integer arithmetic therefore implements the whole algorithm in polynomial bit time. Earlier inserted points only reject candidates and never redefine later scales. Finally the product of the positive coordinate denominators has bit length at most their sum. Scaling by this product preserves strict determinant signs and gives integer coordinates with polynomial bit length.
+\end{proof}

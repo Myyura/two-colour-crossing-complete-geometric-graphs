@@ -1,0 +1,9 @@
+Two-colour crossing minimization in complete geometric graphs
+Copyright 2026 Myyura
+
+This artifact contains an AI-assisted mathematical manuscript, Lean proofs,
+and exact finite diagnostic programs. AI assistance and the scope of the
+formal and informal reviews are described in docs/provenance.md.
+
+Lean and mathlib are external dependencies with their own copyright notices
+and licenses. No third-party published paper is redistributed here.

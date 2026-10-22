@@ -1,0 +1,1470 @@
+{
+  "schema_version": 1,
+  "entry_module": "Q4.Candidate.ConstructedReduction",
+  "original_project": "q4_lean",
+  "note": "original_path is relative to the historical project; verification of a public checkout does not require that project. Copied module bytes are unchanged.",
+  "modules": [
+    {
+      "module": "Q4.Candidate.ActualCatalogBounds",
+      "path": "Q4/Candidate/ActualCatalogBounds.lean",
+      "original_path": "Q4/Candidate/ActualCatalogBounds.lean",
+      "sha256": "20734071067db79bbd190bdc6121d9bf13b5e433921992d31e19e5876f30dd40",
+      "imports": [
+        "Q4.Candidate.ActualCatalogRegime",
+        "Q4.Candidate.ActualSideGeometry",
+        "Q4.Candidate.PaletteExhaustion",
+        "Q4.Candidate.IndexedPaletteForcing"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ActualCatalogParameters",
+      "path": "Q4/Candidate/ActualCatalogParameters.lean",
+      "original_path": "Q4/Candidate/ActualCatalogParameters.lean",
+      "sha256": "161778a12ad4ca7dd45da5b84f0f3b9ab9252a0b9ec24e745cf498b61e4ed84a",
+      "imports": [
+        "Q4.Candidate.ActualCatalogBounds",
+        "Q4.Candidate.CatalogTargets"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ActualCatalogRegime",
+      "path": "Q4/Candidate/ActualCatalogRegime.lean",
+      "original_path": "Q4/Candidate/ActualCatalogRegime.lean",
+      "sha256": "0d71abb2c119c81771909c18bc9b6088073efc2e8cb02baed3e3502c35260b27",
+      "imports": [
+        "Q4.Candidate.ActualProgramGeometry",
+        "Q4.Candidate.SideDominance"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ActualDummyUnary",
+      "path": "Q4/Candidate/ActualDummyUnary.lean",
+      "original_path": "Q4/Candidate/ActualDummyUnary.lean",
+      "sha256": "a2f39846e18c394f368a4dd4743f8be376c9cd453d4b7c9e898ce71a95eb3d91",
+      "imports": [
+        "Q4.Candidate.ActualProgramGeometry",
+        "Q4.Candidate.ProgramExclusion",
+        "Q4.Candidate.DummyPaletteField"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ActualProgramGeometry",
+      "path": "Q4/Candidate/ActualProgramGeometry.lean",
+      "original_path": "Q4/Candidate/ActualProgramGeometry.lean",
+      "sha256": "c90cb48e3c230417b7de4f3806c9fae4586b8e960ace19692410b4ca5746ff24",
+      "imports": [
+        "Q4.Candidate.ProgramPlacement",
+        "Q4.Candidate.ActualRecipe",
+        "Q4.Candidate.CatalogSupport"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ActualRecipe",
+      "path": "Q4/Candidate/ActualRecipe.lean",
+      "original_path": "Q4/Candidate/ActualRecipe.lean",
+      "sha256": "cdb83bc513dad7503af4c007623f273cdac6ad1edf8a0a88c1b9503ad40401e8",
+      "imports": [
+        "Q4.Candidate.ProgramCatalog",
+        "Q4.Candidate.ProposedPalette"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ActualReductionValue",
+      "path": "Q4/Candidate/ActualReductionValue.lean",
+      "original_path": "Q4/Candidate/ActualReductionValue.lean",
+      "sha256": "6b0acc2fb214264c3b3a216d5de4f230de1bcc0b3a7190b07f7048a84c09bffd",
+      "imports": [
+        "Q4.Candidate.ComputedCore",
+        "Q4.Candidate.ConvexBackground",
+        "Q4.Candidate.FreezingErrors",
+        "Q4.Candidate.MainSourceEncoding"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ActualSelectedUnary",
+      "path": "Q4/Candidate/ActualSelectedUnary.lean",
+      "original_path": "Q4/Candidate/ActualSelectedUnary.lean",
+      "sha256": "ace5fd768e4c892bf09bab5413f0f46a61d1f58a724826f22c0d504ad4814ca1",
+      "imports": [
+        "Q4.Candidate.ActualDummyUnary",
+        "Q4.Candidate.ProgramIndex",
+        "Q4.Candidate.CatalogDominance",
+        "Q4.Candidate.ActualCatalogRegime"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ActualSideGeometry",
+      "path": "Q4/Candidate/ActualSideGeometry.lean",
+      "original_path": "Q4/Candidate/ActualSideGeometry.lean",
+      "sha256": "40b899f8605f63d5b340df7b337311a31a0263d12b29f84e1475fbb7a6b7bfc3",
+      "imports": [
+        "Q4.Candidate.ActualProgramGeometry",
+        "Q4.Candidate.SideCatalog"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.AlternatingTriples",
+      "path": "Q4/Candidate/AlternatingTriples.lean",
+      "original_path": "Q4/Candidate/AlternatingTriples.lean",
+      "sha256": "07e12d080c93b4a4eda5200461121ddf30df0c962964d6cdb99ba398d8d61583",
+      "imports": [
+        "Mathlib.MeasureTheory.Integral.Prod",
+        "Mathlib.MeasureTheory.Integral.DominatedConvergence",
+        "Mathlib.Topology.Order.IntermediateValue",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.Ring"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.AlternationKernel",
+      "path": "Q4/Candidate/AlternationKernel.lean",
+      "original_path": "Q4/Candidate/AlternationKernel.lean",
+      "sha256": "63cc8af5b771cf3f2286a3d2e44e288ea96c0b2e80568b95299f335df861c0ee",
+      "imports": [
+        "Q4.Candidate.AlternatingTriples",
+        "Mathlib.MeasureTheory.Integral.IntegrableOn",
+        "Mathlib.Tactic.NormNum"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.AnalyticVariance",
+      "path": "Q4/Candidate/AnalyticVariance.lean",
+      "original_path": "Q4/Candidate/AnalyticVariance.lean",
+      "sha256": "6cbd03e22ae4e2fa6ab536fa261c34a35f1cdf51bde03b3f3dead63aa8ed175f",
+      "imports": [
+        "Mathlib.MeasureTheory.Integral.Prod",
+        "Mathlib.Analysis.SpecialFunctions.Integrals.Basic",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.Ring"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.AntiperiodicReplacement",
+      "path": "Q4/Candidate/AntiperiodicReplacement.lean",
+      "original_path": "Q4/Candidate/AntiperiodicReplacement.lean",
+      "sha256": "d9793180e594bf185d0857bb42aef4a1f31084528e9df120338fc325260efd9b",
+      "imports": [
+        "Q4.Candidate.AntiperiodicThreshold",
+        "Q4.Candidate.EnergyLipschitz"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.AntiperiodicThreshold",
+      "path": "Q4/Candidate/AntiperiodicThreshold.lean",
+      "original_path": "Q4/Candidate/AntiperiodicThreshold.lean",
+      "sha256": "32757318cde27b48b99adcb5d9c05d52cd1ab7353d661a49e1a8c243390c8984",
+      "imports": [
+        "Q4.Candidate.DiagonalHalves",
+        "Q4.Candidate.DiagonalCoordinates"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.BoxAverage",
+      "path": "Q4/Candidate/BoxAverage.lean",
+      "original_path": "Q4/Candidate/BoxAverage.lean",
+      "sha256": "c0f9c7ba3223b3ef0b79ae4086215308cf5bcd50ee8bd3f482734dca7dd4e58b",
+      "imports": [
+        "Q4.Candidate.ThresholdTranslation",
+        "Mathlib.MeasureTheory.Integral.Prod"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.BoxDerivative",
+      "path": "Q4/Candidate/BoxDerivative.lean",
+      "original_path": "Q4/Candidate/BoxDerivative.lean",
+      "sha256": "e2a8d60f83cf51004f65754aba0c6eb49d851a7e78365ca6bf3bf9a187be2c7c",
+      "imports": [
+        "Q4.Candidate.ComparisonEnergy",
+        "Q4.Candidate.SquareTranslation",
+        "Q4.Candidate.BoxAverage",
+        "Q4.Candidate.DiagonalCoordinates",
+        "Q4.Candidate.DiagonalAverage",
+        "Mathlib.MeasureTheory.Integral.IntervalIntegral.LebesgueDifferentiationThm",
+        "Mathlib.Analysis.Calculus.Deriv.Comp",
+        "Mathlib.Analysis.Calculus.Deriv.Add",
+        "Mathlib.Analysis.Calculus.Deriv.Shift",
+        "Mathlib.Analysis.Calculus.Deriv.Mul",
+        "Mathlib.Analysis.Calculus.Deriv.Prod",
+        "Mathlib.Analysis.Calculus.Rademacher",
+        "Mathlib.MeasureTheory.Function.AbsolutelyContinuous"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.CandidateSize",
+      "path": "Q4/Candidate/CandidateSize.lean",
+      "original_path": "Q4/Candidate/CandidateSize.lean",
+      "sha256": "8c5fd580d80ac3c42035b69370d8b11a5f3ee62576ce3750f84120697cadb7e4",
+      "imports": [
+        "Q4.Candidate.ProgramPlacement",
+        "Q4.Candidate.FreezingParameters"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.CanonicalEnergy",
+      "path": "Q4/Candidate/CanonicalEnergy.lean",
+      "original_path": "Q4/Candidate/CanonicalEnergy.lean",
+      "sha256": "5b2a02fb358fbe783315a3d5051cec6606cbe2305da5640608962c7ce00745a7",
+      "imports": [
+        "Q4.Candidate.AntiperiodicReplacement"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.CanonicalField",
+      "path": "Q4/Candidate/CanonicalField.lean",
+      "original_path": "Q4/Candidate/CanonicalField.lean",
+      "sha256": "2f82c0c9d28bff0d81c5e20656185aebd1adc9221932b94db5135fc7dcb1ad4f",
+      "imports": [
+        "Q4.Candidate.GridLocalization",
+        "Mathlib.Order.Interval.Finset.Fin"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.CatalogDominance",
+      "path": "Q4/Candidate/CatalogDominance.lean",
+      "original_path": "Q4/Candidate/CatalogDominance.lean",
+      "sha256": "64626c71ecd91bc40b740bbffcbbf9081b3f92547a89ea75dc72387856ede49f",
+      "imports": [
+        "Q4.Candidate.CatalogSupport"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.CatalogSupport",
+      "path": "Q4/Candidate/CatalogSupport.lean",
+      "original_path": "Q4/Candidate/CatalogSupport.lean",
+      "sha256": "c76162174f4417e4fe3114dd0afa47dd901e946501447bd795f8434afbd3877f",
+      "imports": [
+        "Q4.Candidate.ActualRecipe"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.CatalogTargets",
+      "path": "Q4/Candidate/CatalogTargets.lean",
+      "original_path": "Q4/Candidate/CatalogTargets.lean",
+      "sha256": "3f01bf94cdad0bec9655cdad516a2b3fa7ac02ac0cd5dd8cf1893aa28bcf3375",
+      "imports": [
+        "Q4.Candidate.PaletteBounds",
+        "Q4.Candidate.CandidateSize"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ComparisonEnergy",
+      "path": "Q4/Candidate/ComparisonEnergy.lean",
+      "original_path": "Q4/Candidate/ComparisonEnergy.lean",
+      "sha256": "03117eb4cbd12649890c93ebc798fa8270e6c6aa0f786e9745dd418bc2ddd4ce",
+      "imports": [
+        "Q4.Candidate.AlternationKernel"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.CompleteBackground",
+      "path": "Q4/Candidate/CompleteBackground.lean",
+      "original_path": "Q4/Candidate/CompleteBackground.lean",
+      "sha256": "6e48099321291bec1f03674eb77461ee324293fd50eb857660fc49313250907d",
+      "imports": [
+        "Q4.Candidate.CompleteFanFields",
+        "Q4.Candidate.CompleteClassEnergy"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.CompleteClassEnergy",
+      "path": "Q4/Candidate/CompleteClassEnergy.lean",
+      "original_path": "Q4/Candidate/CompleteClassEnergy.lean",
+      "sha256": "7c4d163318c60122d1c8e1fb8ad52a8a73890b16811b5e9041266830f6ec36cd",
+      "imports": [
+        "Q4.Candidate.CompleteGridEnergy",
+        "Q4.JointProbe"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.CompleteDrawing",
+      "path": "Q4/Candidate/CompleteDrawing.lean",
+      "original_path": "Q4/Candidate/CompleteDrawing.lean",
+      "sha256": "07d07cbebf194a30aead43ebf37a6ff4f52f75ca12bae0d9d1bded30902952c4",
+      "imports": [
+        "Q4.Candidate.DoubleCapGrid",
+        "Q4.Candidate.GridStepBridge"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.CompleteFanFields",
+      "path": "Q4/Candidate/CompleteFanFields.lean",
+      "original_path": "Q4/Candidate/CompleteFanFields.lean",
+      "sha256": "d79119eaeaf0323206aadba94be50da46323eb32b8a51f89032baecf4193b14a",
+      "imports": [
+        "Q4.Candidate.CompleteProbeFreezing",
+        "Q4.Candidate.RankSoftRows",
+        "Q4.Candidate.OrdinarySoftRows",
+        "Q4.Candidate.OrdinaryTablePreservation"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.CompleteGridEnergy",
+      "path": "Q4/Candidate/CompleteGridEnergy.lean",
+      "original_path": "Q4/Candidate/CompleteGridEnergy.lean",
+      "sha256": "09d588d6b30289187bda471b4ea10d8ebf60153a6c8d24cf03100e08778474e9",
+      "imports": [
+        "Q4.Candidate.CompleteDrawing"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.CompleteInput",
+      "path": "Q4/Candidate/CompleteInput.lean",
+      "original_path": "Q4/Candidate/CompleteInput.lean",
+      "sha256": "f2b975d8ef42b093b2390da011e92da545310bd5a87619db0c2cb01441d04634",
+      "imports": [
+        "Q4.Candidate.ProgramPlacement",
+        "Q4.Candidate.ProgramIndex"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.CompleteProbeFreezing",
+      "path": "Q4/Candidate/CompleteProbeFreezing.lean",
+      "original_path": "Q4/Candidate/CompleteProbeFreezing.lean",
+      "sha256": "f881400dcf3b7b08f6d189849ae931fd971154397ba923565fddb34177bb774a",
+      "imports": [
+        "Q4.Candidate.CompleteGridEnergy",
+        "Q4.Candidate.ProbeFreezingReal"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ComputedBackground",
+      "path": "Q4/Candidate/ComputedBackground.lean",
+      "original_path": "Q4/Candidate/ComputedBackground.lean",
+      "sha256": "a2ef51391207037907a3cceec012c6481ef4290e057eabf83df69b11eb559497",
+      "imports": [
+        "Q4.Candidate.CompleteBackground"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ComputedCore",
+      "path": "Q4/Candidate/ComputedCore.lean",
+      "original_path": "Q4/Candidate/ComputedCore.lean",
+      "sha256": "f5db091ce6db87a2af6eaee94d9047131331b0889d2f610f7e6304a552cd85bf",
+      "imports": [
+        "Q4.Candidate.ComputedBackground",
+        "Q4.Candidate.CoreValueBridge"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ConservativeGap",
+      "path": "Q4/Candidate/ConservativeGap.lean",
+      "original_path": "Q4/Candidate/ConservativeGap.lean",
+      "sha256": "af10a26b64490fcd3d5fc5614d1771461c07b46d6c95cd31a77f3d949a0e5e07",
+      "imports": [
+        "Q4.Candidate.ReductionGap"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ConstructedReduction",
+      "path": "Q4/Candidate/ConstructedReduction.lean",
+      "original_path": "Q4/Candidate/ConstructedReduction.lean",
+      "sha256": "111517c8c88c665ca08c75f6ee1e96842c204b5fb877656f21100f4f8264b5f3",
+      "imports": [
+        "Q4.Candidate.ActualReductionValue",
+        "Q4.Candidate.ProgramPlacement",
+        "Q4.Candidate.ProgramIndex",
+        "Q4.Candidate.CandidateSize",
+        "Q4.Candidate.ActualSelectedUnary",
+        "Q4.Candidate.ActualCatalogBounds",
+        "Q4.Candidate.CatalogTargets",
+        "Q4.Candidate.CompleteInput",
+        "Q4.Candidate.SourceCutBridge",
+        "Q4.Candidate.ActualCatalogParameters"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ConvexBackground",
+      "path": "Q4/Candidate/ConvexBackground.lean",
+      "original_path": "Q4/Candidate/ConvexBackground.lean",
+      "sha256": "a43efbf3f0ddcb10b457107ecda08acb4c0a1d139582219d15028b75634e8067",
+      "imports": [
+        "Q4.Candidate.CompleteBackground",
+        "Q4.Candidate.CoreFixedPalette"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ConvexSeparation",
+      "path": "Q4/Candidate/ConvexSeparation.lean",
+      "original_path": "Q4/Candidate/ConvexSeparation.lean",
+      "sha256": "f7ed1807816cf6b84c7bd667da4b6e6ecf6ab2e98397c3bbad4bf722d4c1af0b",
+      "imports": [
+        "Mathlib.Algebra.Order.Field.Rat",
+        "Mathlib.Algebra.Order.Field.Basic",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.FieldSimp",
+        "Q4.CleanWire"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ConvexSeparationGrid",
+      "path": "Q4/Candidate/ConvexSeparationGrid.lean",
+      "original_path": "Q4/Candidate/ConvexSeparationGrid.lean",
+      "sha256": "9b4dc76e56c2e2b46a88e86ec658317180bc80528e740b87862b43dd9bf4d64f",
+      "imports": [
+        "Q4.Candidate.ConvexSeparation",
+        "Mathlib.Data.Fintype.Prod",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+        "Mathlib.Algebra.Order.BigOperators.Group.Finset"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.CoreEncoding",
+      "path": "Q4/Candidate/CoreEncoding.lean",
+      "original_path": "Q4/Candidate/CoreEncoding.lean",
+      "sha256": "9895579fac431ce9ed01db6e585990a4e7e227fef118f9b3237141a38205a65a",
+      "imports": [
+        "Q4.SimultaneousFlip"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.CoreExtension",
+      "path": "Q4/Candidate/CoreExtension.lean",
+      "original_path": "Q4/Candidate/CoreExtension.lean",
+      "sha256": "d26a30f676624b43987d9f5e199aed40d5ba8a098db4a7240d9b49f2eb4dc598",
+      "imports": [
+        "Q4.Candidate.CoreFixedPalette",
+        "Q4.Candidate.CompleteBackground"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.CoreFixedPalette",
+      "path": "Q4/Candidate/CoreFixedPalette.lean",
+      "original_path": "Q4/Candidate/CoreFixedPalette.lean",
+      "sha256": "87c3e598356f409e92fb834cea589cc5fae14a4607ea03415a8686e978664c40",
+      "imports": [
+        "Q4.Candidate.CoreReducedPairs",
+        "Q4.Candidate.CompleteClassEnergy",
+        "Q4.Candidate.DummyPaletteField"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.CoreLocalGeometry",
+      "path": "Q4/Candidate/CoreLocalGeometry.lean",
+      "original_path": "Q4/Candidate/CoreLocalGeometry.lean",
+      "sha256": "32aed44fbbd433d69b658ec36ca5e3f06d23d8c2c17a248bd89814cbe3014099",
+      "imports": [
+        "Q4.Candidate.ProposedPalette",
+        "Q4.Candidate.CompleteProbeFreezing"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.CorePaletteForcing",
+      "path": "Q4/Candidate/CorePaletteForcing.lean",
+      "original_path": "Q4/Candidate/CorePaletteForcing.lean",
+      "sha256": "7b5c195829bed17147d7f4faf32a568744cbe4bab771c89cd40f3bd882cccfaa",
+      "imports": [
+        "Q4.Candidate.CompleteBackground",
+        "Q4.Candidate.CoreFixedPalette",
+        "Mathlib.Data.Finset.Prod"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.CoreReducedPairs",
+      "path": "Q4/Candidate/CoreReducedPairs.lean",
+      "original_path": "Q4/Candidate/CoreReducedPairs.lean",
+      "sha256": "0e2998b9dde0b90bca95c0f8be56fbe1ee87243870ca78c2105dc93c81cf0eff",
+      "imports": [
+        "Q4.Candidate.CoreLocalGeometry",
+        "Q4.Candidate.DummyGeometry"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.CoreValueBridge",
+      "path": "Q4/Candidate/CoreValueBridge.lean",
+      "original_path": "Q4/Candidate/CoreValueBridge.lean",
+      "sha256": "bd79a1480ab2d5ffde75a00a113d7cd2a56d17d8978e7a6f9c24575802414d39",
+      "imports": [
+        "Q4.Candidate.CoreExtension"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.DiagonalAverage",
+      "path": "Q4/Candidate/DiagonalAverage.lean",
+      "original_path": "Q4/Candidate/DiagonalAverage.lean",
+      "sha256": "e8e702807069838f270e847575c72457c5af202d8498361d951c6664161f2cae",
+      "imports": [
+        "Q4.Candidate.DiagonalCoordinates"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.DiagonalCoordinates",
+      "path": "Q4/Candidate/DiagonalCoordinates.lean",
+      "original_path": "Q4/Candidate/DiagonalCoordinates.lean",
+      "sha256": "ff516fe6a1de466fb2c7c79402d64e060221f0a647b9eb2f72f24848a552a5bb",
+      "imports": [
+        "Q4.Candidate.IntervalPoincare",
+        "Mathlib.MeasureTheory.Group.Prod"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.DiagonalHalves",
+      "path": "Q4/Candidate/DiagonalHalves.lean",
+      "original_path": "Q4/Candidate/DiagonalHalves.lean",
+      "sha256": "19abbc9121f2a23322462d5f1fda550ea347f74a0ee6e9e410654d37b55a288e",
+      "imports": [
+        "Q4.Candidate.ComparisonEnergy",
+        "Q4.Candidate.AnalyticVariance",
+        "Q4.Candidate.ThresholdApproximation"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.DiagonalRounding",
+      "path": "Q4/Candidate/DiagonalRounding.lean",
+      "original_path": "Q4/Candidate/DiagonalRounding.lean",
+      "sha256": "c15f0e1ce5daab2cfb3b68c1b532f0877cbc4e93a104da1101403c375ff6a10d",
+      "imports": [
+        "Q4.Candidate.BoxDerivative",
+        "Q4.Candidate.SmoothingApproximation",
+        "Q4.Candidate.EnergyLipschitz"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.DoubleCapGrid",
+      "path": "Q4/Candidate/DoubleCapGrid.lean",
+      "original_path": "Q4/Candidate/DoubleCapGrid.lean",
+      "sha256": "662ae8c75d9c2a72e808bd2dfbd2e6299f12dc07aa12065bcab99920584ad13a",
+      "imports": [
+        "Q4.Candidate.ConvexSeparationGrid"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.DummyGeometry",
+      "path": "Q4/Candidate/DummyGeometry.lean",
+      "original_path": "Q4/Candidate/DummyGeometry.lean",
+      "sha256": "0ce5ffe189fdd595dd9349dc2da8ec569c9841c66a414eb8d77101a1520bd27d",
+      "imports": [
+        "Q4.Candidate.OriginalCapAlternation",
+        "Mathlib.Data.Fintype.BigOperators",
+        "Mathlib.Order.Interval.Finset.Fin",
+        "Mathlib.Algebra.BigOperators.Intervals",
+        "Mathlib.Data.Nat.Choose.Sum"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.DummyPaletteField",
+      "path": "Q4/Candidate/DummyPaletteField.lean",
+      "original_path": "Q4/Candidate/DummyPaletteField.lean",
+      "sha256": "dd4ec0558c5eed882c1d1b0c23d453571b176534c91baa3545243f95e9e6f949",
+      "imports": [
+        "Q4.Candidate.CoreReducedPairs"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.EnergyLipschitz",
+      "path": "Q4/Candidate/EnergyLipschitz.lean",
+      "original_path": "Q4/Candidate/EnergyLipschitz.lean",
+      "sha256": "f0e14c3ca1d90b8199daf8525cf3c28519b875bba921d5864176061965fda9ad",
+      "imports": [
+        "Q4.Candidate.ComparisonEnergy"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.FreezingErrors",
+      "path": "Q4/Candidate/FreezingErrors.lean",
+      "original_path": "Q4/Candidate/FreezingErrors.lean",
+      "sha256": "af5cf266b17f74ca34fce701b6d66f1153051055e7e81054672054d7bee5f2c8",
+      "imports": [
+        "Q4.Candidate.FreezingParameters",
+        "Q4.Candidate.CompleteClassEnergy",
+        "Q4.Candidate.ConservativeGap"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.FreezingParameters",
+      "path": "Q4/Candidate/FreezingParameters.lean",
+      "original_path": "Q4/Candidate/FreezingParameters.lean",
+      "sha256": "c497dc4ad0886f17f6cc46935d9fab25b8a5b91ac1c1f20c4f23ab8f41113f4c",
+      "imports": [
+        "Q4.Candidate.CompleteFanFields",
+        "Q4.Candidate.ProgramCount",
+        "Q4.Candidate.ReductionGap"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.GeometryEncoding",
+      "path": "Q4/Candidate/GeometryEncoding.lean",
+      "original_path": "Q4/Candidate/GeometryEncoding.lean",
+      "sha256": "a0800e6d01436eb9cefaa1ff1b2beb935f122590326700bd402108dd309fe793",
+      "imports": [
+        "Q4.Candidate.RationalEncoding",
+        "Q4.Candidate.SourceChordGeometry"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.GlobalGeometryScales",
+      "path": "Q4/Candidate/GlobalGeometryScales.lean",
+      "original_path": "Q4/Candidate/GlobalGeometryScales.lean",
+      "sha256": "d9fdad082624c5f597851d7577333d59db2049fcd7b62450e15561ecd6f00296",
+      "imports": [
+        "Q4.Candidate.ParentBlockExclusion"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.GridCounts",
+      "path": "Q4/Candidate/GridCounts.lean",
+      "original_path": "Q4/Candidate/GridCounts.lean",
+      "sha256": "038d055e94811087e531e492a38bd37d60f2e290733f6ebe6a2a6def4b6f442a",
+      "imports": [
+        "Mathlib.Basic.Real.Basic",
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Finset.Max",
+        "Mathlib.Data.Fintype.Prod",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+        "Mathlib.Algebra.BigOperators.Ring.Finset",
+        "Mathlib.Order.Interval.Finset.Nat",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.FieldSimp"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.GridInitialConstants",
+      "path": "Q4/Candidate/GridInitialConstants.lean",
+      "original_path": "Q4/Candidate/GridInitialConstants.lean",
+      "sha256": "a2e0a062d77f453312081911ceb829af0ea29e3781562cecf42929689357005a",
+      "imports": [
+        "Q4.Candidate.TwoPhaseStability"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.GridLocalization",
+      "path": "Q4/Candidate/GridLocalization.lean",
+      "original_path": "Q4/Candidate/GridLocalization.lean",
+      "sha256": "384bb8968b531ad6c6e52a1e64cf7bac15fa00567dca487525892738e0a5a256",
+      "imports": [
+        "Q4.SimultaneousFlip",
+        "Q4.Candidate.GridCounts",
+        "Mathlib.Basic.Real.Basic",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Ring"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.GridStepBridge",
+      "path": "Q4/Candidate/GridStepBridge.lean",
+      "original_path": "Q4/Candidate/GridStepBridge.lean",
+      "sha256": "95bd2c4608a9e9153d4dad224fb7b906b07b77843eb68b18e1a9b08210f3be45",
+      "imports": [
+        "Q4.Candidate.GridStepExtension",
+        "Q4.Candidate.TwoPhaseStability",
+        "Q4.Candidate.CanonicalEnergy",
+        "Q4.Candidate.GridInitialConstants"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.GridStepExtension",
+      "path": "Q4/Candidate/GridStepExtension.lean",
+      "original_path": "Q4/Candidate/GridStepExtension.lean",
+      "sha256": "ababb163209b306bbc6ecafb4de7a438024aeaa4df92cf59826fecd6b70ae89a",
+      "imports": [
+        "Q4.Candidate.CanonicalField",
+        "Q4.Candidate.DiagonalRounding",
+        "Mathlib.Order.Interval.Set.Union"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.IndexedPaletteForcing",
+      "path": "Q4/Candidate/IndexedPaletteForcing.lean",
+      "original_path": "Q4/Candidate/IndexedPaletteForcing.lean",
+      "sha256": "3863b3a98272c80e5a7433641379dc6a76a7e796eafc492e42c529a6a92afbf8",
+      "imports": [
+        "Q4.Candidate.CorePaletteForcing",
+        "Q4.Candidate.ProgramIndex"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.IntervalPoincare",
+      "path": "Q4/Candidate/IntervalPoincare.lean",
+      "original_path": "Q4/Candidate/IntervalPoincare.lean",
+      "sha256": "7bfb70571048c06b837e5ec21c27e2ed76ebf586daf6c889a8de3d9d98270143",
+      "imports": [
+        "Q4.Candidate.AnalyticVariance",
+        "Mathlib.MeasureTheory.Integral.IntervalIntegral.AbsolutelyContinuousFun"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.MacroLayout",
+      "path": "Q4/Candidate/MacroLayout.lean",
+      "original_path": "Q4/Candidate/MacroLayout.lean",
+      "sha256": "03b6520bf65368c2eded01c8f3010621967a03512b471476d73e8764148c1b7d",
+      "imports": [
+        "Q4.Candidate.GeometryEncoding"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.MainSourceEncoding",
+      "path": "Q4/Candidate/MainSourceEncoding.lean",
+      "original_path": "Q4/Candidate/MainSourceEncoding.lean",
+      "sha256": "ed81e5f0d780aded505199637de8206cb61a15f8d0e9b741b92817e837e0fd4e",
+      "imports": [
+        "Q4.Candidate.OriginalVertexLayout",
+        "Q4.Candidate.SourceSelectedEdges",
+        "Q4.Candidate.CoreReducedPairs"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.OneDimensionalStability",
+      "path": "Q4/Candidate/OneDimensionalStability.lean",
+      "original_path": "Q4/Candidate/OneDimensionalStability.lean",
+      "sha256": "5dc141671b8fa2dc18ecd7343f77eef26cff9a47d0bd1287bb13834b4d0c4b11",
+      "imports": [
+        "Q4.Candidate.AlternationKernel",
+        "Q4.Candidate.ThresholdApproximation"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.OperatorPerturbation",
+      "path": "Q4/Candidate/OperatorPerturbation.lean",
+      "original_path": "Q4/Candidate/OperatorPerturbation.lean",
+      "sha256": "d405ff1e53fb6026650850f6b3872395c27c21b94368b32190784e71d6b8a52f",
+      "imports": [
+        "Q4.Candidate.EnergyLipschitz"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.OrdinaryCoreField",
+      "path": "Q4/Candidate/OrdinaryCoreField.lean",
+      "original_path": "Q4/Candidate/OrdinaryCoreField.lean",
+      "sha256": "f86dd95ab6d6298db5bef2663f6f35522512771e2bc9e92d5fcfce701a840bc5",
+      "imports": [
+        "Q4.Candidate.OrdinaryResponse",
+        "Q4.Candidate.OrdinaryNonincident"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.OrdinaryFan",
+      "path": "Q4/Candidate/OrdinaryFan.lean",
+      "original_path": "Q4/Candidate/OrdinaryFan.lean",
+      "sha256": "89600a8b398520c3fdbfd52709f3b1a3eda6774ffd4f529a29c995f3434ecafb",
+      "imports": [
+        "Q4.Candidate.DoubleCapGrid"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.OrdinaryNonincident",
+      "path": "Q4/Candidate/OrdinaryNonincident.lean",
+      "original_path": "Q4/Candidate/OrdinaryNonincident.lean",
+      "sha256": "64792799916960b95c83afaf73822062013edf1085583b91499547a23232ef44",
+      "imports": [
+        "Q4.Candidate.OrdinaryFan",
+        "Q4.Candidate.OrientationPreservation"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.OrdinaryResponse",
+      "path": "Q4/Candidate/OrdinaryResponse.lean",
+      "original_path": "Q4/Candidate/OrdinaryResponse.lean",
+      "sha256": "496f3d140dc6d1a6d87b99bcf4a668b0b2fb63a95d698a240dc47f6fdeabaf02",
+      "imports": [
+        "Q4.Candidate.VirtualColumnSoftSupport"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.OrdinarySoftRows",
+      "path": "Q4/Candidate/OrdinarySoftRows.lean",
+      "original_path": "Q4/Candidate/OrdinarySoftRows.lean",
+      "sha256": "3f5859abf935daf1dab8a381226e4286939ed8a941944bdead7a4cf93d036917",
+      "imports": [
+        "Q4.Candidate.OrdinaryResponse"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.OrdinaryTablePreservation",
+      "path": "Q4/Candidate/OrdinaryTablePreservation.lean",
+      "original_path": "Q4/Candidate/OrdinaryTablePreservation.lean",
+      "sha256": "223513f56c34dac5aa4c20796eac44a8eee69bbda13ccff88c1e6cbde42e6e3d",
+      "imports": [
+        "Q4.Candidate.RankTablePreservation"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.OrientationPreservation",
+      "path": "Q4/Candidate/OrientationPreservation.lean",
+      "original_path": "Q4/Candidate/OrientationPreservation.lean",
+      "sha256": "6c7326a97d9e3a806296f7fb187f086ed30051cbcd652c5371260bac30da32ed",
+      "imports": [
+        "Q4.Candidate.UniformInsertion",
+        "Mathlib.Data.Finset.Max"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.OriginalCapAlternation",
+      "path": "Q4/Candidate/OriginalCapAlternation.lean",
+      "original_path": "Q4/Candidate/OriginalCapAlternation.lean",
+      "sha256": "5e1b3a83d8db4932e49427b2c08b989b356f2b8ccf60583c1919bdf44f4f5255",
+      "imports": [
+        "Q4.Candidate.OriginalCapCrossing"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.OriginalCapCrossing",
+      "path": "Q4/Candidate/OriginalCapCrossing.lean",
+      "original_path": "Q4/Candidate/OriginalCapCrossing.lean",
+      "sha256": "b10c469f0709509c0fb3a8b0627aa9779ee18b44a3be0af14e997b0fe89ea53e",
+      "imports": [
+        "Q4.Candidate.DoubleCapGrid"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.OriginalVertexLayout",
+      "path": "Q4/Candidate/OriginalVertexLayout.lean",
+      "original_path": "Q4/Candidate/OriginalVertexLayout.lean",
+      "sha256": "8e4d1aeb8f74689b6afd5ba37edc65464740736070daa497ff1e57533d82f9b7",
+      "imports": [
+        "Q4.Candidate.MacroLayout",
+        "Q4.Candidate.ProposedPalette",
+        "Mathlib.Logic.Equiv.Fin.Basic"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.PaletteBounds",
+      "path": "Q4/Candidate/PaletteBounds.lean",
+      "original_path": "Q4/Candidate/PaletteBounds.lean",
+      "sha256": "04ca5892269036a71f0389574c7ef58992de99af6dd9b84a07f47e271b8cbaf8",
+      "imports": [
+        "Q4.Candidate.PaletteForcing",
+        "Q4.Candidate.RankCorrection"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.PaletteCounting",
+      "path": "Q4/Candidate/PaletteCounting.lean",
+      "original_path": "Q4/Candidate/PaletteCounting.lean",
+      "sha256": "6044c8a2afc134b93da29461303f23196e2b7a9ccd1f99f3005e8693370f739b",
+      "imports": [
+        "Q4.Candidate.OriginalCapAlternation",
+        "Q4.Candidate.PaletteForcing",
+        "Mathlib.Order.Interval.Finset.Fin"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.PaletteExhaustion",
+      "path": "Q4/Candidate/PaletteExhaustion.lean",
+      "original_path": "Q4/Candidate/PaletteExhaustion.lean",
+      "sha256": "0afb0162b438a15f3ff6bb97297806142e9dadb7494bd4ea12bdf349e05c6240",
+      "imports": [
+        "Q4.Candidate.ProposedPalette"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.PaletteForcing",
+      "path": "Q4/Candidate/PaletteForcing.lean",
+      "original_path": "Q4/Candidate/PaletteForcing.lean",
+      "sha256": "2805d68984d5ea9a465897c009ad8ebf747152c4ff1af98f6da0859273059abd",
+      "imports": [
+        "Q4.Candidate.CoreEncoding",
+        "Q4.Candidate.ProbeFreezing",
+        "Q4.Candidate.OrdinaryCoreField"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ParentBlockExclusion",
+      "path": "Q4/Candidate/ParentBlockExclusion.lean",
+      "original_path": "Q4/Candidate/ParentBlockExclusion.lean",
+      "sha256": "d7ee47bf85e5ad25ec8d71c6e8c729e53ae54f6629b6cf8eedf6c7f5cfade124",
+      "imports": [
+        "Q4.Candidate.OrdinaryTablePreservation"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.PlacedOrdinaryField",
+      "path": "Q4/Candidate/PlacedOrdinaryField.lean",
+      "original_path": "Q4/Candidate/PlacedOrdinaryField.lean",
+      "sha256": "9a33a86548cd3edcb1f77daf1be8c3914fa06cc35514c0ca855d0583e53017ce",
+      "imports": [
+        "Q4.Candidate.RankResponse",
+        "Q4.Candidate.OrdinaryCoreField",
+        "Q4.Candidate.OrdinaryTablePreservation",
+        "Q4.Candidate.ParentBlockExclusion"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ProbeFreezing",
+      "path": "Q4/Candidate/ProbeFreezing.lean",
+      "original_path": "Q4/Candidate/ProbeFreezing.lean",
+      "sha256": "2904453ea2f4911c80e08e0490b9341072aba45e6a4e793cc7dfc41cd686f20e",
+      "imports": [
+        "Q4.JointProbe"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ProbeFreezingReal",
+      "path": "Q4/Candidate/ProbeFreezingReal.lean",
+      "original_path": "Q4/Candidate/ProbeFreezingReal.lean",
+      "sha256": "8bbed0343dbbfdb921ae5d1dc554afa142c080a8e35177c77db779c2cb72434f",
+      "imports": [
+        "Q4.Candidate.ProbeFreezing",
+        "Mathlib.Basic.Real.Basic",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Ring"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ProgramCatalog",
+      "path": "Q4/Candidate/ProgramCatalog.lean",
+      "original_path": "Q4/Candidate/ProgramCatalog.lean",
+      "sha256": "b8149fdaa86feff1fc1385b4fb816788b2ede51f551f599cd3736fa5f7b2cdf1",
+      "imports": [
+        "Q4.Candidate.ProgramField",
+        "Q4.Candidate.RankNonincident"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ProgramCount",
+      "path": "Q4/Candidate/ProgramCount.lean",
+      "original_path": "Q4/Candidate/ProgramCount.lean",
+      "sha256": "2315fbdbc9df46b175cfada4cb3ef25bb2767f5ef2e627591f57b298b83aa333",
+      "imports": [
+        "Q4.Candidate.PaletteBounds",
+        "Mathlib.Data.Fintype.BigOperators",
+        "Mathlib.Data.Fintype.Sum",
+        "Mathlib.Algebra.BigOperators.Fin"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ProgramExclusion",
+      "path": "Q4/Candidate/ProgramExclusion.lean",
+      "original_path": "Q4/Candidate/ProgramExclusion.lean",
+      "sha256": "7c64937b35cf0303bac72a938e1e6ae211b8292faaf2576b6589c6d2d2ee9da4",
+      "imports": [
+        "Q4.Candidate.ProgramCatalog"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ProgramField",
+      "path": "Q4/Candidate/ProgramField.lean",
+      "original_path": "Q4/Candidate/ProgramField.lean",
+      "sha256": "6a0ccd8ad3b8a055ca155dc4cd08561bd57773a67496f0b19cd82163beac8bb9",
+      "imports": [
+        "Q4.Candidate.ProgramCount",
+        "Q4.Candidate.PlacedOrdinaryField"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ProgramGeometry",
+      "path": "Q4/Candidate/ProgramGeometry.lean",
+      "original_path": "Q4/Candidate/ProgramGeometry.lean",
+      "sha256": "5e87574faf4edbd85cc58644310f7e895a63cebd1192ca8c9567ad4766b37e66",
+      "imports": [
+        "Q4.Candidate.OriginalVertexLayout",
+        "Q4.Candidate.ProgramCatalog",
+        "Q4.Candidate.CompleteFanFields"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ProgramIndex",
+      "path": "Q4/Candidate/ProgramIndex.lean",
+      "original_path": "Q4/Candidate/ProgramIndex.lean",
+      "sha256": "5df39ea06a43f53f5ca6225a034d1aeb901e96f5b97385ed4ff1ef8224519195",
+      "imports": [
+        "Q4.Candidate.ActualRecipe",
+        "Q4.Candidate.CoreValueBridge"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ProgramPlacement",
+      "path": "Q4/Candidate/ProgramPlacement.lean",
+      "original_path": "Q4/Candidate/ProgramPlacement.lean",
+      "sha256": "0e3aca0593fbfe7a9dd9ae6ee8263edb1bc37cecd5c0a2f2a904d60811499a2b",
+      "imports": [
+        "Q4.Candidate.ProgramGeometry",
+        "Mathlib.Data.List.OfFn",
+        "Mathlib.Data.List.Forall2",
+        "Mathlib.Data.List.Nodup"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ProposedPalette",
+      "path": "Q4/Candidate/ProposedPalette.lean",
+      "original_path": "Q4/Candidate/ProposedPalette.lean",
+      "sha256": "fa30a419c87adf9731c2e43cbda1a411f4f6f6367a5e3f87e3e24e092f89990e",
+      "imports": [
+        "Q4.Candidate.PaletteCounting"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.RankCorrection",
+      "path": "Q4/Candidate/RankCorrection.lean",
+      "original_path": "Q4/Candidate/RankCorrection.lean",
+      "sha256": "b0df0d22d732546cf0de1b22a81a2127f6921b90cd20cfb1d814cbc2ae1a6d36",
+      "imports": [
+        "Q4.Candidate.CoreEncoding",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Basic"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.RankGap",
+      "path": "Q4/Candidate/RankGap.lean",
+      "original_path": "Q4/Candidate/RankGap.lean",
+      "sha256": "69f800e67cb2b1df2b4f1f64a7a208e4fd60290ab0b1102a36a0d41cc8ac3239",
+      "imports": [
+        "Q4.Candidate.ConvexSeparation"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.RankGapPreservation",
+      "path": "Q4/Candidate/RankGapPreservation.lean",
+      "original_path": "Q4/Candidate/RankGapPreservation.lean",
+      "sha256": "9d08f8e85ecffda0b4e3c6bdcd8a8861d64c7922405aef53b284163bb5d02b52",
+      "imports": [
+        "Q4.Candidate.RankGap",
+        "Q4.Candidate.OrientationPreservation"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.RankNonincident",
+      "path": "Q4/Candidate/RankNonincident.lean",
+      "original_path": "Q4/Candidate/RankNonincident.lean",
+      "sha256": "1089a159438102b5df5748f60632a88c7e1a50a954936f9893d1fd65871d237b",
+      "imports": [
+        "Q4.Candidate.RankNonselected"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.RankNonselected",
+      "path": "Q4/Candidate/RankNonselected.lean",
+      "original_path": "Q4/Candidate/RankNonselected.lean",
+      "sha256": "d7c9ad929d88898a3927a4a7aead65aaa2c06e7b54a6250d233ee815641bc90e",
+      "imports": [
+        "Q4.Candidate.RankGapPreservation",
+        "Q4.Candidate.OrdinaryNonincident"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.RankResponse",
+      "path": "Q4/Candidate/RankResponse.lean",
+      "original_path": "Q4/Candidate/RankResponse.lean",
+      "sha256": "b11aacc4f1de7b097b77fc0a96d4b5bbe3585f54f757e32bf024ee7f7bd8fe04",
+      "imports": [
+        "Q4.Candidate.RankSoftRows",
+        "Q4.Candidate.OrdinaryResponse"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.RankSoftRows",
+      "path": "Q4/Candidate/RankSoftRows.lean",
+      "original_path": "Q4/Candidate/RankSoftRows.lean",
+      "sha256": "aa1d4a2b5e1e932311c63d94cf347d6b3a9f3dd0fa30ff5f4795f9226b6e46d1",
+      "imports": [
+        "Q4.Candidate.RankTablePreservation",
+        "Q4.Candidate.VirtualColumnSoftSupport"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.RankTablePreservation",
+      "path": "Q4/Candidate/RankTablePreservation.lean",
+      "original_path": "Q4/Candidate/RankTablePreservation.lean",
+      "sha256": "29542c07329de79b90e9de6b43a6c2ce8a08391b5142e86bf8cf9318784cfd78",
+      "imports": [
+        "Q4.Candidate.RankNonincident"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.RationalEncoding",
+      "path": "Q4/Candidate/RationalEncoding.lean",
+      "original_path": "Q4/Candidate/RationalEncoding.lean",
+      "sha256": "fea31eecc7695bc2957360c0472b9ac8ce9f900d1d84e51ef61515980e278c5f",
+      "imports": [
+        "Q4.Candidate.GlobalGeometryScales"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ReductionGap",
+      "path": "Q4/Candidate/ReductionGap.lean",
+      "original_path": "Q4/Candidate/ReductionGap.lean",
+      "sha256": "d2ed4d11f9ee012d4d21884ddae20a57e7821a4543dbb590342b244ac155fb12",
+      "imports": [
+        "Mathlib.Basic.Real.Basic",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.GCongr",
+        "Mathlib.Tactic.Ring"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.SideCatalog",
+      "path": "Q4/Candidate/SideCatalog.lean",
+      "original_path": "Q4/Candidate/SideCatalog.lean",
+      "sha256": "f386c3f8bbca084ffe8864f68cc8be00581a91cd9b445846d41618c41c93c0d7",
+      "imports": [
+        "Q4.Candidate.CatalogDominance"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.SideDominance",
+      "path": "Q4/Candidate/SideDominance.lean",
+      "original_path": "Q4/Candidate/SideDominance.lean",
+      "sha256": "b0d9ac30106481d4b34ad5a130dffdb8e01de955efff6fc2b7ee780d4a593dfe",
+      "imports": [
+        "Q4.Candidate.SideCatalog"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.SliceStability",
+      "path": "Q4/Candidate/SliceStability.lean",
+      "original_path": "Q4/Candidate/SliceStability.lean",
+      "sha256": "f07225b4babd2a7678dddd76c92b4acc9491e881929561f499d0458f6976da13",
+      "imports": [
+        "Q4.Candidate.ComparisonEnergy",
+        "Q4.Candidate.OneDimensionalStability",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Continuity"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.SmoothingApproximation",
+      "path": "Q4/Candidate/SmoothingApproximation.lean",
+      "original_path": "Q4/Candidate/SmoothingApproximation.lean",
+      "sha256": "b648e1f530b05714349eefa0350b5b4c034e8d5f012c4bb6032a42aed015c79c",
+      "imports": [
+        "Q4.Candidate.BoxAverage",
+        "Q4.Candidate.SquareTranslation"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.SourceChordGeometry",
+      "path": "Q4/Candidate/SourceChordGeometry.lean",
+      "original_path": "Q4/Candidate/SourceChordGeometry.lean",
+      "sha256": "e6c345593ce5bd5c0ae612e2d9c1699c9b8b66cfd544f17c0aa25710b54bf6e2",
+      "imports": [
+        "Q4.Candidate.OriginalCapCrossing",
+        "Q4.Candidate.RankGap",
+        "Mathlib.Data.Fin.Rev"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.SourceCutBridge",
+      "path": "Q4/Candidate/SourceCutBridge.lean",
+      "original_path": "Q4/Candidate/SourceCutBridge.lean",
+      "sha256": "6b3629f7e8f978166c45c91df7652bd6b13c557d44171cc5ed622114cf423832",
+      "imports": [
+        "Q4.Candidate.SourceSelectedEdges"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.SourceSelectedEdges",
+      "path": "Q4/Candidate/SourceSelectedEdges.lean",
+      "original_path": "Q4/Candidate/SourceSelectedEdges.lean",
+      "sha256": "b1a2c671def6ae4e5c4e7489d5410769613a0cd11b58bd5e16dfe3063c0baefb",
+      "imports": [
+        "Q4.Candidate.SourceChordGeometry",
+        "Q4.Candidate.CoreEncoding",
+        "Mathlib.Data.Fintype.BigOperators"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.SquareTranslation",
+      "path": "Q4/Candidate/SquareTranslation.lean",
+      "original_path": "Q4/Candidate/SquareTranslation.lean",
+      "sha256": "d736f4cf75d0a153e9867fdaf6a43483fc2ea6e69e1428fdfa13e0acae18c868",
+      "imports": [
+        "Q4.Candidate.SliceStability",
+        "Q4.Candidate.ThresholdTranslation"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.StabilityConstants",
+      "path": "Q4/Candidate/StabilityConstants.lean",
+      "original_path": "Q4/Candidate/StabilityConstants.lean",
+      "sha256": "3c35d1f33ae4d799f08db41e1dc5671545f8353a1b2eb0b90e1102ee28f41f6e",
+      "imports": [
+        "Q4.Candidate.ThresholdHalfSelection"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ThresholdApproximation",
+      "path": "Q4/Candidate/ThresholdApproximation.lean",
+      "original_path": "Q4/Candidate/ThresholdApproximation.lean",
+      "sha256": "91065fc74fe7b45c193e164463b64814d07545d5a00323d9f941348d4c3c99ad",
+      "imports": [
+        "Q4.Candidate.AlternatingTriples",
+        "Q4.Candidate.UnitIntervalMeasure",
+        "Mathlib.Topology.Order.Compact",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ThresholdHalfSelection",
+      "path": "Q4/Candidate/ThresholdHalfSelection.lean",
+      "original_path": "Q4/Candidate/ThresholdHalfSelection.lean",
+      "sha256": "e3047f773ca201d86635e2497b3a711ccb2aa2c1d9297c3cabe0237993e1a8f5",
+      "imports": [
+        "Q4.Candidate.AntiperiodicThreshold",
+        "Q4.Candidate.SliceStability",
+        "Mathlib.MeasureTheory.Integral.Average"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.ThresholdTranslation",
+      "path": "Q4/Candidate/ThresholdTranslation.lean",
+      "original_path": "Q4/Candidate/ThresholdTranslation.lean",
+      "sha256": "74fabd8325bb78344a0eaebd9c31808f8d51c9badc48ca45d490b2e8efaca5bc",
+      "imports": [
+        "Q4.Candidate.ThresholdApproximation",
+        "Mathlib.MeasureTheory.Group.Integral"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.TwoPhaseStability",
+      "path": "Q4/Candidate/TwoPhaseStability.lean",
+      "original_path": "Q4/Candidate/TwoPhaseStability.lean",
+      "sha256": "77fd83ffe62379ebec373af5775e394f9fd1a2cf1d82dc5cb1f1f57689930ba4",
+      "imports": [
+        "Q4.Candidate.StabilityConstants",
+        "Q4.Candidate.DiagonalRounding",
+        "Q4.Candidate.OperatorPerturbation",
+        "Q4.Candidate.AntiperiodicReplacement"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.UniformInsertion",
+      "path": "Q4/Candidate/UniformInsertion.lean",
+      "original_path": "Q4/Candidate/UniformInsertion.lean",
+      "sha256": "1459f33baf09567017df2e587f048a2d98bddbb76877b520e529085431eccecf",
+      "imports": [
+        "Q4.Candidate.DoubleCapGrid"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.UnitIntervalMeasure",
+      "path": "Q4/Candidate/UnitIntervalMeasure.lean",
+      "original_path": "Q4/Candidate/UnitIntervalMeasure.lean",
+      "sha256": "203cf6d1edf1cfb5e759cea62578075721a25f48ed5239142e666bc5565bd173",
+      "imports": [
+        "Mathlib.MeasureTheory.Measure.Lebesgue.Basic",
+        "Mathlib.MeasureTheory.Measure.Real"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.VirtualColumnField",
+      "path": "Q4/Candidate/VirtualColumnField.lean",
+      "original_path": "Q4/Candidate/VirtualColumnField.lean",
+      "sha256": "9beab32b6da3e8f98c21e4f4d0929efd1a7dd9638bd787e9788d6bc9110c3b09",
+      "imports": [
+        "Q4.Candidate.OrdinaryFan",
+        "Q4.Candidate.CanonicalField"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.VirtualColumnMidpoint",
+      "path": "Q4/Candidate/VirtualColumnMidpoint.lean",
+      "original_path": "Q4/Candidate/VirtualColumnMidpoint.lean",
+      "sha256": "75880b8fed41b242ade39f87261b43b248c9b3d184c5646637e7ca06792f5d06",
+      "imports": [
+        "Q4.Candidate.VirtualColumnField",
+        "Mathlib.Algebra.Order.Archimedean.Real.Basic",
+        "Mathlib.Algebra.Order.Floor.Ring",
+        "Mathlib.Algebra.Order.Group.MinMax"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.VirtualColumnShape",
+      "path": "Q4/Candidate/VirtualColumnShape.lean",
+      "original_path": "Q4/Candidate/VirtualColumnShape.lean",
+      "sha256": "e095cfbff92cd805cc245239b144aaee8d334bf2ca3325dd0711c01225bff369",
+      "imports": [
+        "Q4.Candidate.VirtualColumnMidpoint"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.VirtualColumnSoftRows",
+      "path": "Q4/Candidate/VirtualColumnSoftRows.lean",
+      "original_path": "Q4/Candidate/VirtualColumnSoftRows.lean",
+      "sha256": "e734ad6490d92357c4c20bdc2e35b927b4eb571a7ee8386f8016ed7e4ad63258",
+      "imports": [
+        "Q4.Candidate.VirtualColumnShape",
+        "Mathlib.Algebra.BigOperators.Intervals"
+      ]
+    },
+    {
+      "module": "Q4.Candidate.VirtualColumnSoftSupport",
+      "path": "Q4/Candidate/VirtualColumnSoftSupport.lean",
+      "original_path": "Q4/Candidate/VirtualColumnSoftSupport.lean",
+      "sha256": "cffc5426bcedc587776d4b62a9a13760fed5eddba74157aa83c62ad0a7a73700",
+      "imports": [
+        "Q4.Candidate.VirtualColumnSoftRows"
+      ]
+    },
+    {
+      "module": "Q4.CleanWire",
+      "path": "Q4/CleanWire.lean",
+      "original_path": "Q4/CleanWire.lean",
+      "sha256": "31ff694d15c21dc542a9ea49fd67895e652805235be3ae44a0dcee889a0f11a5",
+      "imports": [
+        "Q4.Counting"
+      ]
+    },
+    {
+      "module": "Q4.Counting",
+      "path": "Q4/Counting.lean",
+      "original_path": "Q4/Counting.lean",
+      "sha256": "44033dde926140a9a7b7bc80c3deaf6f45685fb149e597bcaf6fd0fba62285ac",
+      "imports": [
+        "Std"
+      ]
+    },
+    {
+      "module": "Q4.JointProbe",
+      "path": "Q4/JointProbe.lean",
+      "original_path": "Q4/JointProbe.lean",
+      "sha256": "cfcd8be7ed4984df972c550ad1b0f0a530db6e0ab92a8045b213433ca8535265",
+      "imports": [
+        "Q4.SimultaneousFlip"
+      ]
+    },
+    {
+      "module": "Q4.SimultaneousFlip",
+      "path": "Q4/SimultaneousFlip.lean",
+      "original_path": "Q4/SimultaneousFlip.lean",
+      "sha256": "a9e3598892759f16e76f4d5dfa1269778db535a0fad2da9dad770924d99f53f0",
+      "imports": [
+        "Q4.Counting"
+      ]
+    }
+  ],
+  "external_imports": [
+    "Mathlib.Algebra.BigOperators.Fin",
+    "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+    "Mathlib.Algebra.BigOperators.Intervals",
+    "Mathlib.Algebra.BigOperators.Ring.Finset",
+    "Mathlib.Algebra.Order.Archimedean.Real.Basic",
+    "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+    "Mathlib.Algebra.Order.Field.Basic",
+    "Mathlib.Algebra.Order.Field.Rat",
+    "Mathlib.Algebra.Order.Floor.Ring",
+    "Mathlib.Algebra.Order.Group.MinMax",
+    "Mathlib.Analysis.Calculus.Deriv.Add",
+    "Mathlib.Analysis.Calculus.Deriv.Comp",
+    "Mathlib.Analysis.Calculus.Deriv.Mul",
+    "Mathlib.Analysis.Calculus.Deriv.Prod",
+    "Mathlib.Analysis.Calculus.Deriv.Shift",
+    "Mathlib.Analysis.Calculus.Rademacher",
+    "Mathlib.Analysis.SpecialFunctions.Integrals.Basic",
+    "Mathlib.Analysis.SpecialFunctions.Pow.Continuity",
+    "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+    "Mathlib.Basic.Real.Basic",
+    "Mathlib.Data.Fin.Rev",
+    "Mathlib.Data.Finset.Card",
+    "Mathlib.Data.Finset.Max",
+    "Mathlib.Data.Finset.Prod",
+    "Mathlib.Data.Fintype.BigOperators",
+    "Mathlib.Data.Fintype.Prod",
+    "Mathlib.Data.Fintype.Sum",
+    "Mathlib.Data.List.Forall2",
+    "Mathlib.Data.List.Nodup",
+    "Mathlib.Data.List.OfFn",
+    "Mathlib.Data.Nat.Choose.Sum",
+    "Mathlib.Logic.Equiv.Fin.Basic",
+    "Mathlib.MeasureTheory.Function.AbsolutelyContinuous",
+    "Mathlib.MeasureTheory.Group.Integral",
+    "Mathlib.MeasureTheory.Group.Prod",
+    "Mathlib.MeasureTheory.Integral.Average",
+    "Mathlib.MeasureTheory.Integral.DominatedConvergence",
+    "Mathlib.MeasureTheory.Integral.IntegrableOn",
+    "Mathlib.MeasureTheory.Integral.IntervalIntegral.AbsolutelyContinuousFun",
+    "Mathlib.MeasureTheory.Integral.IntervalIntegral.LebesgueDifferentiationThm",
+    "Mathlib.MeasureTheory.Integral.Prod",
+    "Mathlib.MeasureTheory.Measure.Lebesgue.Basic",
+    "Mathlib.MeasureTheory.Measure.Real",
+    "Mathlib.Order.Interval.Finset.Fin",
+    "Mathlib.Order.Interval.Finset.Nat",
+    "Mathlib.Order.Interval.Set.Union",
+    "Mathlib.Tactic.FieldSimp",
+    "Mathlib.Tactic.GCongr",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.Tactic.Positivity",
+    "Mathlib.Tactic.Ring",
+    "Mathlib.Topology.Order.Compact",
+    "Mathlib.Topology.Order.IntermediateValue",
+    "Std"
+  ],
+  "generated_and_configuration": [
+    {
+      "path": "Q4.lean",
+      "sha256": "cf12a2dc7bfcc904a36cc7b69b187d429e17884171889c8004d07823ee1c8b01"
+    },
+    {
+      "path": "lakefile.toml",
+      "sha256": "8687d09c237d376a0f37f2a8a65917324dd0830c4fd087157f8692c02464dc87",
+      "original_path": "lakefile.toml"
+    },
+    {
+      "path": "lake-manifest.json",
+      "sha256": "0b82985800cd14809c5a52370fbe67d146e871dfb95d645077e50adda76ee0d0",
+      "original_path": "lake-manifest.json"
+    },
+    {
+      "path": "lean-toolchain",
+      "sha256": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
+      "original_path": "lean-toolchain"
+    },
+    {
+      "path": "audit_sources.py",
+      "sha256": "a73f444c9b1447d777803dac56fff6b9ab8ba69831dc7ee96b18565b929f5342"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "0c6670a583e96defb7e53be5e32f52e2df9a1cb907c898af8fb138c625e51cf3"
+    }
+  ],
+  "closure_module_count": 127,
+  "candidate_module_count": 123,
+  "excluded_original_modules": [
+    "Q4/AffineBoxSearch.lean",
+    "Q4/BalancedSlice.lean",
+    "Q4/BlockDeletion.lean",
+    "Q4/BlockResponse.lean",
+    "Q4/CentralGapBudget.lean",
+    "Q4/CodebookPadding.lean",
+    "Q4/CompensationDescent.lean",
+    "Q4/CyclicBridge.lean",
+    "Q4/EarSlice.lean",
+    "Q4/FourColumn.lean",
+    "Q4/FourMatching.lean",
+    "Q4/FreeBResponse.lean",
+    "Q4/GateOracle.lean",
+    "Q4/HierarchicalGeometry.lean",
+    "Q4/HubGeometry.lean",
+    "Q4/HubGram.lean",
+    "Q4/HubIntegerLower.lean",
+    "Q4/LargeVIntegerResponse.lean",
+    "Q4/LocalBoundaryCharge.lean",
+    "Q4/MajorityBundles.lean",
+    "Q4/MarginRanks.lean",
+    "Q4/MixedCenter.lean",
+    "Q4/MultiProbe.lean",
+    "Q4/NAE.lean",
+    "Q4/NeutralColumns.lean",
+    "Q4/OddCycleBound.lean",
+    "Q4/Perturbation.lean",
+    "Q4/PhaseSlice.lean",
+    "Q4/Polarity.lean",
+    "Q4/PolarityMatrix.lean",
+    "Q4/ProfileRigidity.lean",
+    "Q4/ProfileSearch.lean",
+    "Q4/QuarterSource.lean",
+    "Q4/RobustExchange.lean",
+    "Q4/SameCell.lean",
+    "Q4/SeparatedCoreResponse.lean",
+    "Q4/ShortCellTerminal.lean",
+    "Q4/ShortMacroSeparation.lean",
+    "Q4/TerminalZeroPair.lean",
+    "Q4/ThresholdSwap.lean",
+    "Q4/TwoColumnFreeBlock.lean",
+    "Q4/TwoLeafDefect.lean",
+    "Q4/TwoPoint.lean",
+    "Q4/TwoStarTrap.lean",
+    "Q4/ZeroChainField.lean"
+  ]
+}

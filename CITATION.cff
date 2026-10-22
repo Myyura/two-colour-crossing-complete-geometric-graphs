@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "Please cite the manuscript and identify the repository commit used for verification."
+type: software
+repository-code: "https://github.com/Myyura/two-colour-crossing-complete-geometric-graphs"
+title: "Two-colour crossing minimization in complete geometric graphs is NP-hard"
+authors:
+  - family-names: Myyura
+    affiliation: The Kai Project
+abstract: >-
+  Manuscript, Lean formalization, and exact finite checks for the
+  NP-hardness of minimizing monochromatic proper-crossing pairs in fixed
+  complete geometric graphs with free two-colouring of all edges, and
+  NP-completeness of the corresponding threshold decision problem.
+keywords:
+  - computational geometry
+  - crossing number
+  - NP-completeness
+  - Lean
+license:
+  - Apache-2.0
+  - CC-BY-4.0

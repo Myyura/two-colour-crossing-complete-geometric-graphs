@@ -1,0 +1,36 @@
+\section{A direct-completion obstruction}\label{app:completion}
+
+The following example explains why the contribution of added edges must
+be controlled in a completeness-preserving reduction.
+
+\begin{proposition}
+Completing a segment family to the complete geometric graph on its
+endpoints can produce an optimum whose restriction to the original
+family is not optimal. The minimum contribution of the added edges can
+also depend on the prescribed source colours.
+\end{proposition}
+\begin{proof}
+Take $p_i=(i,i^2)$ for $0\leq i<6$ and abbreviate $p_ip_j$ by $ij$.
+The source edges are $01,24,35$. Their only crossing pair is $24,35$,
+so the source optimum is zero.
+
+Every five-point subset is strictly convex. The crossing graph of its
+five diagonals is an odd cycle, so every two-colouring contains a
+monochromatic crossing. There are six five-point subsets, and every
+crossing pair belongs to exactly two of them. Therefore the complete
+six-point graph has at least three monochromatic crossing pairs in
+every colouring.
+
+Colour $03,04,13,14$ blue and all remaining edges red. Its monochromatic
+crossing pairs are exactly $(02,15),(03,14),(24,35)$, so it is optimal
+for the complete graph. Its restriction to the source has cost one.
+In particular, when $24$ and $35$ have the same colour, the minimum
+additional cost is two.
+
+Alternatively colour $14,15,24,25$ blue and the other edges red.
+The monochromatic crossing pairs are $(02,13),(04,35),(14,25)$.
+This is again a complete optimum, but $24$ and $35$ now have different
+colours. The source cost is zero and the minimum additional cost is
+three. Hence the extra optimum is not independent of the source
+colouring.
+\end{proof}

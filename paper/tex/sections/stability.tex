@@ -1,0 +1,679 @@
+\section{Stability of the comparison grid}
+\label{sec:stability}
+
+The comparison grid supplies a reference colouring without prescribing any
+target edge colours.  We first prove a quantitative continuous statement,
+then transfer it to every finite rectangular grid.  The finite statement
+applies to actual minimizers with arbitrary bounded unary perturbations.
+A separate estimate applies to any colouring with the resulting localized
+support; this distinction will allow us to change the program colours while
+keeping the same grid colouring.
+
+\subsection{The continuous comparison energy}
+
+All integrals in this section use Lebesgue measure.  Functions are Borel
+measurable; the statements also hold for Lebesgue-measurable functions after
+replacement on a null set.  For a sign function
+$f:[0,1]^2\to\{-1,1\}$, put
+\begin{equation}
+ \mathcal E(f)=
+ \int_{\substack{0\le u<u'\le1\\0\le v<v'\le1}}
+ \mathbf 1\{f(u,v)=f(u',v')\}\,du\,dv\,du'\,dv'.
+ \label{eq:comparison-energy}
+\end{equation}
+Each comparable unordered pair occurs once.  Define
+\[
+ f_*(u,v)=
+ \begin{cases}1,&u+v<1,\\-1,&u+v\ge1.\end{cases}
+\]
+The diagonal convention has no effect on the continuous integral, but we
+retain this strict inequality when passing to finite grids.
+
+\begin{theorem}[Continuous two-phase stability]
+\label{thm:continuous}
+Every measurable sign function on the unit square has
+$\mathcal E(f)\ge1/12$.  For every $\varepsilon\ge0$, if
+$\mathcal E(f)\le1/12+\varepsilon$, then
+\begin{equation}
+ \min_{\sigma\in\{-1,1\}}
+ \|f-\sigma f_*\|_{L^1([0,1]^2)}
+ \le4096\varepsilon^{1/72}.
+ \label{eq:continuous-stability}
+\end{equation}
+\end{theorem}
+
+We give the analytic ingredients with constants, since only a uniform
+estimate, rather than a sharp exponent, is needed later.
+
+For $h:[0,1]\to\{-1,1\}$ define
+\[
+ (\mathcal T h)(t)=\int_0^1\operatorname{sgn}(s-t)h(s)\,ds,
+ \qquad D(h)=\frac13-\|\mathcal T h\|_2^2.
+\]
+Values of the sign kernel on its diagonal are immaterial.  A threshold
+function is a sign function that is constant on each side of a point
+$c\in[0,1]$, with opposite signs on those two intervals.  Both orientations
+and, through $c=0,1$, both constant functions are included.
+
+\begin{lemma}[One-dimensional stability]
+\label{lem:one-dimensional}
+For every measurable sign function $h$, one has $D(h)\ge0$.  There is a
+threshold function $b$ such that
+\[
+ \|h-b\|_1\le4D(h)^{1/3}.
+\]
+\end{lemma}
+
+\begin{proof}
+Let
+\[
+ I(h)=\int_{0<r<s<t<1}
+ \mathbf 1\{h(r)=h(t)\ne h(s)\}\,dr\,ds\,dt.
+\]
+The elementary identity
+\[
+ 4\mathbf 1\{h(r)=h(t)\ne h(s)\}
+ =1+h(r)h(t)-h(r)h(s)-h(s)h(t)
+\]
+gives
+\begin{equation}
+ D(h)=8I(h).
+ \label{eq:alternation-deficit}
+\end{equation}
+To check the coefficient, after integrating out the third variable the
+coefficient of $h(u)h(v)$, for $u<v$, in the triple expression is
+$2(v-u)-1$.  On the other hand,
+\[
+ \int_0^1\operatorname{sgn}(u-t)\operatorname{sgn}(v-t)\,dt
+ =1-2|u-v|.
+\]
+The constant triple integral is $1/6$, and the ordered two-variable
+integral is half the corresponding symmetric integral.  These observations
+give \eqref{eq:alternation-deficit}, including its constant term, by Fubini.
+All integrands are bounded, so these changes of order are legitimate.
+
+Let $e$ be the least measure of disagreement with a threshold.  For each
+orientation, disagreement is continuous in its threshold position, and
+$[0,1]$ is compact, so the minimum is attained.  We claim
+$I(h)\ge e^3/64$.  There is nothing to prove if $e=0$.  Otherwise let $p$
+be the measure of the positive set.  The constant negative threshold shows
+that $p\ge e$.  By continuity of cumulative positive mass choose $a\le b$
+so that the positive mass before $a$ and after $b$ is $e/4$ each.
+
+If the negative mass between $a$ and $b$ is at least $e/4$, independently
+choosing a positive point before $a$, a negative point between $a,b$, and
+a positive point after $b$ gives $I(h)\ge(e/4)^3$.  Otherwise compare with
+the threshold positive before $b$ and negative after $b$.  Its disagreement
+is at least $e$, whereas the negative mass between $a,b$ plus the positive
+mass after $b$ is less than $e/2$.  Thus the negative mass before $a$ is
+at least $e/2$.  Comparing with the oppositely oriented threshold at $a$
+similarly gives negative mass at least $e/2$ after $b$.  The positive mass
+between $a,b$ is $p-e/2\ge e/2$.  Negative--positive--negative triples
+therefore give the stronger bound $I(h)\ge e^3/8$.  The claim follows.
+By \eqref{eq:alternation-deficit}, $e^3\le8D(h)$; since the sign-function
+$L^1$ distance is $2e$, the asserted bound follows.
+\end{proof}
+
+Apply $\mathcal T$ in the two coordinates and write
+\[
+ A(u,v)=\int_0^1\operatorname{sgn}(s-u)f(s,v)\,ds,
+ \qquad
+ C(u,v)=\int_0^1\operatorname{sgn}(s-v)f(u,s)\,ds,
+ \qquad M=\int_{[0,1]^2}f.
+\]
+Expanding the order indicators and the equality indicator, and using
+antisymmetry of the sign kernel, gives
+\[
+ \mathcal E(f)=\frac{1+M^2-\langle A,C\rangle}{8}.
+\]
+In particular,
+\begin{equation}
+ 8\bigl(\mathcal E(f)-1/12\bigr)
+ =M^2+\frac12\|A-C\|_2^2
+ +\frac12\left(\frac13-\|A\|_2^2\right)
+ +\frac12\left(\frac13-\|C\|_2^2\right).
+ \label{eq:comparison-deficit}
+\end{equation}
+Lemma~\ref{lem:one-dimensional} on each row and column makes every term on
+the right nonnegative.  This proves the lower bound in
+Theorem~\ref{thm:continuous}.  For $f_*$ the mean vanishes, both slice
+families are thresholds, and direct integration gives $A=C$.  Hence its
+energy is exactly $1/12$.
+
+Under an excess bound $\varepsilon$, \eqref{eq:comparison-deficit} gives
+\begin{equation}
+ |M|\le\sqrt{8\varepsilon},\qquad
+ \|A-C\|_2\le4\sqrt\varepsilon,
+ \qquad
+ \int_0^1 D(f(\cdot,v))\,dv\le16\varepsilon,
+ \label{eq:deficit-consequences}
+\end{equation}
+and the analogous column estimate.  Jensen's inequality and
+Lemma~\ref{lem:one-dimensional} show that the average row distance from a
+threshold, and also the average column distance, is at most
+$4(16\varepsilon)^{1/3}\le11\varepsilon^{1/3}$.  These distance functions are
+measurable: one may take the infimum over rational threshold positions in
+both orientations, using continuity in the threshold position.  No
+measurable selection of optimal thresholds is required.
+
+\begin{lemma}[Approximation by a diagonal profile]
+\label{lem:diagonal-approximation}
+Suppose $0<h\le1$ and $\mathcal E(f)\le1/12+h^6$.  There is a measurable
+$b:[0,2]\to\{-1,1\}$ such that, for $f_1(u,v)=b(u+v)$,
+\[
+ \|f-f_1\|_1\le128h,
+ \qquad \mathcal E(f_1)\le1/12+257h.
+\]
+\end{lemma}
+
+\begin{proof}
+It suffices first to treat $h<1/8$.  Extend $f$ by zero outside the square.
+A threshold on $[0,1]$, extended by zero, has total variation at most four.
+Approximating each row by a threshold and applying the triangle inequality
+shows that translation by $r$ in the first coordinate changes the zero
+extension in $L^1$ by at most
+$22\varepsilon^{1/3}+4|r|$.  The same holds in the second coordinate.
+Here the rowwise inequality can be integrated using the measurable
+infimum just described, so no selection issue arises.
+
+Let $f_h$ be the convolution of the zero extension with the uniform
+probability density on $[-h,h]^2$.  Integrating the translation bound and
+using $\varepsilon=h^6$ yields
+\begin{equation}
+ \|f-f_h\|_{L^1(\mathbb R^2)}
+ \le44h^2+8h\le52h.
+ \label{eq:box-error}
+\end{equation}
+On the interior square $Q_h=[h,1-h]^2$ we also have
+\begin{equation}
+ \| (\partial_u-\partial_v)f_h\|_{L^1(Q_h)}\le2h.
+ \label{eq:directional-bound}
+\end{equation}
+Indeed, on the open unit square, in the sense of distributions,
+\[
+ (\partial_u-\partial_v)f
+ =\tfrac12\partial_u\partial_v(A-C),
+\]
+because $\partial_u A=-2f$ and $\partial_v C=-2f$.  The mixed derivative
+of the uniform averaging kernel is the signed measure at its four corners
+with total variation $h^{-2}$.  Convolution on $Q_h$ therefore gives a bound
+$\|A-C\|_1/(2h^2)\le2h$ by \eqref{eq:deficit-consequences}.
+Only averaging boxes contained in the original square are used here, so no
+distributional boundary term from the zero extension enters this estimate.
+The box average of a bounded function is Lipschitz: translating either
+coordinate changes the averaging rectangle by area at most a constant
+times the translation distance.  Consequently the weak directional
+derivative above agrees with its almost-everywhere derivative, and the
+one-dimensional fundamental theorem applies on almost every diagonal slice.
+
+For each $s$ average $f_h(u,s-u)$ over the interval of $u$ for which
+$(u,s-u)\in Q_h$, and denote the average by $j(s)$.  Put $j(s)=0$ when
+that interval is empty.  This defines a measurable function with
+$|j|\le1$.  On an interval $I$ of length $\ell$, an absolutely continuous
+function $g$ satisfies
+\[
+ \int_I|g-g_I|
+ \le\frac1\ell\int_I\int_I|g(x)-g(y)|\,dx\,dy
+ \le\ell\int_I|g'|.
+\]
+The diagonal coordinates $(s,u)$ have Jacobian one and their intervals
+have length at most one.  Integrating this inequality and using
+\eqref{eq:directional-bound} gives
+$\|f_h-j(u+v)\|_{L^1(Q_h)}\le2h$.  In particular no inverse lower bound
+on the length of a short diagonal is required.  Outside $Q_h$ the area is
+at most $4h$ and the pointwise difference is at most two.  Together with
+\eqref{eq:box-error}, this gives
+\[
+ \|f-j(u+v)\|_{L^1([0,1]^2)}\le52h+2h+8h=62h.
+\]
+Round $j$ to a sign, with a fixed convention at zero.  For a sign $z$ and
+$r\in[-1,1]$, $|z-\operatorname{sgn}(r)|\le2|z-r|$.  Thus the resulting
+$f_1$ has distance at most $124h\le128h$.
+
+For any two sign functions $f,g$, expansion of the equality indicator
+gives the useful bound
+\begin{equation}
+ |\mathcal E(f)-\mathcal E(g)|
+ \le\frac12\int_{[0,1]^2}|f-g|
+       \bigl(uv+(1-u)(1-v)\bigr)\,du\,dv
+ \le\|f-g\|_1.
+ \label{eq:energy-lipschitz}
+\end{equation}
+Hence $\mathcal E(f_1)\le1/12+h^6+128h\le1/12+129h$, which is stronger
+than the stated bound.  If $h\ge1/8$, any fixed diagonal sign function
+suffices: the distance is at most two, the energy is at most $1/4$, and
+both claimed bounds follow.  This completes the lemma for $0<h\le1$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:continuous}]
+Assume first that $\varepsilon>0$, put $h=\varepsilon^{1/6}$, and suppose
+$\alpha=257h\le1/4096$.  Lemma~\ref{lem:diagonal-approximation} gives
+$f_1(u,v)=b(u+v)$ with energy excess at most $\alpha$.
+Let $t=\alpha^{1/4}\le1/8$.
+By \eqref{eq:deficit-consequences} there is a row at height
+$v\in[t,2t]$ whose one-dimensional deficit is at most $16\alpha/t$.
+Its sign profile is $b$ restricted to $[v,v+1]$.  By
+Lemma~\ref{lem:one-dimensional}, it has a threshold approximation of
+error at most $4(16\alpha/t)^{1/3}<11\alpha^{1/4}$.
+Restrict that threshold to $[v,1]$ and extend it to $[0,1]$ as a threshold.
+The additional interval has length at most $2t$ and costs at most $4t$.
+Thus $b$ on $[0,1]$ is within $15\alpha^{1/4}$ of a threshold $b_0$.
+Selecting a row with $v\in[1-2t,1-t]$ in the same way gives a threshold
+$b_1$ within $15\alpha^{1/4}$ of $s\mapsto b(1+s)$ on $[0,1]$.
+
+Let $\widetilde b(s)=b_0(s)$ for $s<1$ and
+$\widetilde b(s)=b_1(s-1)$ for $s\ge1$, and put
+$f_2(u,v)=\widetilde b(u+v)$.  The density of $u+v$ on the square is
+$s$ for $0\le s\le1$ and $2-s$ for $1\le s\le2$, so it is at most one.
+Consequently
+\begin{equation}
+ \|f_1-f_2\|_1\le\zeta:=30\alpha^{1/4}.
+ \label{eq:two-half-error}
+\end{equation}
+Each coordinate operator $\mathcal T$ has $L^2$ operator norm at most
+one, by Cauchy--Schwarz on each unit interval and Fubini.  Moreover,
+$\|f_1-f_2\|_2^2=2\|f_1-f_2\|_1$.  Writing
+$\mathcal D=\mathcal T_u-\mathcal T_v$, the triangle inequality followed
+by $(x+y)^2\le2x^2+2y^2$ gives
+\begin{equation}
+ \|\mathcal D f_2\|_2^2
+ \le32\alpha+16\zeta\le512\alpha^{1/4}.
+ \label{eq:two-half-operator}
+\end{equation}
+
+Set $m_0=|\{s\in[0,1]:b_0(s)=b_1(s)\}|$ and
+$F(t)=\int_0^t(b_0(s)+b_1(s))\,ds$.  Directly integrating the two
+coordinate operators yields
+\begin{equation}
+ \mathcal D f_2(u,v)=F(v)-F(u),
+ \qquad
+ \|\mathcal D f_2\|_2^2=2\int_0^1(F-\overline F)^2.
+ \label{eq:agreement-variance}
+\end{equation}
+Because $b_0,b_1$ are thresholds, the nonzero derivative of $F$ is
+supported on at most two intervals, and is constantly $2$ or $-2$ on
+each.  If $m_0>0$, one of those intervals has length
+$\ell\ge m_0/2$.  For any constant $c$, the integral of $(F-c)^2$ on
+that interval is at least
+\[
+ \min_d\int_0^\ell(2s-d)^2\,ds=\ell^3/3.
+\]
+Taking $c=\overline F$ in \eqref{eq:agreement-variance} and using
+\eqref{eq:two-half-operator}, we obtain
+$m_0^3\le6144\alpha^{1/4}$ and hence
+\begin{equation}
+ m_0\le19\alpha^{1/12}.
+ \label{eq:agreement-bound}
+\end{equation}
+
+Replace $b_1$ by $-b_0$ and call the resulting diagonal function $f_3$.
+Since the diagonal density is at most one,
+$\|f_2-f_3\|_1\le2m_0$.  If $b_0$ is positive before $c$ and negative
+after $c$, then
+\[
+ \int f_3=\int_0^1(2s-1)b_0(s)\,ds=-2c(1-c).
+\]
+Reversing the threshold orientation reverses the mean.  The distances
+from $f_3$ to the two canonical phases are $2c$ and $2(1-c)$, in some
+order, since the density weights of the two halves add to one.
+Therefore its distance to a canonical phase is at most
+$2|\int f_3|$.  With $d=\|f-f_2\|_1$, the triangle inequality now gives
+\[
+ \min_\sigma\|f-\sigma f_*\|_1
+ \le3d+6m_0+2\left|\int f\right|.
+\]
+Using $d\le128h+30\alpha^{1/4}$,
+\eqref{eq:agreement-bound}, and $|\int f|\le3h^3$, the right-hand side
+is at most
+\[
+ 384h+90\alpha^{1/4}+114\alpha^{1/12}+6h^3
+ \le594\alpha^{1/12}.
+\]
+Here $0<h\le1$, $\alpha=257h\le1$, and each smaller power term is
+bounded by the displayed coefficient times $\alpha^{1/12}$.
+Since $257^{1/12}\le2$, this is at most
+$1188h^{1/12}\le4096\varepsilon^{1/72}$.
+
+If $257h>1/4096$, the distance between any two sign functions is at most
+two.  The inequality $h^{1/12}\ge1/4$ at the cutoff, and monotonicity
+thereafter, give the asserted estimate immediately.  Finally, if
+$\varepsilon=0$, apply the positive-excess result for every positive
+excess parameter.  The minimum of the distances to the two fixed phases
+must then be zero.  One of those two phases attains that minimum, proving
+the zero-excess case without a choice of a limiting phase.
+\end{proof}
+
+\subsection{Finite rectangular grids with unary costs}
+
+For integers $m,n\ge1$, let $J_{m,n}$ have vertex set
+$\{0,\ldots,m-1\}\times\{0,\ldots,n-1\}$, where two vertices are adjacent
+exactly when both coordinate orders strictly agree.  In this section write
+\[
+ V=mn,\qquad \rho=\frac1m+\frac1n,\qquad
+ u_i=\frac{i+1/2}{m},\qquad v_j=\frac{j+1/2}{n}.
+\]
+Thus $V$ is the number of vertices of the comparison graph, not the
+number of points of the eventual geometric drawing.  Define
+\[
+ c^+_{ij}=\mathbf1\{u_i+v_j<1\},\qquad c^-_{ij}=1-c^+_{ij},
+ \qquad s^\sigma_{ij}=2c^\sigma_{ij}-1.
+\]
+In particular a diagonal cell centre has spin $-1$ in the positive phase.
+
+Let $U_x:\{0,1\}\to\mathbb R$ be unary costs, and suppose
+\[
+ |U_x(1)-U_x(0)|\le\alpha V\quad\hbox{for all }x,
+ \qquad \alpha\ge0.
+\]
+No bound is imposed on their additive constants.  Write
+\[
+ E(c)=\Phi_J(c)+\sum_xU_x(c_x),
+\]
+where $\Phi_J$ counts monochromatic edges of $J_{m,n}$.
+For a set $F$ of grid vertices, $c\oplus F$ denotes the colouring obtained
+by flipping exactly $F$.  Define the exact finite quantities
+\begin{equation}
+ d_x^\sigma=E(c^\sigma\oplus\{x\})-E(c^\sigma),\qquad
+ L_\sigma=E(c^\sigma)+\sum_x\min(0,d_x^\sigma),\qquad
+ L=\min(L_+,L_-).
+ \label{eq:finite-linear-floor}
+\end{equation}
+For $w\ge0$ let
+\[
+ D_w=\{(i,j):|u_i+v_j-1|\le w\},\qquad
+ C_w=\{(i,j):u_i+v_j\le w\ \hbox{or}\ u_i+v_j\ge2-w\}.
+\]
+
+\begin{theorem}[Finite-grid localization and energy bounds]
+\label{thm:grid}
+Let $a$ satisfy $\alpha+\rho\le a\le2^{-4096}$.
+For every rectangular aspect ratio the following statements hold.
+\begin{enumerate}
+ \item Every minimizer $c$ of $E$ has a phase $\sigma$ such that, with
+ $F=\{x:c_x\ne c_x^\sigma\}$,
+ \[
+ |F|\le52aV,\qquad F\subseteq D_{220a}\cup C_{220a}.
+ \]
+ \item The minimum energy belongs to
+ \[
+ [L-2^{32}a^3V^2,\ L+2^{32}a^3V^2].
+ \]
+ For either prescribed phase, the explicit set
+ $F_\sigma^0=\{x:d_x^\sigma<0\}$ has size at most $52aV$ and
+ \[
+ E(c^\sigma\oplus F_\sigma^0)\le L_\sigma+2^{32}a^3V^2.
+ \]
+ \item For every $F\subseteq D_{220a}\cup C_{220a}$,
+ \[
+ E(c^\sigma\oplus F)\ge L_\sigma-2^{32}a^3V^2.
+ \]
+ This last conclusion requires no optimality of $c^\sigma\oplus F$.
+ In fact it holds for arbitrary real unary costs, without their oscillation
+ bound, whenever $\rho\le a\le1/65536$.
+\end{enumerate}
+For rational unary costs, both $L_\sigma$ and the two prescribed-phase
+colourings are computable by polynomially many exact arithmetic operations.
+\end{theorem}
+
+\begin{proof}
+\emph{From cells to the continuous objective.}
+Extend a grid colouring to the sign function $f_c$ constant on its
+$1/m$ by $1/n$ cells.  Comparable pairs in distinct rows and columns
+contribute exactly $\Phi_J(c)/V^2$.  All other contributions are
+nonnegative and their total uncoloured measure is
+\[
+ \frac14-\frac{\binom m2\binom n2}{m^2n^2}
+ =\frac1{4m}+\frac1{4n}-\frac1{4mn}\le\frac\rho4.
+\]
+We will use the weaker bound
+\begin{equation}
+ 0\le\mathcal E(f_c)-\Phi_J(c)/V^2\le\rho/2.
+ \label{eq:cell-comparison}
+\end{equation}
+The functions $f_{c^+}$ and $f_*$ can disagree only where
+$|u+v-1|\le\rho/2$.  This band has area at most $\rho$, whence
+$\|f_{c^+}-f_*\|_1\le2\rho$, and the analogous assertion holds for
+the negative phase.  By \eqref{eq:energy-lipschitz},
+$\mathcal E(f_{c^+})\le1/12+2\rho$.
+For a minimizer $c$, comparison with $c^+$ gives
+$\Phi_J(c)\le\Phi_J(c^+)+\alpha V^2$.  Therefore
+\[
+ \mathcal E(f_c)\le1/12+\alpha+\tfrac52\rho\le1/12+5a.
+\]
+Theorem~\ref{thm:continuous} and the canonical cell discrepancy give a
+phase whose disagreement fraction $\mu=|F|/V$ satisfies
+\begin{equation}
+ \mu\le2048(5a)^{1/72}+\rho\le2^{-20}.
+ \label{eq:initial-fraction}
+\end{equation}
+For the final numerical bound, use $5<8$, $a\le2^{-4096}$, and
+$\rho\le a$; the first term is less than $2^{11-4093/72}<2^{-45}$.
+This initial estimate follows from the actual minimum condition.
+
+\emph{Canonical local fields.}
+For $p=(u,v)$ let $Q_p$ be the union of the lower-left and upper-right
+rectangles comparable to $p$.  With $s=1-u-v$, direct integration gives
+\[
+ \int_{Q_p}f_*=-s(1-|s|).
+\]
+For $s\ge0$, the lower-left rectangle contributes $uv$, and the
+upper-right rectangle contributes $s^2-(1-u)(1-v)$; reflection gives the
+other case.  The union of cells corresponding to the finite neighbours of
+a cell centre differs from $Q_p$ only in its row and column strips,
+of total area at most $\rho$.  The sign-function discrepancy contributes
+at most another $2\rho$.  A single grid flip changes the cost by minus
+the vertex spin times its neighbour-spin sum.  Consequently, in either
+canonical phase,
+\begin{equation}
+ \left|\frac{d_x^{\rm grid}}V-\ell(u_i,v_j)\right|\le6\rho,
+ \qquad
+ \ell(u,v)=|1-u-v|(1-|1-u-v|).
+ \label{eq:canonical-field}
+\end{equation}
+At a diagonal centre the continuous field is zero, so the strict tie
+convention causes no change to this bound.  Including the unary cost gives
+\begin{equation}
+ d_x^\sigma\ge V\ell(u_i,v_j)-6aV.
+ \label{eq:field-with-unaries}
+\end{equation}
+If $t\in[0,1]$ and $t(1-t)\le z$, then either $t\le2z$ or
+$1-t\le2z$, by considering $t\le1/2$ and $t\ge1/2$ separately.
+Thus a small value of $\ell$ places the vertex in a narrow diagonal strip
+or in the two corner regions.
+
+\emph{Finite strip and corner counts.}
+A rectangle with side lengths $r,t$ contains at most
+\[
+ (mr+1)(nt+1)\le V(r+\rho)(t+\rho)
+\]
+cell centres.  For $\rho\le w\le1$, counting by rows gives
+$|D_w|\le(2w+\rho)V\le3wV$, and bounding each corner triangle by
+a square gives $|C_w|\le8w^2V$.  Two comparable points of $D_w$, ordered
+coordinatewise, have the sum of their coordinate differences at most
+$2w$.  For any strip point its strip neighbours therefore lie in two
+squares of side $2w$, giving at most $18w^2V$ possibilities.  Hence for
+every $F\subseteq D_w\cup C_w$,
+\begin{equation}
+ \deg_F(x)\le26w^2V\quad(x\in D_w),\qquad
+ |E(J_{m,n}[F])|\le83w^3V^2.
+ \label{eq:strip-counts}
+\end{equation}
+For the edge bound, strip--strip, strip--corner, and corner--corner
+edges contribute at most $27w^3V^2$, $24w^3V^2$, and $32w^4V^2$,
+respectively.  Counting an edge more than once when regions overlap only
+increases these upper bounds.  The degree assertion is made only for strip
+vertices: corner vertices need not have degree of order $w^2V$.
+
+\emph{Bootstrap from initial stability.}
+For a disagreeing vertex $x\in F$, changing its colour back in the
+minimizer has cost change
+\[
+ -d_x^\sigma-2\sum_{y\in F:\,xy\in E(J_{m,n})}s_x^\sigma s_y^\sigma
+ \ge0.
+\]
+Thus $d_x^\sigma\le2\deg_F(x)$, and
+\eqref{eq:field-with-unaries} yields
+\begin{equation}
+ \ell(u_i,v_j)\le6a+2\deg_F(x)/V\qquad(x\in F).
+ \label{eq:local-optimality-profile}
+\end{equation}
+Initially $\deg_F(x)\le\mu V$.  The observation following
+\eqref{eq:field-with-unaries} gives
+\[
+ F\subseteq D_w\cup C_w,
+ \qquad w=4\mu+12a.
+\]
+By \eqref{eq:initial-fraction}, $\rho\le w<1/4$.  For
+$x\in F\cap D_w$, \eqref{eq:strip-counts} improves
+\eqref{eq:local-optimality-profile} to
+$\ell\le6a+52w^2$.  In $D_w$ we have
+$\ell\ge|1-u-v|/2$, so
+$F\cap D_w\subseteq D_{12a+104w^2}$.  The direct row count and the
+corner count now imply
+\[
+ \mu\le25a+216w^2
+ \le25a+6912\mu^2+62208a^2.
+\]
+Since $\mu\le2^{-20}$ and $a\le2^{-4096}$, we have
+$6912\mu^2\le\mu/2$ and $62208a^2\le a$.
+Absorbing these terms proves $\mu\le52a$.
+Substitution in the definition of $w$ gives $w\le220a$, establishing
+the first conclusion.  No small degree bound for corner vertices has
+been used in this absorption.
+
+\emph{Exact correction for simultaneous flips.}
+For every flip set $F$ and arbitrary real unary costs,
+\begin{equation}
+ E(c^\sigma\oplus F)-E(c^\sigma)
+ =\sum_{x\in F}d_x^\sigma
+  +2\sum_{\{x,y\}\in E(J_{m,n}[F])}s_x^\sigma s_y^\sigma.
+ \label{eq:simultaneous-flips}
+\end{equation}
+Indeed, an edge with both endpoints flipped keeps its equality status,
+while its two single-flip contributions sum to
+$-2s_x^\sigma s_y^\sigma$.  The second sum restores exactly this
+discrepancy; unary terms already add independently.
+
+If $F\subseteq D_{220a}\cup C_{220a}$ and
+$\rho\le a\le1/65536$, \eqref{eq:strip-counts} bounds the absolute
+correction by
+\[
+ 2\cdot83\cdot220^3a^3V^2<2^{32}a^3V^2.
+\]
+The linear sum is at least $\sum_x\min(0,d_x^\sigma)$.
+This proves the third conclusion, including its stronger independence
+from the unary oscillation and from optimality.  Applying it to the
+localized minimizer proves the lower bound in the second conclusion.
+
+For the upper bound in a prescribed phase, take exactly
+$F_\sigma^0=\{x:d_x^\sigma<0\}$.  By
+\eqref{eq:field-with-unaries}, this set is contained in
+$D_{12a}\cup C_{12a}$, and its cardinality is at most
+\[
+ (36a+1152a^2)V\le52aV.
+\]
+Its linear sum in \eqref{eq:simultaneous-flips} is the defining sum for
+$L_\sigma$, while its correction is bounded by
+$2\cdot83\cdot12^3a^3V^2<2^{32}a^3V^2$.
+Choosing the phase with smaller $L_\sigma$ proves the upper bound for
+the minimum.  Finally, all quantities in \eqref{eq:finite-linear-floor}
+are finite sums and single-vertex comparisons.  They require no search
+over colourings and can be evaluated exactly in polynomially many
+operations for rational unary costs.
+\end{proof}
+
+\subsection{Freezing probes while preserving the actual grid}
+
+The following lemma is about an arbitrary finite simple graph.  In the
+application its vertices are geometric edges and its adjacency relation
+is proper crossing.  Thus its conclusion includes interactions between
+the probes themselves.
+
+\begin{proposition}[Probe freezing]
+\label{prop:freezing}
+Let a finite simple graph have vertex partition $X,T,Z$, with induced
+subgraph on $X$ equal to $J_{m,n}$.  The objective is the number of
+monochromatic graph edges, and all vertices may be coloured freely.
+Use $V=mn$ and $\rho=1/m+1/n$.  Suppose every vertex of $X$ has at most
+$\alpha V$ neighbours outside $X$, every vertex of $T$ has at most
+$\beta V$ neighbours outside $X$, and
+\[
+ \alpha,\beta\ge0,\qquad \alpha+\rho\le a\le2^{-4096}.
+\]
+For $p\in T$ and $\sigma\in\{+,-\}$ let
+\[
+ h_p^\sigma=\sum_{x\in N(p)\cap X}s_x^\sigma.
+\]
+This is its colour-1 cost minus its colour-0 cost when the grid is
+canonical.  Choose $y_p^+=1$ when $h_p^+<0$ and $y_p^+=0$ otherwise,
+and put $y_p^-=1-y_p^+$.  These are best responses in both phases,
+including their complemented zero-field tie convention.
+
+Put $b=104a+\beta$, and suppose that $Q\ge0$ satisfies
+\begin{equation}
+ |\{p\in T:|h_p^\sigma|\le bV\}|
+ \le Q(b+\rho)V
+ \quad\hbox{for both phases}.
+ \label{eq:soft-probe-count}
+\end{equation}
+Then every optimal colouring $\chi$ has a phase $\sigma$ and a colouring
+$\psi$ such that only vertices of $T$ are changed, every probe is coloured
+$y_p^\sigma$, and
+\begin{equation}
+ 0\le\Phi(\psi)-\Phi(\chi)
+ \le E_{\rm fr}:=2Q(b+\rho)bV^2.
+ \label{eq:freezing-error}
+\end{equation}
+The unchanged grid differs from $c^\sigma$ on at most $52aV$ vertices,
+all in $D_{220a}\cup C_{220a}$.  If $\OPT_{\rm fr}$ is the minimum over
+colourings with the probes in either of the two frozen phases, then
+\[
+ 0\le\OPT_{\rm fr}-\OPT\le E_{\rm fr}.
+\]
+It suffices for \eqref{eq:soft-probe-count} to have the stronger estimate
+$|\{p:|h_p^\sigma|\le tV\}|\le Q(t+\rho)V$ for
+$0\le t\le t_0$, together with $b\le t_0$.
+\end{proposition}
+
+\begin{proof}
+Fix the colours outside $X$ in a genuine global optimum.  Its restriction
+to $X$ minimizes the resulting grid objective.  Each conditional unary
+oscillation is at most the number of outside neighbours, hence at most
+$\alpha V$.  Theorem~\ref{thm:grid} gives a phase $\sigma$ and a
+disagreement set $F$ with $|F|\le52aV$ and the stated support.  Keep this
+grid colouring fixed for the rest of the proof.
+
+For every probe, its field from $X$ differs from $h_p^\sigma$ by at most
+$2|F|\le104aV$.  Under any colouring of all other vertices, its field
+from neighbours outside $X$ has absolute value at most $\beta V$.
+Thus the full field differs from $h_p^\sigma$ by at most $bV$.
+If $|h_p^\sigma|>bV$, the sign of the full field is the same as the
+canonical sign, whatever the outside colours are.  Single-vertex
+optimality of $\chi$ therefore forces this hard probe already to have
+colour $y_p^\sigma$.
+
+Recolour each remaining, soft probe to $y_p^\sigma$, in any order.
+At every step the grid remains fixed.  The outside field still has
+absolute value at most $\beta V$ even after earlier probe changes, since
+all probe--probe neighbours were included in that degree bound.  The
+cost increase for the current recolouring is at most the magnitude of
+the current full field, which is bounded by
+\[
+ |h_p^\sigma|+104aV+\beta V\le2bV.
+\]
+There are at most $Q(b+\rho)V$ soft probes by
+\eqref{eq:soft-probe-count}.  Summing the sequential cost changes gives
+the upper bound in \eqref{eq:freezing-error}.  The lower bound follows
+because $\chi$ is a global optimum and $\psi$ is a feasible colouring.
+Only probes were changed, so the same grid and its localization remain.
+
+The frozen feasible set is a subset of the original feasible set and
+contains the constructed $\psi$.  Its optimum is therefore between
+$\Phi(\chi)$ and $\Phi(\psi)$, proving the final optimum bound.
+\end{proof}
+
+The last clause of Theorem~\ref{thm:grid} can now be applied to this
+unchanged grid under the newly frozen unary costs.  It applies because
+the support is localized, whether or not this grid minimizes the new
+conditional objective.  This is the reason for retaining the arbitrary
+localized-colouring estimate in addition to the optimum bracket.
